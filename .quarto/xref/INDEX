@@ -46,5 +46,8 @@
   },
   "pages/userControl.md": {
     "userControl.html": "6760cbae"
+  },
+  "pages/scavenger.ipynb": {
+    "scavenger.html": "ef21e719"
   }
 }

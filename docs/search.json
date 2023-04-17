@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ABOPSC",
     "section": "",
-    "text": "Lesson Lab Work Scoring"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
   },
   {
     "objectID": "pages/assignments.html",
@@ -25,7 +25,7 @@
     "href": "pages/scavenger.html",
     "title": "Scavenger Hunt",
     "section": "",
-    "text": "Lesson Lab Work Scoring"
+    "text": "Code\nint x = 56/10*5*4;\n\nif (x<10){\n    System.out.println(\"extra credit\");\n}\nelse if (x<= 50){\n    System.out.println(\"apple\");\n}\nelse if (x > 50 &&  x <= 100){\n    System.out.println(\"candy\");\n}\nelse if (x > 100 &&  x <= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x > 115 &&  x <= 150){\n    System.out.println(\"dinero\");\n}"
   },
   {
     "objectID": "pages/grading.html",
@@ -89,5 +89,33 @@
     "title": "Units 1 to 4 Lesson",
     "section": "Hack 3:",
     "text": "Hack 3:\n\nCreate a Car object named myCar with the following details:\n\n\nMake: “Toyota”\nModel: “Camry”\nYear: 2019\nPrice: 25000.0\n\n\nPrint the car details using the getMake(), getModel(), getYear(), and getPrice() methods.\nCheck if the car is affordable within a budget of $20000 using the isAffordable() method and print the result using if-else statement.\nDetermine and print the car’s classification based on its price using if-else-if statement:\n\n\nIf the price is greater than $50000, print “The car is a luxury car.”\nIf the price is greater than $30000, print “The car is a mid-range car.”\nOtherwise, print “The car is an affordable car.”\n\n\n\nCode\npublic class Car {\n    private String make;\n    private String model;\n    private int year;\n    private double price;\n    \n    // Constructor\n    public Car(String make, String model, int year, double price) {\n        this.make = make;\n        this.model = model;\n        this.year = year;\n        this.price = price;\n    }\n    \n    // Getter methods\n    public String getMake() {\n        return make;\n    }\n    \n    public String getModel() {\n        return model;\n    }\n    \n    public int getYear() {\n        return year;\n    }\n    \n    public double getPrice() {\n        return price;\n    }\n    \n    // Method to determine if the car is affordable or not\n    public boolean isAffordable(double budget) {\n        if (price <= budget) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n    \n    // Main method\n    public static void main(String[] args) {\n        // Create a new Car object\n\n        // Print the car details\n        \n        // Check if the car is affordable with a budget of $20000 using an if-else statement\n       \n        // Check if the car is a luxury car based on its price using if-else-if statement\n    \n    }\n}\nCar.main(null);"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-2",
+    "href": "pages/scavenger.html#question-2",
+    "title": "Scavenger Hunt",
+    "section": "Question 2",
+    "text": "Question 2\n\n\nCode\npublic static void main(String [] args) {\n    String[] words = {\"and\", \"more\", \"is\", \"also\", \"plus\"};\n    answer(words);\n    System.out.println(answer(words));\n}\n\npublic static String answer(String words[]) {\n    String first = words[0];\n    for (int i = 1 ; i < words.length ; i++) {\n        if ((words[i].compareTo(first)) < 0) {\n            first = words[i];\n        }\n    } \n    return first;\n}"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-3",
+    "href": "pages/scavenger.html#question-3",
+    "title": "Scavenger Hunt",
+    "section": "Question 3",
+    "text": "Question 3\n\n\nCode\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\")\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\")\n}\nelse {\n    System.out.print(\"in\")\n}"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-4",
+    "href": "pages/scavenger.html#question-4",
+    "title": "Scavenger Hunt",
+    "section": "Question 4",
+    "text": "Question 4\n\n\nCode\nint x = 10;\nif (x*3 <= 30) {\n    x++;\n}\nif (x > 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\n\nA. 11 (chair) B. 15 (backpack) C. 31 (table) D. error (floor)"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-5",
+    "href": "pages/scavenger.html#question-5",
+    "title": "Scavenger Hunt",
+    "section": "Question 5",
+    "text": "Question 5\nItems whose value does not change are called…\nA. variable (Mr.M’s desk) B. stay-same (bathroom) C. literal (outside) D. unvariable (hetvi’s backpack)"
   }
 ]
