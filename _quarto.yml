@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "temp"
+  title: "ABopsC"
   navbar:
     left:
       - href: index.qmd

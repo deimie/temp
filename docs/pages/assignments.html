@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ABopsC - Quiz</title>
+<title>ABopsC - Assignments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quiz</h1>
+<h1 class="title">Assignments</h1>
 </div>
 
 
@@ -117,30 +117,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<script>
-
-    // YOU HAVE TO GET THE ID SOMEHOW
-    function create_questions(set) {
-        
-        const ID = 0; // Change later
-        url = "";
-
-        const body = {
-            method : "POST",
-            headers : {
-                "Content-Type" : "application/json"
-            },
-            credentials : "include",
-            body: JSON.stringify({id : ID})
-        }
-
-        fetch(url, body).then(data => data.json()).then(data => {
-
-        });
-    }
-</script>
+<p>{% include lab_nav.html %}</p>
+<section id="assignments" class="level2">
+<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
+<ol type="1">
+<li><a href="{{site.baseurl}}/grading/">Assignment 1</a></li>
+<li><a href="">Assignment 2</a></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

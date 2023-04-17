@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ABopsC - Quiz</title>
+<title>ABopsC - Grading</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quiz</h1>
+<h1 class="title">Grading</h1>
 </div>
 
 
@@ -117,30 +117,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>{% include lab_nav.html %}</p>
+<section id="grading-checklist-period-2-apcsa" class="level2">
+<h2 class="anchored" data-anchor-id="grading-checklist-period-2-apcsa">Grading Checklist Period 2 APCSA</h2>
+
+
+<table>
+<tbody><tr>
+<th>
+Name
+</th>
+<th>
+Score
+</th>
+</tr>
+<tr>
+<td>
+Name
+</td>
+<td>
+Score
+</td>
+</tr>
+
+</tbody></table>
+<form>
+Name:<br> <input type="text" id="name" name="name"> Grade:<br> <input type="text" id="grade" name="grade"> <button type="button" onclick="addRow();">Submit</button>
+</form>
+
+
 <script>
+    function addRow(){
+        var name = document.getElementById("name").value;
+        var grade = document.getElementById("grade").value;
 
-    // YOU HAVE TO GET THE ID SOMEHOW
-    function create_questions(set) {
-        
-        const ID = 0; // Change later
-        url = "";
+        var table = document.getElementsByTagName("table")[0];
+        var newRow = table.insertRow(1);
 
-        const body = {
-            method : "POST",
-            headers : {
-                "Content-Type" : "application/json"
-            },
-            credentials : "include",
-            body: JSON.stringify({id : ID})
-        }
+        var nameCell = newRow.insertCell(0);
+        var gradeCell = newRow.insertCell(1);
 
-        fetch(url, body).then(data => data.json()).then(data => {
-
-        });
+        nameCell.innerHTML = name;
+        gradeCell.innerHTML = grade; 
     }
 </script>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

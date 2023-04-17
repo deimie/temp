@@ -7,18 +7,53 @@
     "text": "Lesson Lab Work Scoring"
   },
   {
-    "objectID": "pages/about.html",
-    "href": "pages/about.html",
-    "title": "About",
+    "objectID": "pages/assignments.html",
+    "href": "pages/assignments.html",
+    "title": "Assignments",
     "section": "",
-    "text": "About this site"
+    "text": "{% include lab_nav.html %}"
   },
   {
-    "objectID": "pages/test.html",
-    "href": "pages/test.html",
-    "title": "test",
+    "objectID": "pages/assignments.html#assignments",
+    "href": "pages/assignments.html#assignments",
+    "title": "Assignments",
+    "section": "Assignments",
+    "text": "Assignments\n\nAssignment 1\nAssignment 2"
+  },
+  {
+    "objectID": "pages/scavenger.html",
+    "href": "pages/scavenger.html",
+    "title": "Scavenger Hunt",
     "section": "",
-    "text": "Hello, World!\n\nprint(\"Hello, World!\")\n\nHello, World!"
+    "text": "Lesson Lab Work Scoring"
+  },
+  {
+    "objectID": "pages/grading.html",
+    "href": "pages/grading.html",
+    "title": "Grading",
+    "section": "",
+    "text": "{% include lab_nav.html %}"
+  },
+  {
+    "objectID": "pages/grading.html#grading-checklist-period-2-apcsa",
+    "href": "pages/grading.html#grading-checklist-period-2-apcsa",
+    "title": "Grading",
+    "section": "Grading Checklist Period 2 APCSA",
+    "text": "Grading Checklist Period 2 APCSA\n\n\n\n\n\nName\n\n\nScore\n\n\n\n\nName\n\n\nScore\n\n\n\n\n\nName:  Grade:  Submit"
+  },
+  {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About ABopsC",
+    "section": "",
+    "text": "Welcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!"
+  },
+  {
+    "objectID": "pages/userControl.html",
+    "href": "pages/userControl.html",
+    "title": "ABopsC",
+    "section": "",
+    "text": "{% include login.html %} {% include signup.html %}"
   },
   {
     "objectID": "pages/lesson.html",
@@ -28,25 +63,11 @@
     "text": "Units 1-4 are roughly half of the exam\nThe best way to learn it is through code flow which means integrating all key concepts into a code that you build upon\nStart with the scavenger hunt quiz"
   },
   {
-    "objectID": "pages/lesson.html#setup",
-    "href": "pages/lesson.html#setup",
-    "title": "Lesson",
-    "section": "",
-    "text": "Units 1-4 are roughly half of the exam\nThe best way to learn it is through code flow which means integrating all key concepts into a code that you build upon\nStart with the scavenger hunt quiz"
-  },
-  {
     "objectID": "pages/lesson.html#lesson",
     "href": "pages/lesson.html#lesson",
     "title": "Lesson",
     "section": "Lesson",
-    "text": "Lesson\n\nUnit 1\nSet the scene: you are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.\nTo make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.\nThe first step to doing this is through storing these different variables just mentioned as data types - primitive data types. You use variables to store data in Java. Types of primitive data include integers, doubles, booleans, etc.\nNow, there are so many things you need to make when buying a car: price, brand, milage, color, etc. We can set the price of a car can be stored as a double, the car brand as a strings. If you want to store whether you like a car or not, you can store that information as a boolean data type.\nNow that you have data and variables declared, you can also compare prices of different cars through expressions and assignment statements. we will go more in depth about boolean comparison statement in Unit 3. Casting, the assignment of one data type to another, can be used for rounding. This can make prices more customer-friendly and easier to compare.\nThere are operators like the modulo operator where the remainder is computed or there’s division and multiplication. If you ever want to compare car prices, you can set up a code with scanner input which is also a very common with consoles.\nimage\nWe can also use compound operators which follows the form a += 1 or age ++ in order to indicate a = a + 1. For example, if you want to model the amount of cars that have entered the highway. Each time the light turns green the number of cars is car += 2.\n\n\nUnit 2\n\nNow that Hack 1 we have practically covered Unit 1 of AP computer science that involves primitive data types and operators (both simple and compound)\nWhen you want to characterize all the cars, you can create a class or a template that basically defines what an object is like and what the object can do\nWhen it comes to cars, you can create a class for what the car is like. The class Cars can have variables like String brand, int age, double mpg. With these parameters, you can create an actual object. Car honda = new Car (“Honda,” “10,” “54.6”) –&gt; constructor\nInside the parentheses –&gt; parameters which are values passed\nCar (String brand, int age, double mpg)\nIf you want to overload a constructor, you can have the same characteristics but different order of variables. For example, Car (double mpg, String brand, int age) ### Unit 3\n\nContinuing the cars theme, we are going to explore Unit 3 which includes topics like boolean expressions, if statements, control flow, if-else statements, else-if statements, compound boolean expressions, equivalent boolean expressions, and comparing objects. This is roughly 15%-17.5% of the AP Exam.\nJust like how cars have different conditions or states, we can use boolean expressions in Java to represent conditions that evaluate to either true or false. For example, we can have a boolean expression that checks if a car’s engine is running or if its speed is greater than a certain threshold.\n\ncode block\n\nIn Java, we can use boolean operators like && (and), || (or), and ! (not) to create compound boolean expressions that combine multiple conditions. These operators allow us to create more complex conditions for making decisions in our code.\n\ncode block\n\nOne common use of boolean expressions is in if statements, which allow us to execute different blocks of code depending on whether a condition is true or false. For example, we can use an if statement to check if a car’s engine is running, and if it is, we can perform actions like accelerating or decelerating the car.\n\ncode block\n\nWe can also use if-else statements to specify different blocks of code to be executed when a condition is true or false. This allows us to handle both cases in our code. For example, we can use an if-else statement to check if a car’s speed is above a certain limit, and if it is, we can display a warning message.\n\ncode block\n\nAnother expression that we can use is else-if statements in Java to check multiple conditions sequentially until one of them is true. This allows us to handle different cases in our code. For example, we can use else-if statements to check the weather condition and adjust the car’s driving mode accordingly.\n\ncode block\n\nIt’s important to note that equivalent boolean expressions can be used interchangeably in our code. For example, we can use == or .equals() to compare objects of certain types, such as strings or other objects, in our boolean expressions.\n\ncode block\n\nLastly, we can use object comparison to compare objects based on their references. In Java, objects are compared using the == operator, which compares the memory addresses of the objects. For example, we can use object comparison to check if two cars are the same object or not.\n\ncode block\n\nYou can also use the equals method which is denoted by equals() to compare two objects.\n\ncode block\n\nKey to note is the use of truth tables. Oftentimes, if you want to visualize the possible outcomes of different combinations of boolean values and logical operators, and use them to evaluate the overall result of a boolean expression."
-  },
-  {
-    "objectID": "pages/scoring.html",
-    "href": "pages/scoring.html",
-    "title": "Lab Scores",
-    "section": "",
-    "text": "Lesson Lab Work Scoring\n\n\n\n\nScore Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
+    "text": "Lesson\n\nUnit 1\nSet the scene: you are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.\nTo make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.\nThe first step to doing this is through storing these different variables just mentioned as data types - primitive data types. You use variables to store data in Java. Types of primitive data include integers, doubles, booleans, etc.\nNow, there are so many things you need to make when buying a car: price, brand, milage, color, etc. We can set the price of a car can be stored as a double, the car brand as a strings. If you want to store whether you like a car or not, you can store that information as a boolean data type.\nNow that you have data and variables declared, you can also compare prices of different cars through expressions and assignment statements. we will go more in depth about boolean comparison statement in Unit 3. Casting, the assignment of one data type to another, can be used for rounding. This can make prices more customer-friendly and easier to compare.\nThere are operators like the modulo operator where the remainder is computed or there’s division and multiplication. If you ever want to compare car prices, you can set up a code with scanner input which is also a very common with consoles.\nimage\nWe can also use compound operators which follows the form a += 1 or age ++ in order to indicate a = a + 1. For example, if you want to model the amount of cars that have entered the highway. Each time the light turns green the number of cars is car += 2."
   },
   {
     "objectID": "pages/labs.html",
@@ -54,5 +75,19 @@
     "title": "Labs",
     "section": "",
     "text": "Lesson Lab Work Scoring"
+  },
+  {
+    "objectID": "pages/scoring.html",
+    "href": "pages/scoring.html",
+    "title": "Lab Scores",
+    "section": "",
+    "text": "Lesson Lab Work Scoring\n\n\n\n\nScore Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n</div>"
+  },
+  {
+    "objectID": "pages/lesson.html#hack-3",
+    "href": "pages/lesson.html#hack-3",
+    "title": "Lesson",
+    "section": "Hack 3:",
+    "text": "Hack 3:\n\nCreate a Car object named myCar with the following details:\n\n\nMake: “Toyota”\nModel: “Camry”\nYear: 2019\nPrice: 25000.0\n\n\nPrint the car details using the getMake(), getModel(), getYear(), and getPrice() methods.\nCheck if the car is affordable within a budget of $20000 using the isAffordable() method and print the result using if-else statement.\nDetermine and print the car’s classification based on its price using if-else-if statement:\n\n\nIf the price is greater than $50000, print “The car is a luxury car.”\nIf the price is greater than $30000, print “The car is a mid-range car.”\nOtherwise, print “The car is an affordable car.”\n\n\npublic class Car {\n    private String make;\n    private String model;\n    private int year;\n    private double price;\n    \n    // Constructor\n    public Car(String make, String model, int year, double price) {\n        this.make = make;\n        this.model = model;\n        this.year = year;\n        this.price = price;\n    }\n    \n    // Getter methods\n    public String getMake() {\n        return make;\n    }\n    \n    public String getModel() {\n        return model;\n    }\n    \n    public int getYear() {\n        return year;\n    }\n    \n    public double getPrice() {\n        return price;\n    }\n    \n    // Method to determine if the car is affordable or not\n    public boolean isAffordable(double budget) {\n        if (price <= budget) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n    \n    // Main method\n    public static void main(String[] args) {\n        // Create a new Car object\n\n        // Print the car details\n        \n        // Check if the car is affordable with a budget of $20000 using an if-else statement\n       \n        // Check if the car is a luxury car based on its price using if-else-if statement\n    \n    }\n}\nCar.main(null);"
   }
 ]

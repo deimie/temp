@@ -34,5 +34,17 @@
   },
   "pages/labs.md": {
     "labs.html": "cf360b27"
+  },
+  "pages/assignments.md": {
+    "assignments.html": "98077d5f"
+  },
+  "pages/scavenger.md": {
+    "scavenger.html": "9ff65554"
+  },
+  "pages/grading.md": {
+    "grading.html": "5d667f8d"
+  },
+  "pages/userControl.md": {
+    "userControl.html": "6760cbae"
   }
 }
