@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ABOPSC",
     "section": "",
-    "text": "Lesson Lab Work Scoring"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
   },
   {
     "objectID": "pages/assignments.html",
@@ -25,7 +25,7 @@
     "href": "pages/scavenger.html",
     "title": "Scavenger Hunt",
     "section": "",
-    "text": "Lesson Lab Work Scoring"
+    "text": "Code\nint x = 56/10*5*4;\n\nif (x&lt;10){\n    System.out.println(\"extra credit\");\n}\nelse if (x&lt;= 50){\n    System.out.println(\"apple\");\n}\nelse if (x &gt; 50 &&  x &lt;= 100){\n    System.out.println(\"candy\");\n}\nelse if (x &gt; 100 &&  x &lt;= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x &gt; 115 &&  x &lt;= 150){\n    System.out.println(\"dinero\");\n}"
   },
   {
     "objectID": "pages/grading.html",
@@ -51,9 +51,9 @@
   {
     "objectID": "pages/userControl.html",
     "href": "pages/userControl.html",
-    "title": "ABopsC",
+    "title": "\nLogin\n",
     "section": "",
-    "text": "&lt;h1&gt;Login&lt;/h1&gt;\n\n&lt;table&gt;\n    &lt;div id=\"loggedOut\"&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Username&lt;/th&gt;\n            &lt;th&gt;&lt;input autocomplete=\"off\" type=\"email\" id=\"username\" name=\"username\"\n                    placeholder=\"enter your username...\"&gt;&lt;/th&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;th&gt;Password&lt;/th&gt;\n            &lt;th&gt;&lt;input autocomplete=\"off\" type=\"password\" id=\"pswd\" name=\"pswd\"\n                    placeholder=\"enter your password...\"&gt;&lt;/th&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n            &lt;th&gt;&lt;button class=\"btn\" type=\"submit\" value=\"Submit\" onclick=\"login_user()\"&gt;Submit&lt;/button&gt;&lt;/th&gt;\n        &lt;/tr&gt;\n\n        &lt;tr&gt;\n            &lt;th&gt; Or &lt;a onclick=\"signUpPage()\"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/div&gt;\n    &lt;div id=\"loggedIn\"&gt;\n        &lt;tr&gt;\n            &lt;th&gt;&lt;button class=\"btn\" type=\"submit\" onclick=\"logout()\"&gt;Logout&lt;/button&gt;&lt;/th&gt;\n        &lt;/tr&gt;\n    &lt;/div&gt;\n\n&lt;/table&gt;\n\n\n\n\n&lt;h1&gt;Sign Up&lt;/h1&gt;\n&lt;table&gt;\n    &lt;tr&gt;\n        &lt;th&gt;First Name&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"text\" id=\"fname\" name=\"fname\" placeholder=\"enter your first name...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Last Name&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"text\" id=\"lname\" name=\"lname\" placeholder=\"enter your last name...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Username&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"text\" id=\"username\" name=\"username\" placeholder=\"enter a username...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Password&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"password\" id=\"pswd\" name=\"pswd\" placeholder=\"enter a password...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Confirm Password&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"password\" id=\"pswdagain\" name=\"pswdagain\" placeholder=\"re-enter password...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;&lt;button class=\"btn\" type=\"submit\" value=\"Submit\" onclick=\"checkFields()\"&gt;Submit&lt;/button&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt; Or &lt;a onclick=\"loginPage()\"&gt;login&lt;/a&gt; instead.&lt;/th&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;"
+    "text": "Login\n\n\n\n\n\n\nUsername\n\n\n\n\nPassword\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\n\nLogout\n\n\n\n\n\n&lt;h1&gt;Sign Up&lt;/h1&gt;\n&lt;table&gt;\n    &lt;tr&gt;\n        &lt;th&gt;First Name&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"text\" id=\"fname\" name=\"fname\" placeholder=\"enter your first name...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Last Name&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"text\" id=\"lname\" name=\"lname\" placeholder=\"enter your last name...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Username&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"text\" id=\"username\" name=\"username\" placeholder=\"enter a username...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Password&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"password\" id=\"pswd\" name=\"pswd\" placeholder=\"enter a password...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Confirm Password&lt;/th&gt;\n        &lt;th&gt;&lt;input type=\"password\" id=\"pswdagain\" name=\"pswdagain\" placeholder=\"re-enter password...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;&lt;button class=\"btn\" type=\"submit\" value=\"Submit\" onclick=\"checkFields()\"&gt;Submit&lt;/button&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt; Or &lt;a onclick=\"loginPage()\"&gt;login&lt;/a&gt; instead.&lt;/th&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;"
   },
   {
     "objectID": "pages/lesson.html",
@@ -81,20 +81,55 @@
     "href": "pages/lesson.html#hack-3",
     "title": "Units 1 to 4 Lesson",
     "section": "Hack 3:",
-    "text": "Hack 3:\n\nCreate a Car object named myCar with the following details:\n\n\nMake: “Toyota”\nModel: “Camry”\nYear: 2019\nPrice: 25000.0\n\n\nPrint the car details using the getMake(), getModel(), getYear(), and getPrice() methods.\nCheck if the car is affordable within a budget of $20000 using the isAffordable() method and print the result using if-else statement.\nDetermine and print the car’s classification based on its price using if-else-if statement:\n\n\nIf the price is greater than $50000, print “The car is a luxury car.”\nIf the price is greater than $30000, print “The car is a mid-range car.”\nOtherwise, print “The car is an affordable car.”\n\n\n\nCode\npublic class Car {\n    private String make;\n    private String model;\n    private int year;\n    private double price;\n    \n    // Constructor\n    public Car(String make, String model, int year, double price) {\n        this.make = make;\n        this.model = model;\n        this.year = year;\n        this.price = price;\n    }\n    \n    // Getter methods\n    public String getMake() {\n        return make;\n    }\n    \n    public String getModel() {\n        return model;\n    }\n    \n    public int getYear() {\n        return year;\n    }\n    \n    public double getPrice() {\n        return price;\n    }\n    \n    // Method to determine if the car is affordable or not\n    public boolean isAffordable(double budget) {\n        if (price &lt;= budget) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n    \n    // Main method\n    public static void main(String[] args) {\n        // Create a new Car object\n\n        // Print the car details\n        \n        // Check if the car is affordable with a budget of $20000 using an if-else statement\n       \n        // Check if the car is a luxury car based on its price using if-else-if statement\n    \n    }\n}\nCar.main(null);"
+    "text": "Hack 3:\n\nCreate a Car object named myCar with the following details:\n\n\nMake: “Toyota”\nModel: “Camry”\nYear: 2019\nPrice: 25000.0\n\n\nPrint the car details using the getMake(), getModel(), getYear(), and getPrice() methods.\nCheck if the car is affordable within a budget of $20000 using the isAffordable() method and print the result using if-else statement.\nDetermine and print the car’s classification based on its price using if-else-if statement:\n\n\nIf the price is greater than $50000, print “The car is a luxury car.”\nIf the price is greater than $30000, print “The car is a mid-range car.”\nOtherwise, print “The car is an affordable car.”\n\n\npublic class Car {\n    private String make;\n    private String model;\n    private int year;\n    private double price;\n    \n    // Constructor\n    public Car(String make, String model, int year, double price) {\n        this.make = make;\n        this.model = model;\n        this.year = year;\n        this.price = price;\n    }\n    \n    // Getter methods\n    public String getMake() {\n        return make;\n    }\n    \n    public String getModel() {\n        return model;\n    }\n    \n    public int getYear() {\n        return year;\n    }\n    \n    public double getPrice() {\n        return price;\n    }\n    \n    // Method to determine if the car is affordable or not\n    public boolean isAffordable(double budget) {\n        if (price &lt;= budget) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n    \n    // Main method\n    public static void main(String[] args) {\n        // Create a new Car object\n\n        // Print the car details\n        \n        // Check if the car is affordable with a budget of $20000 using an if-else statement\n       \n        // Check if the car is a luxury car based on its price using if-else-if statement\n    \n    }\n}\nCar.main(null);"
   },
   {
     "objectID": "pages/labs.html",
     "href": "pages/labs.html",
     "title": "Labs",
     "section": "",
-    "text": "Lesson Lab Work Scoring"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
   },
   {
     "objectID": "pages/scoring.html",
     "href": "pages/scoring.html",
     "title": "Lab Scores",
     "section": "",
-    "text": "Lesson Lab Work Scoring\n\n\n\n\nScore Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring\n\n\n\n\nScore Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-1",
+    "href": "pages/scavenger.html#question-1",
+    "title": "Scavenger Hunt",
+    "section": "",
+    "text": "Code\nint x = 56/10*5*4;\n\nif (x&lt;10){\n    System.out.println(\"extra credit\");\n}\nelse if (x&lt;= 50){\n    System.out.println(\"apple\");\n}\nelse if (x &gt; 50 &&  x &lt;= 100){\n    System.out.println(\"candy\");\n}\nelse if (x &gt; 100 &&  x &lt;= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x &gt; 115 &&  x &lt;= 150){\n    System.out.println(\"dinero\");\n}"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-2",
+    "href": "pages/scavenger.html#question-2",
+    "title": "Scavenger Hunt",
+    "section": "Question 2",
+    "text": "Question 2\n\n\nCode\npublic static void main(String [] args) {\n    String[] words = {\"and\", \"more\", \"is\", \"also\", \"plus\"};\n    answer(words);\n    System.out.println(answer(words));\n}\n\npublic static String answer(String words[]) {\n    String first = words[0];\n    for (int i = 1 ; i &lt; words.length ; i++) {\n        if ((words[i].compareTo(first)) &lt; 0) {\n            first = words[i];\n        }\n    } \n    return first;\n}"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-3",
+    "href": "pages/scavenger.html#question-3",
+    "title": "Scavenger Hunt",
+    "section": "Question 3",
+    "text": "Question 3\n\n\nCode\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\")\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\")\n}\nelse {\n    System.out.print(\"in\")\n}"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-4",
+    "href": "pages/scavenger.html#question-4",
+    "title": "Scavenger Hunt",
+    "section": "Question 4",
+    "text": "Question 4\n\n\nCode\nint x = 10;\nif (x*3 &lt;= 30) {\n    x++;\n}\nif (x &gt; 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\n\nA. 11 (chair) B. 15 (backpack) C. 31 (table) D. error (floor)"
+  },
+  {
+    "objectID": "pages/scavenger.html#question-5",
+    "href": "pages/scavenger.html#question-5",
+    "title": "Scavenger Hunt",
+    "section": "Question 5",
+    "text": "Question 5\nItems whose value does not change are called…\nA. variable (Mr.M’s desk) B. stay-same (bathroom) C. literal (outside) D. unvariable (hetvi’s backpack)"
   }
 ]

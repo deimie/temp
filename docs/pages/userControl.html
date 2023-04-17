@@ -84,11 +84,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/about.html" rel="" target="">
+    <a class="nav-link" href="//pages/about.html" rel="" target="">
  <span class="menu-text">About ABopsC</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../userControl.md" rel="" target="">
+ <span class="menu-text">Account</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -106,41 +112,46 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div id="login" class="userAuth">
-<pre><code>&lt;h1&gt;Login&lt;/h1&gt;
+<h1>
+Login
+</h1>
 
-&lt;table&gt;
-    &lt;div id="loggedOut"&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Username&lt;/th&gt;
-            &lt;th&gt;&lt;input autocomplete="off" type="email" id="username" name="username"
-                    placeholder="enter your username..."&gt;&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Password&lt;/th&gt;
-            &lt;th&gt;&lt;input autocomplete="off" type="password" id="pswd" name="pswd"
-                    placeholder="enter your password..."&gt;&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;button class="btn" type="submit" value="Submit" onclick="login_user()"&gt;Submit&lt;/button&gt;&lt;/th&gt;
-        &lt;/tr&gt;
+<table>
+<tbody>
+<tr>
+<th>
+<span>Username</span><input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
+</th>
+</tr>
+<tr>
+<th>
+<span>Password</span><input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
+</th>
+</tr>
+<tr>
+<th>
+<button class="btn" type="submit" value="Submit" onclick="login_user()">
+Submit
+</button>
+</th>
+</tr>
+<tr>
+<th>
+Or <a class="link" onclick="signUpPage()">sign up</a> instead.
+</th>
+</tr>
+</tbody>
 
-        &lt;tr&gt;
-            &lt;th&gt; Or &lt;a onclick="signUpPage()"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/div&gt;
-    &lt;div id="loggedIn"&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;button class="btn" type="submit" onclick="logout()"&gt;Logout&lt;/button&gt;&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/div&gt;
-
-&lt;/table&gt;</code></pre>
+</table>
+<button class="btn" type="submit" onclick="logout()">
+Logout
+</button>
 </div>
 
 <script>
 
 
-if (sessionStorage.getItem("authorized")) {
+    if (sessionStorage.getItem("authorized")) {
         document.getElementById("loggedIn").style.display = "hidden";
         document.getElementById("loggedOut").style.visibility = "visible";
     }
@@ -342,13 +353,6 @@ if (sessionStorage.getItem("authorized")) {
 
     }
 </script>
-<style>
-    .userAuth {
-        border-radius:10px;
-        padding:15px;
-        border: #f7f7f7 solid 5px;
-    }
-</style>
 
 
 

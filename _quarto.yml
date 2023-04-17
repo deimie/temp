@@ -8,7 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - pages/about.qmd
+      - /pages/about.qmd
+    right:
+      - href: userControl.md
+        text: Account
 
 format:
   html:

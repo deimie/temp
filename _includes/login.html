@@ -1,43 +1,38 @@
 <html>
 
 <div id="login" class="userAuth">
-    
-    <h1>Login</h1>
 
-    <table>
-        <div id="loggedOut">
-            <tr>
-                <th>Username</th>
-                <th><input autocomplete="off" type="email" id="username" name="username"
-                        placeholder="enter your username..."></th>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <th><input autocomplete="off" type="password" id="pswd" name="pswd"
-                        placeholder="enter your password..."></th>
-            </tr>
-            <tr>
-                <th><button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button></th>
-            </tr>
+<h1>Login</h1>
 
-            <tr>
-                <th> Or <a onclick="signUpPage()">sign up</a> instead.</th>
-            </tr>
-        </div>
-        <div id="loggedIn">
-            <tr>
-                <th><button class="btn" type="submit" onclick="logout()">Logout</button></th>
-            </tr>
-        </div>
+<table>
+    <tbody>
+        <tr>
+            <th><span>Username</span><input autocomplete="off" type="email" id="username" name="username"
+                    placeholder="enter your username..."></th>
+        </tr>
+        <tr>
+            <th><span>Password</span><input autocomplete="off" type="password" id="pswd" name="pswd"
+                    placeholder="enter your password..."></th>
+        </tr>
+        <tr>
+            <th><button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button></th>
+        </tr>
 
-    </table>
+        <tr>
+            <th> Or <a class="link" onclick="signUpPage()">sign up</a> instead.</th>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn" type="submit" onclick="logout()">Logout</button>
 </div>
+
 </html>
 
 <script>
 
 
-if (sessionStorage.getItem("authorized")) {
+    if (sessionStorage.getItem("authorized")) {
         document.getElementById("loggedIn").style.display = "hidden";
         document.getElementById("loggedOut").style.visibility = "visible";
     }
