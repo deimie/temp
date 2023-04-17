@@ -21,10 +21,14 @@ h1,h2,h3,h4,h5 {
     margin:15px;
 }
 
-p, span, td, th, li, ul, input {
+p, span, td, th, li, ul, input, div {
     color: #fafbfc;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.indexBackground {
+    background-image:linear-gradient(to bottom right, #060b69, lighten($primary,2),purple);
+}
 input {
     background: none;
     border: none;
@@ -47,6 +51,11 @@ input {
     color:blue;
     text-decoration: underline;
     cursor:pointer;
+}
+
+.icon {
+    height: 50px;
+    fill:white;
 }
 
 /*
@@ -77,4 +86,35 @@ Misc
     padding:15px;
     border: $button-border solid 3px;
     background-color:$secondary;
+}
+
+.text-box {
+    border-radius: 10px;
+    border: $primary 3px solid;
+    background-color: rgba($primary,.5);
+    padding:10px;
+    text-align: center;
+    box-shadow:$primary 10px 10px 10px;
+}
+
+.homeTile {
+    padding:5px;
+    background-color: $primary;
+    height: 150px;
+    width: 260px;
+    display: inline;
+    text-align:center;
+    color:white;
+    margin: 10px;
+    border-radius:30px;
+
+    &:hover {
+        border: $button-border-light 4px solid;
+    }
+}
+
+.tileContainer {
+    display:inline;
+    margin:auto;
+    text-align:center;
 }
