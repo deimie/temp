@@ -8,13 +8,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - pages/about.qmd
 
 format:
   html:
-    theme: cosmo
-    css: styles.scss
-    toc: true
-
-
-
+    theme: 
+      - styles.scss
+      
+minimal_mistakes_skin: "dark"

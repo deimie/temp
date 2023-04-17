@@ -4,5 +4,17 @@
   },
   "about.qmd": {
     "about.html": "b403662c"
+  },
+  "pages/about.qmd": {
+    "about.html": "d7af616b"
+  },
+  "pages/index.qmd": {
+    "index.html": "f43627cb"
+  },
+  "pages/test.ipynb": {
+    "test.html": "537084c8"
+  },
+  "test.ipynb": {
+    "test.html": "856e7ffe"
   }
 }

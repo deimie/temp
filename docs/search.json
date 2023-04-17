@@ -1,16 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "temp",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\nFuck"
+  },
+  {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
     "title": "About",
     "section": "",
     "text": "About this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "temp",
+    "objectID": "pages/test.html",
+    "href": "pages/test.html",
+    "title": "test",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Hello, World!\n\nprint(\"Hello, World!\")\n\nHello, World!"
   }
 ]
