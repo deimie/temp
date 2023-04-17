@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.326">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,10 +19,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,13 +48,43 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -109,23 +138,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">ABopsC</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/about.html" rel="" target="">
+    <a class="nav-link" href="../pages/about.html">
  <span class="menu-text">About ABopsC</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -183,126 +210,359 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.</p>
 <p>The first step to doing this is through storing these different variables just mentioned as data types - primitive data types. You use variables to store data in Java. Types of primitive data include integers, doubles, booleans, etc.</p>
 <p>Now, there are so many things you need to make when buying a car: price, brand, milage, color, etc. We can set the price of a car can be stored as a double, the car brand as a strings. If you want to store whether you like a car or not, you can store that information as a boolean data type.</p>
-<p>Now that you have data and variables declared, you can also compare prices of different cars through expressions and assignment statements. we will go more in depth about boolean comparison statement in Unit 3. Casting, the assignment of one data type to another, can be used for rounding. This can make prices more customer-friendly and easier to compare.</p>
-<p>There are operators like the modulo operator where the remainder is computed or there’s division and multiplication. If you ever want to compare car prices, you can set up a code with scanner input which is also a very common with consoles.</p>
-<p>image</p>
-<p>We can also use compound operators which follows the form a += 1 or age ++ in order to indicate a = a + 1. For example, if you want to model the amount of cars that have entered the highway. Each time the light turns green the number of cars is car += 2.</p>
-</section>
-</section>
-<section id="unit-2" class="level1">
-<h1>Unit 2</h1>
-<ul>
-<li>Now that Hack 1 we have practically covered Unit 1 of AP computer science that involves primitive data types and operators (both simple and compound)</li>
-<li>When you want to characterize all the cars, you can create a class or a template that basically defines what an object is like and what the object can do</li>
-<li>When it comes to cars, you can create a class for what the car is like. The class Cars can have variables like String brand, int age, double mpg. With these parameters, you can create an actual object. Car honda = new Car (“Honda,” “10,” “54.6”) –&gt; constructor</li>
-<li>Inside the parentheses –&gt; parameters which are values passed</li>
-<li>Car (String brand, int age, double mpg)</li>
-<li>If you want to overload a constructor, you can have the same characteristics but different order of variables. For example, Car (double mpg, String brand, int age)</li>
-</ul>
-</section>
-<section id="unit-3" class="level1">
-<h1>Unit 3</h1>
-<p>Continuing the cars theme, we are going to explore Unit 3 which includes topics like boolean expressions, if statements, control flow, if-else statements, else-if statements, compound boolean expressions, equivalent boolean expressions, and comparing objects. This is roughly 15%-17.5% of the AP Exam.</p>
-<p>Just like how cars have different conditions or states, we can use boolean expressions in Java to represent conditions that evaluate to either true or false. For example, we can have a boolean expression that checks if a car’s engine is running or if its speed is greater than a certain threshold.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">boolean</span> isEngineRunning <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="dt">int</span> speed <span class="op">=</span> <span class="dv">60</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">boolean</span> isSpeedAboveThreshold <span class="op">=</span> speed <span class="op">&gt;</span> <span class="dv">50</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="cf">if</span> <span class="op">(</span>isEngineRunning <span class="op">&amp;&amp;</span> isSpeedAboveThreshold<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is moving fast!"</span><span class="op">);</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is not moving fast."</span><span class="op">);</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Car <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> year <span class="op">=</span> <span class="dv">2023</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> price <span class="op">=</span> <span class="fl">30000.00</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">boolean</span> isElectric <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Year: "</span> <span class="op">+</span> year<span class="op">);</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Price: $"</span> <span class="op">+</span> price<span class="op">);</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Is Electric: "</span> <span class="op">+</span> isElectric<span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>There are operators like the modulo operator where the remainder is computed or there’s division and multiplication. If you ever want to compare car prices, you can set up a code with scanner input which is also a very common with consoles.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/iriisyang/Iris-Yang/blob/master/images/operator.png?raw=true" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">This is an image</figcaption><p></p>
+</figure>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CarPrice <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter the price of the car: "</span><span class="op">);</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> price <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextDouble</span><span class="op">();</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The price of the car is $"</span> <span class="op">+</span> price<span class="op">);</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>We can also use compound operators which follows the form a += 1 or age ++ in order to indicate a = a + 1. For example, if you want to model the amount of cars that have entered the highway. Each time the light turns green the number of cars is car += 2.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> cars <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> <span class="co">// starting number of cars</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numCarsEntering <span class="op">=</span> <span class="dv">2</span><span class="op">;</span> <span class="co">// number of cars entering at a time</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numIterations <span class="op">=</span> <span class="dv">5</span><span class="op">;</span> <span class="co">// number of times to loop</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> numIterations<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    cars <span class="op">+=</span> numCarsEntering<span class="op">;</span> <span class="co">// use compound operator to add cars</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Number of cars on highway: "</span> <span class="op">+</span> cars<span class="op">);</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="unit-2" class="level3">
+<h3 class="anchored" data-anchor-id="unit-2">Unit 2</h3>
+<p>Unit 2 mostly focuses on objects, classes, methods, and constructors.</p>
+<p>In order to use the data you need to first create a class. In this class, you can then create objects and methods to access the data.</p>
+<p>An object is a reference type and can be used to access data. A constructor makes data that is stored in an object. For example, I can make a car object and create a constructor that includes different characteristics of the car such as its brand, color, price, and milage.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Car <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> brand<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> color<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> price<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> mileage<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Car</span><span class="op">(</span><span class="bu">String</span> brand<span class="op">,</span> <span class="bu">String</span> color<span class="op">,</span> <span class="dt">double</span> price<span class="op">,</span> <span class="dt">double</span> mileage<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">brand</span> <span class="op">=</span> brand<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">color</span> <span class="op">=</span> color<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">price</span> <span class="op">=</span> price<span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mileage</span> <span class="op">=</span> mileage<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Getters and setters</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getBrand</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> brand<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setBrand</span><span class="op">(</span><span class="bu">String</span> brand<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">brand</span> <span class="op">=</span> brand<span class="op">;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getColor</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> color<span class="op">;</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setColor</span><span class="op">(</span><span class="bu">String</span> color<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">color</span> <span class="op">=</span> color<span class="op">;</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getPrice</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> price<span class="op">;</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setPrice</span><span class="op">(</span><span class="dt">double</span> price<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">price</span> <span class="op">=</span> price<span class="op">;</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getMileage</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> mileage<span class="op">;</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setMileage</span><span class="op">(</span><span class="dt">double</span> mileage<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mileage</span> <span class="op">=</span> mileage<span class="op">;</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Getters and setters use to manipulate the variables. Getters retrieve the variables and setters set the variable.</p>
+<p>You can also use methods to make the object perform certain actions. The method includes the scope which indicates if it is public or private allowing other classes/objects to access it or not. There is also the return type. Void does not return any data. Next is the name of the method which usually describes its action. The parameters include what variables are included in the method. Finally, the body actually performs the action.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/iriisyang/Iris-Yang/blob/master/images/method.png?raw=true" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">This is an image</figcaption><p></p>
+</figure>
+</div>
+<p>The method can compare the price of two cars for example. You can create code that outputs the cheaper car when entering the name of the two cars.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Car <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> price<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Car</span><span class="op">(</span><span class="bu">String</span> name<span class="op">,</span> <span class="dt">double</span> price<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">name</span> <span class="op">=</span> name<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">price</span> <span class="op">=</span> price<span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getName</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> name<span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getPrice</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> price<span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="bu">String</span> <span class="fu">cheaperCar</span><span class="op">(</span><span class="bu">String</span> car1Name<span class="op">,</span> <span class="dt">double</span> car1Price<span class="op">,</span> <span class="bu">String</span> car2Name<span class="op">,</span> <span class="dt">double</span> car2Price<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        Car car1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span>car1Name<span class="op">,</span> car1Price<span class="op">);</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        Car car2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span>car2Name<span class="op">,</span> car2Price<span class="op">);</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>car1<span class="op">.</span><span class="fu">getPrice</span><span class="op">()</span> <span class="op">&lt;</span> car2<span class="op">.</span><span class="fu">getPrice</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> car1<span class="op">.</span><span class="fu">getName</span><span class="op">();</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> car2<span class="op">.</span><span class="fu">getName</span><span class="op">();</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> cheaperCarName <span class="op">=</span> <span class="fu">cheaperCar</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="fl">20000.0</span><span class="op">,</span> <span class="st">"Honda"</span><span class="op">,</span> <span class="fl">25000.0</span><span class="op">);</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The cheaper car is: "</span> <span class="op">+</span> cheaperCarName<span class="op">);</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>It is also important to learn about the math classes. They perform common mathematical functions such as absolute value, exponent power, square root, random number generation, etc.</p>
+<p>If acceleration is an important factor in deciding which car you want, absolute value may be important. The car can constantly display your acceleration speed no mater if you are going forward or backward.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Acceleration <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> velocity1 <span class="op">=</span> <span class="fl">10.0</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> velocity2 <span class="op">=</span> <span class="fl">5.0</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> time <span class="op">=</span> <span class="fl">2.0</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Calculate acceleration using absolute value</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> acceleration <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span><span class="op">((</span>velocity2 <span class="op">-</span> velocity1<span class="op">)</span> <span class="op">/</span> time<span class="op">);</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The acceleration is "</span> <span class="op">+</span> acceleration<span class="op">);</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Maybe there is a whole registry of cars and you do not want to search though each one. Use the random function to randomly display a car and its characteristics to see if it is the right fit.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Random</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CarRegistry <span class="op">{</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Define car registry</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span><span class="op">[]</span> make <span class="op">=</span> <span class="op">{</span><span class="st">"Honda"</span><span class="op">,</span> <span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Ford"</span><span class="op">,</span> <span class="st">"Chevrolet"</span><span class="op">,</span> <span class="st">"BMW"</span><span class="op">};</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span><span class="op">[]</span> model <span class="op">=</span> <span class="op">{</span><span class="st">"Civic"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">,</span> <span class="st">"F-150"</span><span class="op">,</span> <span class="st">"Silverado"</span><span class="op">,</span> <span class="st">"X5"</span><span class="op">};</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span><span class="op">[]</span> year <span class="op">=</span> <span class="op">{</span><span class="dv">2015</span><span class="op">,</span> <span class="dv">2016</span><span class="op">,</span> <span class="dv">2017</span><span class="op">,</span> <span class="dv">2018</span><span class="op">,</span> <span class="dv">2019</span><span class="op">,</span> <span class="dv">2020</span><span class="op">};</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span><span class="op">[]</span> price <span class="op">=</span> <span class="op">{</span><span class="fl">15000.0</span><span class="op">,</span> <span class="fl">20000.0</span><span class="op">,</span> <span class="fl">25000.0</span><span class="op">,</span> <span class="fl">30000.0</span><span class="op">,</span> <span class="fl">35000.0</span><span class="op">,</span> <span class="fl">40000.0</span><span class="op">};</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Select a random car from the registry</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Random</span> rand <span class="op">=</span> <span class="kw">new</span> <span class="bu">Random</span><span class="op">();</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> index <span class="op">=</span> rand<span class="op">.</span><span class="fu">nextInt</span><span class="op">(</span>make<span class="op">.</span><span class="fu">length</span><span class="op">);</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> selectedMake <span class="op">=</span> make<span class="op">[</span>index<span class="op">];</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> selectedModel <span class="op">=</span> model<span class="op">[</span>index<span class="op">];</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> selectedYear <span class="op">=</span> year<span class="op">[</span>rand<span class="op">.</span><span class="fu">nextInt</span><span class="op">(</span>year<span class="op">.</span><span class="fu">length</span><span class="op">)];</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> selectedPrice <span class="op">=</span> price<span class="op">[</span>rand<span class="op">.</span><span class="fu">nextInt</span><span class="op">(</span>price<span class="op">.</span><span class="fu">length</span><span class="op">)];</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Display the selected car and its characteristics</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Selected Car: "</span> <span class="op">+</span> selectedMake <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> selectedModel<span class="op">);</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Year: "</span> <span class="op">+</span> selectedYear<span class="op">);</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Price: $"</span> <span class="op">+</span> selectedPrice<span class="op">);</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="hack-2" class="level2">
+<h2 class="anchored" data-anchor-id="hack-2">Hack 2</h2>
+<p>Create a class named “Car” with the following attributes:</p>
+<p>make (String) model (String) year (int) price (double) isUsed (boolean) Create a constructor that initializes all of these attributes.</p>
+<p>Create a method named “printCarDetails()” that prints out all of the attributes of the car.</p>
+<p>In the main method, create an array of three cars with the following details:</p>
+<p>Car 1: Make = “Toyota”, Model = “Corolla”, Year = 2022, Price = 24999.99, isUsed = false Car 2: Make = “Honda”, Model = “Accord”, Year = 2018, Price = 18999.99, isUsed = true Car 3: Make = “Ford”, Model = “Mustang”, Year = 2020, Price = 34999.99, isUsed = true Loop through the array and print out the details of each car using the “printCarDetails()” method.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Car <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// create constructor</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">printCarDetails</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="co">// method to print car details</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isEngineRunning <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> speed <span class="op">=</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isSpeedAboveThreshold <span class="op">=</span> speed <span class="op">&gt;</span> <span class="dv">50</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>isEngineRunning <span class="op">&amp;&amp;</span> isSpeedAboveThreshold<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is moving fast!"</span><span class="op">);</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is not moving fast."</span><span class="op">);</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>In Java, we can use boolean operators like &amp;&amp; (and), || (or), and ! (not) to create compound boolean expressions that combine multiple conditions. These operators allow us to create more complex conditions for making decisions in our code.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">boolean</span> isEngineRunning <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="dt">int</span> speed <span class="op">=</span> <span class="dv">60</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="dt">boolean</span> isSpeedAboveThreshold <span class="op">=</span> speed <span class="op">&gt;</span> <span class="dv">50</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="dt">boolean</span> isEmergencyBrakeApplied <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">// compound boolean</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="cf">if</span> <span class="op">(</span>isEngineRunning <span class="op">&amp;&amp;</span> <span class="op">(</span>isSpeedAboveThreshold <span class="op">||</span> isEmergencyBrakeApplied<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is in an emergency situation!"</span><span class="op">);</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is in a normal situation."</span><span class="op">);</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isEngineRunning <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> speed <span class="op">=</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isSpeedAboveThreshold <span class="op">=</span> speed <span class="op">&gt;</span> <span class="dv">50</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isEmergencyBrakeApplied <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">// compound boolean</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>isEngineRunning <span class="op">&amp;&amp;</span> <span class="op">(</span>isSpeedAboveThreshold <span class="op">||</span> isEmergencyBrakeApplied<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is in an emergency situation!"</span><span class="op">);</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is in a normal situation."</span><span class="op">);</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>One common use of boolean expressions is in if statements, which allow us to execute different blocks of code depending on whether a condition is true or false. For example, we can use an if statement to check if a car’s engine is running, and if it is, we can perform actions like accelerating or decelerating the car.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">boolean</span> isEngineRunning <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">if</span> <span class="op">(</span>isEngineRunning<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The engine is running"</span><span class="op">);</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car's engine is not running."</span><span class="op">)</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> isEngineRunning <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>isEngineRunning<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The engine is running"</span><span class="op">);</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car's engine is not running."</span><span class="op">)</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>We can also use if-else statements to specify different blocks of code to be executed when a condition is true or false. This allows us to handle both cases in our code. For example, we can use an if-else statement to check if a car’s speed is above a certain limit, and if it is, we can display a warning message.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> speed <span class="op">=</span> <span class="dv">80</span><span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="dt">int</span> speedLimit <span class="op">=</span> <span class="dv">60</span><span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="cf">if</span> <span class="op">(</span>speed <span class="op">&gt;</span> speedLimit<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Warning: you are above the speed limit!"</span><span class="op">);</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"You are below the speed limit"</span><span class="op">);</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> speed <span class="op">=</span> <span class="dv">80</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> speedLimit <span class="op">=</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>speed <span class="op">&gt;</span> speedLimit<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Warning: you are above the speed limit!"</span><span class="op">);</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"You are below the speed limit"</span><span class="op">);</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Another expression that we can use is else-if statements in Java to check multiple conditions sequentially until one of them is true. This allows us to handle different cases in our code. For example, we can use else-if statements to check the weather condition and adjust the car’s driving mode accordingly.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">String</span> weather <span class="op">=</span> <span class="st">"rainy"</span><span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">int</span> visibility <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="cf">if</span> <span class="op">(</span>weather<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"sunny"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in normal mode."</span><span class="op">);</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>weather<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"rainy"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> visibility <span class="op">&lt;</span> <span class="dv">50</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in slow mode due to low visibility."</span><span class="op">);</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>weather<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"snowy"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in snow mode."</span><span class="op">);</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in normal mode."</span><span class="op">);</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> weather <span class="op">=</span> <span class="st">"rainy"</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> visibility <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>weather<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"sunny"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in normal mode."</span><span class="op">);</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>weather<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"rainy"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> visibility <span class="op">&lt;</span> <span class="dv">50</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in slow mode due to low visibility."</span><span class="op">);</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>weather<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"snowy"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in snow mode."</span><span class="op">);</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Driving in normal mode."</span><span class="op">);</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>It’s important to note that equivalent boolean expressions can be used interchangeably in our code. For example, we can use == or .equals() to compare objects of certain types, such as strings or other objects, in our boolean expressions.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">String</span> carMake <span class="op">=</span> <span class="st">"Toyota"</span><span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">String</span> carModel <span class="op">=</span> <span class="st">"Camry"</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="cf">if</span> <span class="op">(</span>carMake<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> carModel <span class="op">==</span> <span class="st">"Camry"</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is a Toyota Camry."</span><span class="op">);</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is not a Toyota Camry."</span><span class="op">);</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> carMake <span class="op">=</span> <span class="st">"Toyota"</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> carModel <span class="op">=</span> <span class="st">"Camry"</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>carMake<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> carModel <span class="op">==</span> <span class="st">"Camry"</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is a Toyota Camry."</span><span class="op">);</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"The car is not a Toyota Camry."</span><span class="op">);</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Lastly, we can use object comparison to compare objects based on their references. In Java, objects are compared using the == operator, which compares the memory addresses of the objects. For example, we can use object comparison to check if two cars are the same object or not.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1"></a>Car car1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">);</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>Car car2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">);</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="cf">if</span> <span class="op">(</span>car1 <span class="op">==</span> car2<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 and car2 are the same object."</span><span class="op">);</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 and car2 are different objects."</span><span class="op">);</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Car car1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">);</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Car car2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">);</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>car1 <span class="op">==</span> car2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 and car2 are the same object."</span><span class="op">);</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 and car2 are different objects."</span><span class="op">);</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>You can also use the equals method which is denoted by equals() to compare two objects.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="co">// Create two Car objects</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>    Car car1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">,</span> <span class="dv">2020</span><span class="op">);</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>    Car car2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">,</span> <span class="dv">2020</span><span class="op">);</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a>    <span class="co">// Compare using equals() method</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>    <span class="cf">if</span> <span class="op">(</span>car1<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>car2<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 is equal to car2"</span><span class="op">);</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 is not equal to car2"</span><span class="op">);</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>    <span class="op">}</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Create two Car objects</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    Car car1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">,</span> <span class="dv">2020</span><span class="op">);</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    Car car2 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Car</span><span class="op">(</span><span class="st">"Toyota"</span><span class="op">,</span> <span class="st">"Camry"</span><span class="op">,</span> <span class="dv">2020</span><span class="op">);</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Compare using equals() method</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>car1<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>car2<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 is equal to car2"</span><span class="op">);</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"car1 is not equal to car2"</span><span class="op">);</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Key to note is the use of truth tables. Oftentimes, if you want to visualize the possible outcomes of different combinations of boolean values and logical operators, and use them to evaluate the overall result of a boolean expression.</p>
+</section>
 <section id="hack-3" class="level2">
 <h2 class="anchored" data-anchor-id="hack-3">Hack 3:</h2>
 <ol type="1">
@@ -325,81 +585,95 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Otherwise, print “The car is an affordable car.”</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">public</span> <span class="kw">class</span> Car <span class="op">{</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>    <span class="kw">private</span> <span class="bu">String</span> make<span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>    <span class="kw">private</span> <span class="bu">String</span> model<span class="op">;</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="kw">private</span> <span class="dt">int</span> year<span class="op">;</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="kw">private</span> <span class="dt">double</span> price<span class="op">;</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>    </span>
-<span id="cb9-7"><a href="#cb9-7"></a>    <span class="co">// Constructor</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a>    <span class="kw">public</span> <span class="fu">Car</span><span class="op">(</span><span class="bu">String</span> make<span class="op">,</span> <span class="bu">String</span> model<span class="op">,</span> <span class="dt">int</span> year<span class="op">,</span> <span class="dt">double</span> price<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb9-9"><a href="#cb9-9"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">make</span> <span class="op">=</span> make<span class="op">;</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">model</span> <span class="op">=</span> model<span class="op">;</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">year</span> <span class="op">=</span> year<span class="op">;</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">price</span> <span class="op">=</span> price<span class="op">;</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a>    <span class="op">}</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a>    </span>
-<span id="cb9-15"><a href="#cb9-15"></a>    <span class="co">// Getter methods</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getMake</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a>        <span class="cf">return</span> make<span class="op">;</span></span>
-<span id="cb9-18"><a href="#cb9-18"></a>    <span class="op">}</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a>    </span>
-<span id="cb9-20"><a href="#cb9-20"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getModel</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a>        <span class="cf">return</span> model<span class="op">;</span></span>
-<span id="cb9-22"><a href="#cb9-22"></a>    <span class="op">}</span></span>
-<span id="cb9-23"><a href="#cb9-23"></a>    </span>
-<span id="cb9-24"><a href="#cb9-24"></a>    <span class="kw">public</span> <span class="dt">int</span> <span class="fu">getYear</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb9-25"><a href="#cb9-25"></a>        <span class="cf">return</span> year<span class="op">;</span></span>
-<span id="cb9-26"><a href="#cb9-26"></a>    <span class="op">}</span></span>
-<span id="cb9-27"><a href="#cb9-27"></a>    </span>
-<span id="cb9-28"><a href="#cb9-28"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getPrice</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb9-29"><a href="#cb9-29"></a>        <span class="cf">return</span> price<span class="op">;</span></span>
-<span id="cb9-30"><a href="#cb9-30"></a>    <span class="op">}</span></span>
-<span id="cb9-31"><a href="#cb9-31"></a>    </span>
-<span id="cb9-32"><a href="#cb9-32"></a>    <span class="co">// Method to determine if the car is affordable or not</span></span>
-<span id="cb9-33"><a href="#cb9-33"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isAffordable</span><span class="op">(</span><span class="dt">double</span> budget<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb9-34"><a href="#cb9-34"></a>        <span class="cf">if</span> <span class="op">(</span>price <span class="op">&lt;=</span> budget<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb9-35"><a href="#cb9-35"></a>            <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb9-36"><a href="#cb9-36"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb9-37"><a href="#cb9-37"></a>            <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb9-38"><a href="#cb9-38"></a>        <span class="op">}</span></span>
-<span id="cb9-39"><a href="#cb9-39"></a>    <span class="op">}</span></span>
-<span id="cb9-40"><a href="#cb9-40"></a>    </span>
-<span id="cb9-41"><a href="#cb9-41"></a>    <span class="co">// Main method</span></span>
-<span id="cb9-42"><a href="#cb9-42"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb9-43"><a href="#cb9-43"></a>        <span class="co">// Create a new Car object</span></span>
-<span id="cb9-44"><a href="#cb9-44"></a></span>
-<span id="cb9-45"><a href="#cb9-45"></a>        <span class="co">// Print the car details</span></span>
-<span id="cb9-46"><a href="#cb9-46"></a>        </span>
-<span id="cb9-47"><a href="#cb9-47"></a>        <span class="co">// Check if the car is affordable with a budget of $20000 using an if-else statement</span></span>
-<span id="cb9-48"><a href="#cb9-48"></a>       </span>
-<span id="cb9-49"><a href="#cb9-49"></a>        <span class="co">// Check if the car is a luxury car based on its price using if-else-if statement</span></span>
-<span id="cb9-50"><a href="#cb9-50"></a>    </span>
-<span id="cb9-51"><a href="#cb9-51"></a>    <span class="op">}</span></span>
-<span id="cb9-52"><a href="#cb9-52"></a><span class="op">}</span></span>
-<span id="cb9-53"><a href="#cb9-53"></a>Car<span class="op">.</span><span class="fu">main</span><span class="op">(</span><span class="kw">null</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Car <span class="op">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> make<span class="op">;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> model<span class="op">;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> year<span class="op">;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">double</span> price<span class="op">;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Constructor</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Car</span><span class="op">(</span><span class="bu">String</span> make<span class="op">,</span> <span class="bu">String</span> model<span class="op">,</span> <span class="dt">int</span> year<span class="op">,</span> <span class="dt">double</span> price<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">make</span> <span class="op">=</span> make<span class="op">;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">model</span> <span class="op">=</span> model<span class="op">;</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">year</span> <span class="op">=</span> year<span class="op">;</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">price</span> <span class="op">=</span> price<span class="op">;</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Getter methods</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getMake</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> make<span class="op">;</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getModel</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> model<span class="op">;</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">int</span> <span class="fu">getYear</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> year<span class="op">;</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">double</span> <span class="fu">getPrice</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> price<span class="op">;</span></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Method to determine if the car is affordable or not</span></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isAffordable</span><span class="op">(</span><span class="dt">double</span> budget<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>price <span class="op">&lt;=</span> budget<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Main method</span></span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Create a new Car object</span></span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Print the car details</span></span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Check if the car is affordable with a budget of $20000 using an if-else statement</span></span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Check if the car is a luxury car based on its price using if-else-if statement</span></span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>Car<span class="op">.</span><span class="fu">main</span><span class="op">(</span><span class="kw">null</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-</section>
 </section>
 <section id="unit-4" class="level1">
 <h1>Unit 4</h1>
 <p>Now imagine you’re a car mechanic, and you have a long list of cars waiting to be fixed. Instead of manually fixing each car one by one, you want to use a loop to efficiently go through the list. This is where a while loop comes in handy. A while loop is used when you want to repeat a block of code as long as a certain condition is true. For example, you can use a while loop to fix cars in your list until there are no more cars left.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Some issues with while loops is that if the loop condition is always true, the loop will never exit and you’ll have an infinite loop. This can easily crash a computer server and should be avoided. On the other hand, if the loop conditions are always false, then the loop will never run and the body is skipped. This leads to inefficiencies and larger code file sizes than necessary.</p>
 <p>Break and continue statements help loops. Break statement will help immediately exit out of the loop. Continue statement jumps to the next iteration.</p>
 <p>There’s also try-catch staetment blocks and excepion throwing. Exceptions are signs that something is wrong with the code at runtime and the try-catch statements helps keep the program from crashing. The program tries to run the code assuming it works in the try block and if it catches an exception, it moves to the catch block. Then, there is a finally block that runs afterwards no matter what the try or catch blocks say.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Now, let’s say you have a different list of cars, and you know exactly how many cars are in the list. You want to iterate through the list a specific number of times to perform a certain task on each car. This is where a for loop can be very useful. A common example is often fibbonaci’s numbers.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Sometimes, you may need to perform a task that requires multiple levels of iteration. For example, imagine you’re a car dealer, and you have a list of cars with different makes and models. You want to go through each make and model combination to perform some operations. This is where nested iteration comes into play. Nested iteration is when you have one or more loops inside another loop. You can use nested while or for loops to iterate through multiple levels of data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>code block</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 
 
@@ -433,23 +707,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -514,92 +774,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
