@@ -8,10 +8,22 @@ website:
     left:
       - href: index.html
         text: Home
-      - /pages/about.qmd
+      - href: ../pages/about.html
+        text: About ABopsC
+      - href: ../pages/scavenger.html
+        text: Scavenger Hunt
+      - href: ../pages/lesson.html
+        text: Lesson
+      - href: ../pages/labs.html
+        text: Labs
+      - href: ../pages/scoring.html
+        text: Scores
     right:
-      - href: userControl.md
+      - href: ../pages/userControl.html
         text: Account
+
+    margin-footer: |
+      yeah
 
 format:
   html:

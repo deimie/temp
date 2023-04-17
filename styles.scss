@@ -12,8 +12,12 @@ body {
     background-color:$primary;
 }
 
+a {
+    text-decoration: none;
+}
+
 .navbar {
-    background-color:$secondary;
+    background-color:rgba($secondary,.7);
 }
 
 h1,h2,h3,h4,h5 {
@@ -27,7 +31,7 @@ p, span, td, th, li, ul, input, div {
 }
 
 .indexBackground {
-    background-image:linear-gradient(to bottom right, #060b69, lighten($primary,2),purple);
+    background-image:linear-gradient(to bottom right, #060b69, lighten($primary,2),#401540);
 }
 input {
     background: none;
