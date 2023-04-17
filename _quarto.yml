@@ -13,6 +13,6 @@ website:
 format:
   html:
     theme: 
+      - flatly
       - styles.scss
-      
-minimal_mistakes_skin: "dark"
+

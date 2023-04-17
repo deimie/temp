@@ -16,5 +16,23 @@
   },
   "test.ipynb": {
     "test.html": "856e7ffe"
+  },
+  "pages/quiz.qmd": {
+    "quiz.html": "1aee9bca"
+  },
+  "pages/lesson.md": {
+    "lesson.html": "906a8330"
+  },
+  "pages/lesson.qmd": {
+    "lesson.html": "081c9e73"
+  },
+  "pages/lesson.ipynb": {
+    "lesson.html": "3891b391"
+  },
+  "pages/scoring.md": {
+    "scoring.html": "e1ef89d7"
+  },
+  "pages/labs.md": {
+    "labs.html": "cf360b27"
   }
 }
