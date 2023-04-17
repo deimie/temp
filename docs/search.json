@@ -53,7 +53,7 @@
     "href": "pages/userControl.html",
     "title": "ABopsC",
     "section": "",
-    "text": "{% include login.html %} {% include signup.html %}"
+    "text": "{<>% include login.html %} {% include signup.html %}"
   },
   {
     "objectID": "pages/lesson.html",

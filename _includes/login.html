@@ -1,0 +1,141 @@
+<div id="login" class="userAuth">
+    <h1>Login</h1>
+    <table>
+        <div id="loggedOut">
+            <tr>
+                <th>Username</th>
+                <th><input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username..."></th>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <th><input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password..."></th>
+            </tr>
+            <tr>
+                <th><button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button></th>
+            </tr>
+    
+            <tr>
+                <th> Or <a onclick="signUpPage()">sign up</a> instead.</th>
+            </tr>
+        </div>
+        <div id="loggedIn">
+            <tr>
+                <th><button class="btn" type="submit" onclick="logout()">Logout</button></th>
+            </tr>
+        </div>
+
+    </table>
+</div>
+
+<script>
+
+
+if (sessionStorage.getItem("authorized")) {
+    document.getElementById("loggedIn").style.display = "hidden";
+    document.getElementById("loggedOut").style.visibility = "visible";
+}
+
+else {
+    document.getElementById("loggedIn").style.visibility = "visible";
+    document.getElementById("loggedOut").style.display = "hidden";
+}
+    // show login, hide signup
+function signUpPage() {
+    document.getElementById("signup").style.display = "";
+    document.getElementById("login").style.display = "none";
+}
+
+function login_user() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("pswd").value;
+
+  console.log(username);
+  console.log(password);
+
+  const url = "https://abopsc-backend.dontntntnt.de/authenticate/";
+  
+  const options = {
+    method: 'POST', 
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'include', // include, *same-origin, omit
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        email : document.getElementById("username").value,
+        password : document.getElementById("pswd").value,
+    })
+  };
+
+
+  // Fetch JWT
+  fetch(url, options)
+  .then(response => {
+      // trap error response from Web API
+      if (!response.ok) {
+          const errorMsg = 'Login error: ' + response.status;
+          console.log(errorMsg);
+          return; 
+      }
+      // Success!!!
+      // Redirect to Database location
+
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+
+      fetch("https://abopsc-backend.dontntntnt.de/api/person/getPersonName?email=" + username, requestOptions)
+        .then(response => response.text())
+        .then(text => {
+          console.log(text);
+          sessionStorage.setItem("email", username);
+          sessionStorage.setItem("username", text);
+          
+          window.location.href = "{{site.baseurl}}/";
+        })
+        .catch(error => console.log('error', error));
+
+        let authorized = false;
+
+        fetch('https://abopsc-backend.dontntntnt.de/api/person/getPersonRoles?email=' + username, requestOptions)
+            .then(response => response.json())
+            .then(data => {
+            for (const item of data) {
+                console.log(item["name"]);
+                if (item["name"] == "ROLE_ADMIN" || item["name"] == "ROLE_USER") {
+                    authorized = true;
+                }
+            }
+            sessionStorage.setItem("authorized", authorized);
+
+            console.log(authorized);
+
+
+            if (authorized) {
+                document.getElementById("admin").style.display = "block";
+            }
+
+            else {
+                document.getElementById("admin").style.display = "none";
+            }
+            
+
+            })
+            .catch(error => console.error(error));
+      
+  })
+
+}
+
+function logout() {
+  document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  sessionStorage.setItem("username", "Guest");
+  sessionStorage.setItem("email", null);
+  sessionStorage.setItem("authorized", false);
+  window.location.reload();
+
+}
+
+</script>

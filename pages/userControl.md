@@ -3,7 +3,7 @@ layout: single
 permalink: /userControl/
 ---
 
-{% include login.html %}
+{<>% include login.html %}
 {% include signup.html %}
 
 <style>
