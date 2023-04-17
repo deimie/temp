@@ -3,9 +3,8 @@ layout: single
 permalink: /userControl/
 ---
 
-{<>% include login.html %}
-{% include signup.html %}
-
+{{< include ../_includes/login.html >}}
+{{< include ../_includes/signup.html >}}
 <style>
     .userAuth {
         border-radius:10px;

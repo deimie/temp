@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.326">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -73,21 +73,23 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">ABopsC</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/about.html">
+    <a class="nav-link" href="../pages/about.html" rel="" target="">
  <span class="menu-text">About ABopsC</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -102,7 +104,244 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>{&lt;&gt;% include login.html %} {% include signup.html %}</p>
+
+<div id="login" class="userAuth">
+<pre><code>&lt;h1&gt;Login&lt;/h1&gt;
+
+&lt;table&gt;
+    &lt;div id="loggedOut"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+            &lt;th&gt;&lt;input autocomplete="off" type="email" id="username" name="username"
+                    placeholder="enter your username..."&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Password&lt;/th&gt;
+            &lt;th&gt;&lt;input autocomplete="off" type="password" id="pswd" name="pswd"
+                    placeholder="enter your password..."&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;button class="btn" type="submit" value="Submit" onclick="login_user()"&gt;Submit&lt;/button&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;th&gt; Or &lt;a onclick="signUpPage()"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/div&gt;
+    &lt;div id="loggedIn"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;button class="btn" type="submit" onclick="logout()"&gt;Logout&lt;/button&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/div&gt;
+
+&lt;/table&gt;</code></pre>
+</div>
+
+<script>
+
+
+if (sessionStorage.getItem("authorized")) {
+        document.getElementById("loggedIn").style.display = "hidden";
+        document.getElementById("loggedOut").style.visibility = "visible";
+    }
+
+    else {
+        document.getElementById("loggedIn").style.visibility = "visible";
+        document.getElementById("loggedOut").style.display = "hidden";
+    }
+    // show signup, hide login
+    function signUpPage() {
+        document.getElementById("signup").style.display = "";
+        document.getElementById("login").style.display = "none";
+    }
+
+    function login_user() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("pswd").value;
+
+        console.log(username);
+        console.log(password);
+
+        const url = "https://abopsc-backend.dontntntnt.de/authenticate/";
+
+        const options = {
+            method: 'POST',
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'include', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: document.getElementById("username").value,
+                password: document.getElementById("pswd").value,
+            })
+        };
+
+
+        // Fetch JWT
+        fetch(url, options)
+            .then(response => {
+                // trap error response from Web API
+                if (!response.ok) {
+                    const errorMsg = 'Login error: ' + response.status;
+                    console.log(errorMsg);
+                    return;
+                }
+                // Success!!!
+                // Redirect to Database location
+
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                };
+
+                fetch("https://abopsc-backend.dontntntnt.de/api/person/getPersonName?email=" + username, requestOptions)
+                    .then(response => response.text())
+                    .then(text => {
+                        console.log(text);
+                        sessionStorage.setItem("email", username);
+                        sessionStorage.setItem("username", text);
+
+                        window.location.href = "{{site.baseurl}}/";
+                    })
+                    .catch(error => console.log('error', error));
+
+                let authorized = false;
+
+                fetch('https://abopsc-backend.dontntntnt.de/api/person/getPersonRoles?email=' + username, requestOptions)
+                    .then(response => response.json())
+                    .then(data => {
+                        for (const item of data) {
+                            console.log(item["name"]);
+                            if (item["name"] == "ROLE_ADMIN" || item["name"] == "ROLE_USER") {
+                                authorized = true;
+                            }
+                        }
+                        sessionStorage.setItem("authorized", authorized);
+
+                        console.log(authorized);
+
+
+                        if (authorized) {
+                            document.getElementById("admin").style.display = "block";
+                        }
+
+                        else {
+                            document.getElementById("admin").style.display = "none";
+                        }
+
+
+                    })
+                    .catch(error => console.error(error));
+
+            })
+
+    }
+
+    function logout() {
+        document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        sessionStorage.setItem("username", "Guest");
+        sessionStorage.setItem("email", null);
+        sessionStorage.setItem("authorized", false);
+        window.location.reload();
+
+    }
+
+</script>
+<div id="signup" class="userAuth" style="display:none">
+<pre><code>&lt;h1&gt;Sign Up&lt;/h1&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;First Name&lt;/th&gt;
+        &lt;th&gt;&lt;input type="text" id="fname" name="fname" placeholder="enter your first name..."&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;th&gt;&lt;input type="text" id="lname" name="lname" placeholder="enter your last name..."&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Username&lt;/th&gt;
+        &lt;th&gt;&lt;input type="text" id="username" name="username" placeholder="enter a username..."&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Password&lt;/th&gt;
+        &lt;th&gt;&lt;input type="password" id="pswd" name="pswd" placeholder="enter a password..."&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Confirm Password&lt;/th&gt;
+        &lt;th&gt;&lt;input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password..."&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;button class="btn" type="submit" value="Submit" onclick="checkFields()"&gt;Submit&lt;/button&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt; Or &lt;a onclick="loginPage()"&gt;login&lt;/a&gt; instead.&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<script>
+    // show login, hide signup
+    function loginPage() {
+        document.getElementById("signup").style.display = "none";
+        document.getElementById("login").style.display = "";
+    }
+
+    // Replace with domain and api call of backend
+    url = ""
+
+    function checkFields() {
+        if(document.getElementById("password").value == document.getElementById("passwordagain").value) {
+            alert("they match");
+        }
+    }
+
+    function signup_user() {
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("pswd").value;
+
+        const url = "https://abopsc-backend.dontntntnt.de/authenticate";
+        
+        const options = {
+            method: 'POST', 
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'include', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "fname"    : fname,
+                "lname"    : lname,
+                "username" : username,
+                "password" : password
+            })
+        };
+
+
+        // Fetch JWT
+        fetch(url, options)
+        .then(response => {
+            // trap error response from Web API
+            if (!response.ok) {
+                const errorMsg = 'Login error: ' + response.status;
+                console.log(errorMsg);
+                return; 
+            }
+            // Success!!!
+            // Redirect to Database location
+
+            var requestOptions = {
+                method: 'GET',
+                redirect: 'follow'
+            };
+            
+        })
+
+    }
+</script>
 <style>
     .userAuth {
         border-radius:10px;
@@ -141,9 +380,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -208,6 +461,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
