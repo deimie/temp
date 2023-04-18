@@ -109,35 +109,35 @@
     "href": "pages/scavenger.html#question-1",
     "title": "Scavenger Hunt",
     "section": "Question 1",
-    "text": "Question 1\n\nint x = 56/10*5*4;\nif (x<10) {\n    System.out.println(\"extra credit\");\n}\nelse if (x<= 50){\n    System.out.println(\"apple\");\n}\nelse if (x > 50 &&  x <= 100){\n    System.out.println(\"candy\");\n}\nelse if (x > 100 &&  x <= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x > 115 &&  x <= 150){\n    System.out.println(\"dinero\");\n}"
+    "text": "Question 1\n\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\");\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\");\n}\nelse {\n    System.out.print(\"in\");\n}\n\n\nVariables x and y are initialized with boolean values: x is true and y is false.\nFirst conditional statement is evaluated. The expression !(x||y) evaluates to false, and the expression (x && y) evaluates to false as well. - Therefore, the first conditional statement does not execute.\nThe second conditional statement is evaluated. The expression !(x&&y) evaluates to true, and the expression (x || y) evaluates to true.\nCode prints “under”."
   },
   {
     "objectID": "pages/scavenger.html#question-2",
     "href": "pages/scavenger.html#question-2",
     "title": "Scavenger Hunt",
     "section": "Question 2",
-    "text": "Question 2\n\npublic class Q2 {\n    public static void main(String[] args) {\n        String[] words = {\"also\", \"plus\", \"is\", \"for\", \"and\"};\n\n        String first = words[0]; // initialize with the first word\n\n        for (int i = 1; i < words.length; i++) {\n            if (words[i].length() < first.length()) {\n                first = words[i]; // update shortestWord if a shorter word is found\n            }\n        }\n\n        System.out.println(first);\n    }\n}\nQ2.main(null);"
+    "text": "Question 2\n\nint x = 10;\nif (x*3 <= 30) {\n    x++;\n}\nif (x > 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\nA. 11 (chair)\nB. 15 (backpack)\nC. 31 (table)\nD. error (floor)\n\nx is initialized to 10.\nThe first if statement checks if x3 is less than or equal to 30. Since x3 is equal to 30, the condition is true and the code inside the if statement is executed.\nInside the if statement, x is incremented by 1, so it becomes 11.\nThe second if statement checks if x is greater than 31. Since x is equal to 11, the condition is false and the code inside the if statement is not executed.\nThe final value of x is printed, which is 11."
   },
   {
     "objectID": "pages/scavenger.html#question-3",
     "href": "pages/scavenger.html#question-3",
     "title": "Scavenger Hunt",
     "section": "Question 3",
-    "text": "Question 3\n\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\");\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\");\n}\nelse {\n    System.out.print(\"in\");\n}"
+    "text": "Question 3\n\npublic class Q3 {\n    public static void main(String[] args) {\n        String[] words = {\"hello\", \"world\", \"Java\", \"try\", \"catch\"};\n        String result = \"outside\";\n        for (String word : words) {\n            try {\n                // Attempt some code that might throw an exception\n                if (word.length() > 5) {\n                    break;\n                }\n            } catch (Exception e) {\n                // Catch any exception and change the result\n                result = \"inside\";\n            }\n        }\n        System.out.println(result);\n    }\n}\n\n\nAn array of strings named words is declared and initialized with 5 string values.\nA string variable named result is declared and initialized to the value “outside”.\nA for-each loop is used to iterate over each string in the words array.\nInside the loop, an if statement checks if the length of the current string is greater than 5. If it is, the break statement is executed and the loop is terminated.\nSince none of the strings in the array have a length greater than 5, the if statement is never triggered and the break statement is never executed.\nThe loop completes normally and the final value of result is printed to the console, which is “outside”."
   },
   {
     "objectID": "pages/scavenger.html#question-4",
     "href": "pages/scavenger.html#question-4",
     "title": "Scavenger Hunt",
     "section": "Question 4",
-    "text": "Question 4\n\nint x = 10;\nif (x*3 <= 30) {\n    x++;\n}\nif (x > 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\nA. 11 (chair)\nB. 15 (backpack)\nC. 31 (table)\nD. error (floor)"
+    "text": "Question 4\n\npublic class Q4 {\n    public static void main(String[] args) {\n        String[] words = {\"also\", \"plus\", \"is\", \"for\", \"and\"};\n\n        String first = words[0]; // initialize with the first word\n\n        for (int i = 1; i < words.length; i++) {\n            if (words[i].length() < first.length()) {\n                first = words[i]; // update shortestWord if a shorter word is found\n            }\n        }\n\n        System.out.println(first);\n    }\n}\n\n\nAn array of strings named words is declared and initialized with 5 string values.\nA string variable named first is declared and initialized to the value of the first string in the words array, which is “also”.\nA for loop is used to iterate over each string in the words array starting from the second element (index 1).\nInside the loop, an if statement checks if the length of the current string is less than the length of the first string. If it is, the first variable is updated with the value of the current string.\nThe loop completes normally and the final value of first is printed to the console, which is “is” because it is the shortest word in the array."
   },
   {
     "objectID": "pages/scavenger.html#question-5",
     "href": "pages/scavenger.html#question-5",
     "title": "Scavenger Hunt",
     "section": "Question 5",
-    "text": "Question 5\n\npublic class Q5 {\n    public static void main(String[] args) {\n        String[] words = {\"hello\", \"world\", \"Java\", \"try\", \"catch\"};\n        String result = \"outside\";\n        for (String word : words) {\n            try {\n                // Attempt some code that might throw an exception\n                if (word.length() > 5) {\n                    break;\n                }\n            } catch (Exception e) {\n                // Catch any exception and change the result\n                result = \"inside\";\n            }\n        }\n        System.out.println(result);\n    }\n}"
+    "text": "Question 5\n\nint x = 56/10*5*4;\nif (x<10) {\n    System.out.println(\"extra credit\");\n}\nelse if (x<= 50){\n    System.out.println(\"apple\");\n}\nelse if (x > 50 &&  x <= 100){\n    System.out.println(\"candy\");\n}\nelse if (x > 100 &&  x <= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x > 115 &&  x <= 150){\n    System.out.println(\"dinero\");\n}\n\nIt follows the simple arithmetic expression. x = 112 which is between 50 and 100 so it prints candy."
   },
   {
     "objectID": "pages/quiz.html",

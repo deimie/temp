@@ -232,99 +232,127 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">56</span><span class="op">/</span><span class="dv">10</span><span class="op">*</span><span class="dv">5</span><span class="op">*</span><span class="dv">4</span><span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">if</span> <span class="op">(</span>x<span class="op">&lt;</span><span class="dv">10</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"extra credit"</span><span class="op">);</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">// x is true, y is false</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">if</span> <span class="op">(!(</span>x<span class="op">||</span>y<span class="op">)</span> <span class="op">||</span> <span class="op">(</span>x <span class="op">&amp;&amp;</span> y<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"on"</span><span class="op">);</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="op">}</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x<span class="op">&lt;=</span> <span class="dv">50</span><span class="op">){</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"apple"</span><span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="cf">if</span> <span class="op">(!(</span>x<span class="op">&amp;&amp;</span>y<span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>x <span class="op">||</span> y<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"under"</span><span class="op">);</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a><span class="op">}</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">50</span> <span class="op">&amp;&amp;</span>  x <span class="op">&lt;=</span> <span class="dv">100</span><span class="op">){</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"candy"</span><span class="op">);</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="op">}</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">100</span> <span class="op">&amp;&amp;</span>  x <span class="op">&lt;=</span> <span class="dv">115</span><span class="op">){</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"chocolate"</span><span class="op">);</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="op">}</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">115</span> <span class="op">&amp;&amp;</span>  x <span class="op">&lt;=</span> <span class="dv">150</span><span class="op">){</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"dinero"</span><span class="op">);</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"in"</span><span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>Variables x and y are initialized with boolean values: x is true and y is false.</li>
+<li>First conditional statement is evaluated. The expression !(x||y) evaluates to false, and the expression (x &amp;&amp; y) evaluates to false as well. - Therefore, the first conditional statement does not execute.</li>
+<li>The second conditional statement is evaluated. The expression !(x&amp;&amp;y) evaluates to true, and the expression (x || y) evaluates to true.</li>
+<li>Code prints “under”.</li>
+</ul>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
 <div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">public</span> <span class="kw">class</span> Q2 <span class="op">{</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>        <span class="bu">String</span><span class="op">[]</span> words <span class="op">=</span> <span class="op">{</span><span class="st">"also"</span><span class="op">,</span> <span class="st">"plus"</span><span class="op">,</span> <span class="st">"is"</span><span class="op">,</span> <span class="st">"for"</span><span class="op">,</span> <span class="st">"and"</span><span class="op">};</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a>        <span class="bu">String</span> first <span class="op">=</span> words<span class="op">[</span><span class="dv">0</span><span class="op">];</span> <span class="co">// initialize with the first word</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> words<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>            <span class="cf">if</span> <span class="op">(</span>words<span class="op">[</span>i<span class="op">].</span><span class="fu">length</span><span class="op">()</span> <span class="op">&lt;</span> first<span class="op">.</span><span class="fu">length</span><span class="op">())</span> <span class="op">{</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>                first <span class="op">=</span> words<span class="op">[</span>i<span class="op">];</span> <span class="co">// update shortestWord if a shorter word is found</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>            <span class="op">}</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>        <span class="op">}</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>first<span class="op">);</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>    <span class="op">}</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="op">}</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a>Q2<span class="op">.</span><span class="fu">main</span><span class="op">(</span><span class="kw">null</span><span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">// x is true, y is false</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">if</span> <span class="op">(!(</span>x<span class="op">||</span>y<span class="op">)</span> <span class="op">||</span> <span class="op">(</span>x <span class="op">&amp;&amp;</span> y<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"on"</span><span class="op">);</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="op">}</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="cf">if</span> <span class="op">(!(</span>x<span class="op">&amp;&amp;</span>y<span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>x <span class="op">||</span> y<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"under"</span><span class="op">);</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="op">}</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"in"</span><span class="op">);</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">if</span> <span class="op">(</span>x<span class="op">*</span><span class="dv">3</span> <span class="op">&lt;=</span> <span class="dv">30</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>    x<span class="op">++;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="op">}</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">31</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    x <span class="op">+=</span> <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="op">}</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span>x<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">if</span> <span class="op">(</span>x<span class="op">*</span><span class="dv">3</span> <span class="op">&lt;=</span> <span class="dv">30</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    x<span class="op">++;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="op">}</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">31</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    x <span class="op">+=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="op">}</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span>x<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A. 11 (chair)</p>
 <p>B. 15 (backpack)</p>
 <p>C. 31 (table)</p>
 <p>D. error (floor)</p>
+<ul>
+<li>x is initialized to 10.</li>
+<li>The first if statement checks if x<em>3 is less than or equal to 30. Since x</em>3 is equal to 30, the condition is true and the code inside the if statement is executed.</li>
+<li>Inside the if statement, x is incremented by 1, so it becomes 11.</li>
+<li>The second if statement checks if x is greater than 31. Since x is equal to 11, the condition is false and the code inside the if statement is not executed.</li>
+<li>The final value of x is printed, which is 11.</li>
+</ul>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">public</span> <span class="kw">class</span> Q3 <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>        <span class="bu">String</span><span class="op">[]</span> words <span class="op">=</span> <span class="op">{</span><span class="st">"hello"</span><span class="op">,</span> <span class="st">"world"</span><span class="op">,</span> <span class="st">"Java"</span><span class="op">,</span> <span class="st">"try"</span><span class="op">,</span> <span class="st">"catch"</span><span class="op">};</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>        <span class="bu">String</span> result <span class="op">=</span> <span class="st">"outside"</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>        <span class="cf">for</span> <span class="op">(</span><span class="bu">String</span> word <span class="op">:</span> words<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>            <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>                <span class="co">// Attempt some code that might throw an exception</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>                <span class="cf">if</span> <span class="op">(</span>word<span class="op">.</span><span class="fu">length</span><span class="op">()</span> <span class="op">&gt;</span> <span class="dv">5</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>                    <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>                <span class="op">}</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>            <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">Exception</span> e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>                <span class="co">// Catch any exception and change the result</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a>                result <span class="op">=</span> <span class="st">"inside"</span><span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>            <span class="op">}</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>        <span class="op">}</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>result<span class="op">);</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>    <span class="op">}</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>An array of strings named words is declared and initialized with 5 string values.</li>
+<li>A string variable named result is declared and initialized to the value “outside”.</li>
+<li>A for-each loop is used to iterate over each string in the words array.</li>
+<li>Inside the loop, an if statement checks if the length of the current string is greater than 5. If it is, the break statement is executed and the loop is terminated.</li>
+<li>Since none of the strings in the array have a length greater than 5, the if statement is never triggered and the break statement is never executed.</li>
+<li>The loop completes normally and the final value of result is printed to the console, which is “outside”.</li>
+</ul>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">public</span> <span class="kw">class</span> Q4 <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>        <span class="bu">String</span><span class="op">[]</span> words <span class="op">=</span> <span class="op">{</span><span class="st">"also"</span><span class="op">,</span> <span class="st">"plus"</span><span class="op">,</span> <span class="st">"is"</span><span class="op">,</span> <span class="st">"for"</span><span class="op">,</span> <span class="st">"and"</span><span class="op">};</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a>        <span class="bu">String</span> first <span class="op">=</span> words<span class="op">[</span><span class="dv">0</span><span class="op">];</span> <span class="co">// initialize with the first word</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> words<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>            <span class="cf">if</span> <span class="op">(</span>words<span class="op">[</span>i<span class="op">].</span><span class="fu">length</span><span class="op">()</span> <span class="op">&lt;</span> first<span class="op">.</span><span class="fu">length</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>                first <span class="op">=</span> words<span class="op">[</span>i<span class="op">];</span> <span class="co">// update shortestWord if a shorter word is found</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>            <span class="op">}</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>        <span class="op">}</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>first<span class="op">);</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="op">}</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>An array of strings named words is declared and initialized with 5 string values.</li>
+<li>A string variable named first is declared and initialized to the value of the first string in the words array, which is “also”.</li>
+<li>A for loop is used to iterate over each string in the words array starting from the second element (index 1).</li>
+<li>Inside the loop, an if statement checks if the length of the current string is less than the length of the first string. If it is, the first variable is updated with the value of the current string.</li>
+<li>The loop completes normally and the final value of first is printed to the console, which is “is” because it is the shortest word in the array.</li>
+</ul>
 </section>
 <section id="question-5" class="level2">
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
 <div class="cell" data-vscode="{&quot;languageId&quot;:&quot;java&quot;}">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">public</span> <span class="kw">class</span> Q5 <span class="op">{</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>        <span class="bu">String</span><span class="op">[]</span> words <span class="op">=</span> <span class="op">{</span><span class="st">"hello"</span><span class="op">,</span> <span class="st">"world"</span><span class="op">,</span> <span class="st">"Java"</span><span class="op">,</span> <span class="st">"try"</span><span class="op">,</span> <span class="st">"catch"</span><span class="op">};</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>        <span class="bu">String</span> result <span class="op">=</span> <span class="st">"outside"</span><span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>        <span class="cf">for</span> <span class="op">(</span><span class="bu">String</span> word <span class="op">:</span> words<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>            <span class="cf">try</span> <span class="op">{</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>                <span class="co">// Attempt some code that might throw an exception</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>                <span class="cf">if</span> <span class="op">(</span>word<span class="op">.</span><span class="fu">length</span><span class="op">()</span> <span class="op">&gt;</span> <span class="dv">5</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>                    <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>                <span class="op">}</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>            <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">Exception</span> e<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a>                <span class="co">// Catch any exception and change the result</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a>                result <span class="op">=</span> <span class="st">"inside"</span><span class="op">;</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>            <span class="op">}</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a>        <span class="op">}</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>result<span class="op">);</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a>    <span class="op">}</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">56</span><span class="op">/</span><span class="dv">10</span><span class="op">*</span><span class="dv">5</span><span class="op">*</span><span class="dv">4</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">if</span> <span class="op">(</span>x<span class="op">&lt;</span><span class="dv">10</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"extra credit"</span><span class="op">);</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="op">}</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x<span class="op">&lt;=</span> <span class="dv">50</span><span class="op">){</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"apple"</span><span class="op">);</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="op">}</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">50</span> <span class="op">&amp;&amp;</span>  x <span class="op">&lt;=</span> <span class="dv">100</span><span class="op">){</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"candy"</span><span class="op">);</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="op">}</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">100</span> <span class="op">&amp;&amp;</span>  x <span class="op">&lt;=</span> <span class="dv">115</span><span class="op">){</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"chocolate"</span><span class="op">);</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="op">}</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">115</span> <span class="op">&amp;&amp;</span>  x <span class="op">&lt;=</span> <span class="dv">150</span><span class="op">){</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"dinero"</span><span class="op">);</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>It follows the simple arithmetic expression. x = 112 which is between 50 and 100 so it prints candy.</p>
 
 
 </section>
