@@ -1,93 +1,139 @@
-<div id="signup" style="display:none" class="userAuth">
-
-<h1>Sign Up</h1>
-<table>
+<div id="signup" style="display: none" class="userAuth">
+  <h1>Sign Up</h1>
+  <table>
     <tbody>
-        <tr>
-            <th><span>First Name</span><input type="text" id="fname" name="fname" placeholder="enter your first name..."></th>
-        </tr>
-        <tr>
-            <th><span>Last Name</span><input type="text" id="lname" name="lname" placeholder="enter your last name..."></th>
-        </tr>
-        <tr>
-            <th><span>Username</span><input type="text" id="username" name="username" placeholder="enter a username..."></th>
-        </tr>
-        <tr>
-            <th><span>Password</span><input type="password" id="pswd" name="pswd" placeholder="enter a password..."></th>
-        </tr>
-        <tr>
-            <th><span>Confirm Password</span><input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password..."></th>
-        </tr>
-        <tr>
-            <th><button class="btn" type="submit" value="Submit" onclick="checkFields()">Submit</button></th>
-        </tr>
-        <tr>
-            <th> Or <a class="link" onclick="loginPage()">login</a> instead.</th>
-        </tr>
+      <tr>
+        <th>
+          <span>First Name</span
+          ><input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="enter your first name..."
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <span>Last Name</span
+          ><input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="enter your last name..."
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <span>Username</span
+          ><input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="enter a username..."
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <span>Password</span
+          ><input
+            type="password"
+            id="pswd"
+            name="pswd"
+            placeholder="enter a password..."
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <span>Confirm Password</span
+          ><input
+            type="password"
+            id="pswdagain"
+            name="pswdagain"
+            placeholder="re-enter password..."
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <button
+            class="btn"
+            type="submit"
+            value="Submit"
+            onclick="checkFields()"
+          >
+            Submit
+          </button>
+        </th>
+      </tr>
+      <tr>
+        <th>Or <a class="link" onclick="loginPage()">login</a> instead.</th>
+      </tr>
     </tbody>
-</table>
-
+  </table>
 </div>
 
 <script>
-    // show login, hide signup
-    function loginPage() {
-        document.getElementById("signup").style.display = "none";
-        document.getElementById("login").style.display = "";
+  // show login, hide signup
+  function loginPage() {
+    document.getElementById("signup").style.display = "none";
+    document.getElementById("login").style.display = "";
+  }
+
+  // Replace with domain and api call of backend
+  url = "";
+
+  function checkFields() {
+    if (
+      document.getElementById("pswd").value ==
+      document.getElementById("pswdagain").value
+    ) {
+      alert("they match");
     }
+  }
 
-    // Replace with domain and api call of backend
-    url = ""
+  function signup_user() {
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("pswd").value;
 
-    function checkFields() {
-        if (document.getElementById("password").value == document.getElementById("passwordagain").value) {
-            alert("they match");
-        }
-    }
+    const url = "https://abopsc-backend.dontntntnt.de/authenticate";
 
-    function signup_user() {
-        const fname = document.getElementById("fname").value;
-        const lname = document.getElementById("lname").value;
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("pswd").value;
+    const options = {
+      method: "POST",
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "include", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fname: fname,
+        lname: lname,
+        username: username,
+        password: password,
+      }),
+    };
 
-        const url = "https://abopsc-backend.dontntntnt.de/authenticate";
+    // Fetch JWT
+    fetch(url, options).then((response) => {
+      // trap error response from Web API
+      if (!response.ok) {
+        const errorMsg = "Login error: " + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      // Success!!!
+      // Redirect to Database location
 
-        const options = {
-            method: 'POST',
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'include', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "fname": fname,
-                "lname": lname,
-                "username": username,
-                "password": password
-            })
-        };
-
-
-        // Fetch JWT
-        fetch(url, options)
-            .then(response => {
-                // trap error response from Web API
-                if (!response.ok) {
-                    const errorMsg = 'Login error: ' + response.status;
-                    console.log(errorMsg);
-                    return;
-                }
-                // Success!!!
-                // Redirect to Database location
-
-                var requestOptions = {
-                    method: 'GET',
-                    redirect: 'follow'
-                };
-
-            })
-
-    }
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+    });
+  }
 </script>
