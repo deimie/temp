@@ -94,16 +94,6 @@ footer {
     width:100%;
 }
 
-.sidebar {
-    float:right;
-    position: sticky;
-    overflow-y: auto;
-      /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
-      */
-    max-height: calc(100vh - 100px - 2em);
-}
-
 /*
 ---------------
 Misc

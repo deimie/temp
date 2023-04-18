@@ -3,8 +3,8 @@ format:
   html:
     code-fold: false 
     highlight-style: dracula
+    code-line-numbers: true
     include-after-body: ../_includes/footer.html
-keep-ipynb: true
 
 toc: true
 
