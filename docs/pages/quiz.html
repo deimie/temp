@@ -62,7 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -118,7 +118,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -139,6 +141,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<!--Honestly I have no idea what build_revision is, you might just have to delete it if it's causing problems-->
+<p><link href="{{ '/quiz/?v=' | append: site.github.build_revision | relative_url }}"></p>
 <h2 class="anchored">
 Quiz
 </h2>
@@ -153,10 +157,14 @@ Check
     const question_answer_map = new Map();
     var question_count = 0;
 
-    // YOU HAVE TO GET THE ID SOMEHOW
+    var currentUrl = window.location.href;
+    let url = new URL(currentUrl);
+    let urlParams = new URLSearchParams(url.search);
+    var name = parseString(urlParams.get("name"));
+
     function create_questions(set) {
         
-        const ID = 0; // Change later
+
         url = "https://abopsc-backend.dontntntnt.de/api/problem/getProblemSetMC";
 
         const body = {
@@ -165,7 +173,7 @@ Check
                 "Content-Type" : "application/json"
             },
             credentials : "include",
-            body: JSON.stringify({id : ID})
+            body: JSON.stringify({name : name})
         }
 
         fetch(url, body).then(data => data.json()).then(data => {
@@ -249,6 +257,9 @@ Check
 
 
 </main> <!-- /main -->
+<footer>
+    <a href="https://github.com/dontran15/abopsc-frontend">Github</a>
+</footer>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
