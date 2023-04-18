@@ -25,7 +25,7 @@
     "href": "pages/scavenger.html",
     "title": "Scavenger Hunt",
     "section": "",
-    "text": "Welcome to our scavenger hunt!\nWe have computers set up across the room with each question. Start at question 1 and make sure to record your answers. The responses will create message and the key to a special prize!"
+    "text": "Directions: Welcome to our introduction to Unit 1-4. We have 5 questions posted around the room.Partner up and grab your phone to write down the output of the code. No laptops. The responses will create message and the key to a special prize! Ask Iris if you have any questions."
   },
   {
     "objectID": "pages/grading.html",
@@ -116,7 +116,7 @@
     "href": "pages/scavenger.html#question-2",
     "title": "Scavenger Hunt",
     "section": "Question 2",
-    "text": "Question 2\n\n\nCode\npublic static void main(String [] args) {\n    String[] words = {\"and\", \"more\", \"is\", \"also\", \"plus\"};\n    answer(words);\n    System.out.println(answer(words));\n}\n\npublic static String answer(String words[]) {\n    String first = words[0];\n    for (int i = 1 ; i < words.length ; i++) {\n        if ((words[i].compareTo(first)) < 0) {\n            first = words[i];\n        }\n    } \n    return first;\n}"
+    "text": "Question 2\n\n\nCode\npublic class Q2 {\n    public static void main(String[] args) {\n        String[] words = {\"also\", \"plus\", \"is\", \"for\", \"and\"};\n\n        String first = words[0]; // initialize with the first word\n\n        for (int i = 1; i < words.length; i++) {\n            if (words[i].length() < first.length()) {\n                first = words[i]; // update shortestWord if a shorter word is found\n            }\n        }\n\n        System.out.println(first);\n    }\n}\nQ2.main(null);"
   },
   {
     "objectID": "pages/scavenger.html#question-3",
