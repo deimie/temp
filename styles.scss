@@ -81,6 +81,31 @@ Buttons
 
 /*
 ---------------
+Footer
+---------------
+*/
+
+footer {
+    background-color:$secondary;    
+    height:150px;
+    margin-left:0;
+    margin-right:0;
+    float:left;
+    width:100%;
+}
+
+.sidebar {
+    float:right;
+    position: sticky;
+    overflow-y: auto;
+      /* calculate height of nav list
+         viewport height - nav height - masthead x-padding
+      */
+    max-height: calc(100vh - 100px - 2em);
+}
+
+/*
+---------------
 Misc
 ---------------
 */

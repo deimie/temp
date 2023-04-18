@@ -1,0 +1,11 @@
+# Default settings for all files under /pages/
+format:
+  html:
+    code-fold: false 
+    highlight-style: dracula
+    include-after-body: ../_includes/footer.html
+keep-ipynb: true
+
+toc: true
+
+

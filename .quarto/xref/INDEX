@@ -6,7 +6,8 @@
     "about.html": "b403662c"
   },
   "pages/about.qmd": {
-    "about.html": "d7af616b"
+    "about.html": "d7af616b",
+    "about.ipynb": "b0417d92"
   },
   "pages/index.qmd": {
     "index.html": "f43627cb"
@@ -30,24 +31,34 @@
     "lesson.html": "3891b391"
   },
   "pages/scoring.md": {
-    "scoring.html": "e1ef89d7"
+    "scoring.html": "e1ef89d7",
+    "scoring.ipynb": "bc024a4f"
   },
   "pages/labs.md": {
-    "labs.html": "cf360b27"
+    "labs.html": "cf360b27",
+    "labs.ipynb": "0755c3db"
   },
   "pages/assignments.md": {
-    "assignments.html": "98077d5f"
+    "assignments.html": "98077d5f",
+    "assignments.ipynb": "1e57662e"
   },
   "pages/scavenger.md": {
     "scavenger.html": "9ff65554"
   },
   "pages/grading.md": {
-    "grading.html": "5d667f8d"
+    "grading.html": "5d667f8d",
+    "grading.ipynb": "bf09f504"
   },
   "pages/userControl.md": {
-    "userControl.html": "6760cbae"
+    "userControl.html": "6760cbae",
+    "userControl.ipynb": "116a5078"
   },
   "pages/scavenger.ipynb": {
-    "scavenger.html": "ef21e719"
+    "scavenger.html": "ef21e719",
+    "scavenger.out.ipynb": "00c950fa"
+  },
+  "pages/quiz.md": {
+    "quiz.html": "b980cd3d",
+    "quiz.ipynb": "5042ebf4"
   }
 }

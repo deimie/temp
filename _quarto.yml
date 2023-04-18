@@ -28,6 +28,3 @@ format:
       - flatly
       - styles.scss
 
-body-header: |
-  "yass queen"
-
