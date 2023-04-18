@@ -85,7 +85,23 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../pages/about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+ <span class="menu-text">About ABopsC</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/scavenger.html" rel="" target="">
+ <span class="menu-text">Scavenger Hunt</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/lesson.html" rel="" target="">
+ <span class="menu-text">Lesson</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/labs.html" rel="" target="">
+ <span class="menu-text">Labs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/scoring.html" rel="" target="">
+ <span class="menu-text">Scores</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -261,35 +277,52 @@ Logout
 
 </script>
 <div id="signup" class="userAuth" style="display:none">
-<pre><code>&lt;h1&gt;Sign Up&lt;/h1&gt;
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;th&gt;First Name&lt;/th&gt;
-        &lt;th&gt;&lt;input type="text" id="fname" name="fname" placeholder="enter your first name..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Last Name&lt;/th&gt;
-        &lt;th&gt;&lt;input type="text" id="lname" name="lname" placeholder="enter your last name..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Username&lt;/th&gt;
-        &lt;th&gt;&lt;input type="text" id="username" name="username" placeholder="enter a username..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Password&lt;/th&gt;
-        &lt;th&gt;&lt;input type="password" id="pswd" name="pswd" placeholder="enter a password..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Confirm Password&lt;/th&gt;
-        &lt;th&gt;&lt;input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;&lt;button class="btn" type="submit" value="Submit" onclick="checkFields()"&gt;Submit&lt;/button&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt; Or &lt;a onclick="loginPage()"&gt;login&lt;/a&gt; instead.&lt;/th&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
+<h1>
+Sign Up
+</h1>
+
+<table>
+<tbody>
+<tr>
+<th>
+<span>First Name</span><input type="text" id="fname" name="fname" placeholder="enter your first name...">
+</th>
+</tr>
+<tr>
+<th>
+<span>Last Name</span><input type="text" id="lname" name="lname" placeholder="enter your last name...">
+</th>
+</tr>
+<tr>
+<th>
+<span>Username</span><input type="text" id="username" name="username" placeholder="enter a username...">
+</th>
+</tr>
+<tr>
+<th>
+<span>Password</span><input type="password" id="pswd" name="pswd" placeholder="enter a password...">
+</th>
+</tr>
+<tr>
+<th>
+<span>Confirm Password</span><input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password...">
+</th>
+</tr>
+<tr>
+<th>
+<button class="btn" type="submit" value="Submit" onclick="checkFields()">
+Submit
+</button>
+</th>
+</tr>
+<tr>
+<th>
+Or <a class="link" onclick="loginPage()">login</a> instead.
+</th>
+</tr>
+</tbody>
+
+</table>
 </div>
 <script>
     // show login, hide signup
@@ -302,7 +335,7 @@ Logout
     url = ""
 
     function checkFields() {
-        if(document.getElementById("password").value == document.getElementById("passwordagain").value) {
+        if (document.getElementById("password").value == document.getElementById("passwordagain").value) {
             alert("they match");
         }
     }
@@ -314,9 +347,9 @@ Logout
         const password = document.getElementById("pswd").value;
 
         const url = "https://abopsc-backend.dontntntnt.de/authenticate";
-        
+
         const options = {
-            method: 'POST', 
+            method: 'POST',
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'include', // include, *same-origin, omit
@@ -324,32 +357,32 @@ Logout
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "fname"    : fname,
-                "lname"    : lname,
-                "username" : username,
-                "password" : password
+                "fname": fname,
+                "lname": lname,
+                "username": username,
+                "password": password
             })
         };
 
 
         // Fetch JWT
         fetch(url, options)
-        .then(response => {
-            // trap error response from Web API
-            if (!response.ok) {
-                const errorMsg = 'Login error: ' + response.status;
-                console.log(errorMsg);
-                return; 
-            }
-            // Success!!!
-            // Redirect to Database location
+            .then(response => {
+                // trap error response from Web API
+                if (!response.ok) {
+                    const errorMsg = 'Login error: ' + response.status;
+                    console.log(errorMsg);
+                    return;
+                }
+                // Success!!!
+                // Redirect to Database location
 
-            var requestOptions = {
-                method: 'GET',
-                redirect: 'follow'
-            };
-            
-        })
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                };
+
+            })
 
     }
 </script>

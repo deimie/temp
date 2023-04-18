@@ -22,12 +22,12 @@ website:
       - href: ../pages/userControl.html
         text: Account
 
-    margin-footer: |
-      yeah
-
 format:
   html:
     theme: 
       - flatly
       - styles.scss
+
+body-header: |
+  "yass queen"
 

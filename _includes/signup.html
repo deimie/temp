@@ -1,33 +1,32 @@
 <div id="signup" style="display:none" class="userAuth">
-    <h1>Sign Up</h1>
-    <table>
+
+<h1>Sign Up</h1>
+<table>
+    <tbody>
         <tr>
-            <th>First Name</th>
-            <th><input type="text" id="fname" name="fname" placeholder="enter your first name..."></th>
+            <th><span>First Name</span><input type="text" id="fname" name="fname" placeholder="enter your first name..."></th>
         </tr>
         <tr>
-            <th>Last Name</th>
-            <th><input type="text" id="lname" name="lname" placeholder="enter your last name..."></th>
+            <th><span>Last Name</span><input type="text" id="lname" name="lname" placeholder="enter your last name..."></th>
         </tr>
         <tr>
-            <th>Username</th>
-            <th><input type="text" id="username" name="username" placeholder="enter a username..."></th>
+            <th><span>Username</span><input type="text" id="username" name="username" placeholder="enter a username..."></th>
         </tr>
         <tr>
-            <th>Password</th>
-            <th><input type="password" id="pswd" name="pswd" placeholder="enter a password..."></th>
+            <th><span>Password</span><input type="password" id="pswd" name="pswd" placeholder="enter a password..."></th>
         </tr>
         <tr>
-            <th>Confirm Password</th>
-            <th><input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password..."></th>
+            <th><span>Confirm Password</span><input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password..."></th>
         </tr>
         <tr>
             <th><button class="btn" type="submit" value="Submit" onclick="checkFields()">Submit</button></th>
         </tr>
         <tr>
-            <th> Or <a onclick="loginPage()">login</a> instead.</th>
+            <th> Or <a class="link" onclick="loginPage()">login</a> instead.</th>
         </tr>
-    </table>
+    </tbody>
+</table>
+
 </div>
 
 <script>
@@ -41,7 +40,7 @@
     url = ""
 
     function checkFields() {
-        if(document.getElementById("password").value == document.getElementById("passwordagain").value) {
+        if (document.getElementById("password").value == document.getElementById("passwordagain").value) {
             alert("they match");
         }
     }
@@ -53,9 +52,9 @@
         const password = document.getElementById("pswd").value;
 
         const url = "https://abopsc-backend.dontntntnt.de/authenticate";
-        
+
         const options = {
-            method: 'POST', 
+            method: 'POST',
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'include', // include, *same-origin, omit
@@ -63,32 +62,32 @@
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "fname"    : fname,
-                "lname"    : lname,
-                "username" : username,
-                "password" : password
+                "fname": fname,
+                "lname": lname,
+                "username": username,
+                "password": password
             })
         };
 
 
         // Fetch JWT
         fetch(url, options)
-        .then(response => {
-            // trap error response from Web API
-            if (!response.ok) {
-                const errorMsg = 'Login error: ' + response.status;
-                console.log(errorMsg);
-                return; 
-            }
-            // Success!!!
-            // Redirect to Database location
+            .then(response => {
+                // trap error response from Web API
+                if (!response.ok) {
+                    const errorMsg = 'Login error: ' + response.status;
+                    console.log(errorMsg);
+                    return;
+                }
+                // Success!!!
+                // Redirect to Database location
 
-            var requestOptions = {
-                method: 'GET',
-                redirect: 'follow'
-            };
-            
-        })
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                };
+
+            })
 
     }
 </script>
