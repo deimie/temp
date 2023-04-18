@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.326">
+<meta name="generator" content="quarto-1.3.330">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -62,7 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,29 +84,29 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pages/about.html" rel="" target="">
+    <a class="nav-link" href="../../temp/pages/about.html" rel="" target="">
  <span class="menu-text">About ABopsC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pages/scavenger.html" rel="" target="">
+    <a class="nav-link" href="../../temp/pages/scavenger.html" rel="" target="">
  <span class="menu-text">Scavenger Hunt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pages/lesson.html" rel="" target="">
+    <a class="nav-link" href="../../temp/pages/lesson.html" rel="" target="">
  <span class="menu-text">Lesson</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pages/labs.html" rel="" target="">
+    <a class="nav-link" href="../../temp/pages/labs.html" rel="" target="">
  <span class="menu-text">Labs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pages/scoring.html" rel="" target="">
+    <a class="nav-link" href="../../temp/pages/scoring.html" rel="" target="">
  <span class="menu-text">Scores</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../pages/userControl.html" rel="" target="">
+    <a class="nav-link" href="../../temp/pages/userControl.html" rel="" target="">
  <span class="menu-text">Account</span></a>
   </li>  
 </ul>
@@ -120,7 +120,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -276,7 +278,7 @@ Logout
     }
 
 </script>
-<div id="signup" class="userAuth" style="display:none">
+<div id="signup" class="userAuth" style="display: none">
 <h1>
 Sign Up
 </h1>
@@ -325,71 +327,74 @@ Or <a class="link" onclick="loginPage()">login</a> instead.
 </table>
 </div>
 <script>
-    // show login, hide signup
-    function loginPage() {
-        document.getElementById("signup").style.display = "none";
-        document.getElementById("login").style.display = "";
+  // show login, hide signup
+  function loginPage() {
+    document.getElementById("signup").style.display = "none";
+    document.getElementById("login").style.display = "";
+  }
+
+  // Replace with domain and api call of backend
+  url = "";
+
+  // checks passwords
+  function checkFields() {
+    if (
+      document.getElementById("pswd").value ==
+      document.getElementById("pswdagain").value
+    ) {
+      alert("they match");
     }
+  }
 
-    // Replace with domain and api call of backend
-    url = ""
+  function signup_user() {
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("pswd").value;
 
-    function checkFields() {
-        if (document.getElementById("password").value == document.getElementById("passwordagain").value) {
-            alert("they match");
-        }
-    }
+    const url = "https://abopsc-backend.dontntntnt.de/authenticate";
 
-    function signup_user() {
-        const fname = document.getElementById("fname").value;
-        const lname = document.getElementById("lname").value;
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("pswd").value;
+    const options = {
+      method: "POST",
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "include", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fname: fname,
+        lname: lname,
+        username: username,
+        password: password,
+      }),
+    };
 
-        const url = "https://abopsc-backend.dontntntnt.de/authenticate";
+    // Fetch JWT
+    fetch(url, options).then((response) => {
+      // trap error response from Web API
+      if (!response.ok) {
+        const errorMsg = "Login error: " + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      // Success!!!
+      // Redirect to Database location
 
-        const options = {
-            method: 'POST',
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'include', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "fname": fname,
-                "lname": lname,
-                "username": username,
-                "password": password
-            })
-        };
-
-
-        // Fetch JWT
-        fetch(url, options)
-            .then(response => {
-                // trap error response from Web API
-                if (!response.ok) {
-                    const errorMsg = 'Login error: ' + response.status;
-                    console.log(errorMsg);
-                    return;
-                }
-                // Success!!!
-                // Redirect to Database location
-
-                var requestOptions = {
-                    method: 'GET',
-                    redirect: 'follow'
-                };
-
-            })
-
-    }
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+    });
+  }
 </script>
 
 
 
 </main> <!-- /main -->
+<footer>
+    <a href="https://github.com/dontran15/abopsc-frontend">Github</a>
+</footer>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
