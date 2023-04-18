@@ -280,81 +280,65 @@ Logout
 </script>
 <div id="signup" class="userAuth" style="display: none">
 <div>
-<pre><code>&lt;h1&gt;Sign Up&lt;/h1&gt;
-&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Name&lt;/th&gt;
-    &lt;th&gt;
-      &lt;input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="enter your name..."
-      /&gt;
-    &lt;/th&gt;
-  &lt;/tr&gt;
+<h1>
+Sign Up
+</h1>
 
-  &lt;tr&gt;
-    &lt;th&gt;Email&lt;/th&gt;
-    &lt;th&gt;
-      &lt;input
-        type="text"
-        id="email"
-        name="email"
-        placeholder="enter your email..."
-      /&gt;
-    &lt;/th&gt;
-  &lt;/tr&gt;
+<table>
+<tbody><tr>
+<th>
+Name
+</th>
+<th>
+<input type="text" id="name" name="name" placeholder="enter your name...">
+</th>
+</tr>
+<tr>
+<th>
+Email
+</th>
+<th>
+<input type="text" id="email" name="email" placeholder="enter your email...">
+</th>
+</tr>
+<tr>
+<th>
+Password
+</th>
+<th>
+<input type="password" id="password" name="password" placeholder="enter a password...">
+</th>
+</tr>
+<tr>
+<th>
+Confirm Password
+</th>
+<th>
+<input type="password" id="pswdagain" name="pswdagain" placeholder="re-enter password...">
+</th>
+</tr>
+<tr>
+<th>
+Date of Birth
+</th>
+<th>
+<input type="text" placeholder="00-00-0000" id="dob" name="enter date of birth..." required="">
+</th>
+</tr>
+<tr>
+<th>
+<button class="btn" type="submit" value="Submit" onclick="signUp()">
+Submit
+</button>
+</th>
+</tr>
+<tr>
+<th>
+Or <a onclick="loginPage()">login</a> instead.
+</th>
+</tr>
 
-  &lt;tr&gt;
-    &lt;th&gt;Password&lt;/th&gt;
-    &lt;th&gt;
-      &lt;input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="enter a password..."
-      /&gt;
-    &lt;/th&gt;
-  &lt;/tr&gt;
-
-  &lt;tr&gt;
-    &lt;th&gt;Confirm Password&lt;/th&gt;
-    &lt;th&gt;
-      &lt;input
-        type="password"
-        id="pswdagain"
-        name="pswdagain"
-        placeholder="re-enter password..."
-      /&gt;
-    &lt;/th&gt;
-  &lt;/tr&gt;
-
-  &lt;tr&gt;
-    &lt;th&gt;Date of Birth&lt;/th&gt;
-    &lt;th&gt;
-      &lt;input
-        type="text"
-        placeholder="00-00-0000"
-        id="dob"
-        name="enter date of birth..."
-        required
-      /&gt;
-    &lt;/th&gt;
-  &lt;/tr&gt;
-
-  &lt;tr&gt;
-    &lt;th&gt;
-      &lt;button class="btn" type="submit" value="Submit" onclick="signUp()"&gt;
-        Submit
-      &lt;/button&gt;
-    &lt;/th&gt;
-  &lt;/tr&gt;
-
-  &lt;tr&gt;
-    &lt;th&gt;Or &lt;a onclick="loginPage()"&gt;login&lt;/a&gt; instead.&lt;/th&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
+</tbody></table>
 </div>
 </div>
 <script>
