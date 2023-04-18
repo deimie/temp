@@ -4,8 +4,6 @@ format:
     code-fold: false 
     highlight-style: dracula
     code-line-numbers: true
-    include-after-body: ../_includes/footer.html
-
 toc: true
 
 

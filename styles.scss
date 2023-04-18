@@ -39,7 +39,6 @@ input {
     padding:5px;
     display:block;
     font-size:16px;
-    cursor:pointer;
     
     &:focus {
         border-color: $secondary;
@@ -125,10 +124,11 @@ Misc
     text-align:center;
     color:white;
     margin: 10px;
-    border-radius:30px;
+    border-radius:20px;
+    border: $button-border 1px solid;
 
     &:hover {
-        border: $button-border-light 4px solid;
+        border: $button-border-light 1px solid;
     }
 }
 

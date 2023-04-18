@@ -21,6 +21,21 @@ website:
     right:
       - href: ../temp/pages/userControl.html
         text: Account
+  page-footer:
+    background: $secondary
+    foreground: white
+    border: $button-border
+    left:
+      - text: "Lesson"
+        href: ../temp/pages/lesson.html
+      - text: "Scavenger Hunt"
+        href: ../temp/pages/scavenger.html
+      - text: "Labs"
+        href: ../temp/pages/labs.html
+    right:
+      - text: "Github"
+        href: "https://github.com/deimie/temp"
+
 
 format:
   html:
