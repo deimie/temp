@@ -63,7 +63,7 @@
             class="btn"
             type="submit"
             value="Submit"
-            onclick="checkFields()"
+            onclick="signup_user()"
           >
             Submit
           </button>
@@ -93,10 +93,13 @@
       document.getElementById("pswdagain").value
     ) {
       alert("they match");
+    } else {
+      alert("passwords do not match");
     }
   }
 
   function signup_user() {
+    checkFields();
     const fname = document.getElementById("fname").value;
     const lname = document.getElementById("lname").value;
     const username = document.getElementById("username").value;
