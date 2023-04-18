@@ -137,6 +137,6 @@
     "href": "pages/scavenger.html#question-5",
     "title": "Scavenger Hunt",
     "section": "Question 5",
-    "text": "Question 5\nItems whose value does not change are called…\nA. variable (Mr.M’s desk)\nB. stay-same (bathroom)\nC. literal (outside)\nD. unvariable (hetvi’s backpack)"
+    "text": "Question 5\n\n\nCode\npublic class Q5 {\n    public static void main(String[] args) {\n        String[] words = {\"hello\", \"world\", \"Java\", \"try\", \"catch\"};\n        String result = \"outside\";\n        for (String word : words) {\n            try {\n                // Attempt some code that might throw an exception\n                if (word.length() > 5) {\n                    break;\n                }\n            } catch (Exception e) {\n                // Catch any exception and change the result\n                result = \"inside\";\n            }\n        }\n        System.out.println(result);\n    }\n}"
   }
 ]
