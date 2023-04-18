@@ -3,7 +3,7 @@
 <html>
 <body class="indexBackground">
 
-<div class="text-box" style="margin-bottom:150px;">
+<div class="text-box" style="margin-bottom:90px;">
   <h1>Welcome to ABopsC</h1>
   <span>Welcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. 
       We also have a cars-themed lab for you to practice the concepts in application!</span>
