@@ -1,55 +1,47 @@
 <div id="signup" style="display: none" class="userAuth">
-  <h1>Sign Up</h1>
-  <table>
-    <tbody>
+  <div>
+    <h1>Sign Up</h1>
+    <table>
       <tr>
+        <th>Name</th>
         <th>
-          <span>First Name</span
-          ><input
+          <input
             type="text"
-            id="fname"
-            name="fname"
-            placeholder="enter your first name..."
+            id="name"
+            name="name"
+            placeholder="enter your name..."
           />
         </th>
       </tr>
+
       <tr>
+        <th>Email</th>
         <th>
-          <span>Last Name</span
-          ><input
+          <input
             type="text"
-            id="lname"
-            name="lname"
-            placeholder="enter your last name..."
+            id="email"
+            name="email"
+            placeholder="enter your email..."
           />
         </th>
       </tr>
+
       <tr>
+        <th>Password</th>
         <th>
-          <span>Username</span
-          ><input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="enter a username..."
-          />
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <span>Password</span
-          ><input
+          <input
             type="password"
-            id="pswd2"
-            name="pswd2"
+            id="password"
+            name="password"
             placeholder="enter a password..."
           />
         </th>
       </tr>
+
       <tr>
+        <th>Confirm Password</th>
         <th>
-          <span>Confirm Password</span
-          ><input
+          <input
             type="password"
             id="pswdagain"
             name="pswdagain"
@@ -57,23 +49,33 @@
           />
         </th>
       </tr>
+
+      <tr>
+        <th>Date of Birth</th>
+        <th>
+          <input
+            type="text"
+            placeholder="00-00-0000"
+            id="dob"
+            name="enter date of birth..."
+            required
+          />
+        </th>
+      </tr>
+
       <tr>
         <th>
-          <button
-            class="btn"
-            type="submit"
-            value="Submit"
-            onclick="signup_user()"
-          >
+          <button class="btn" type="submit" value="Submit" onclick="signUp()">
             Submit
           </button>
         </th>
       </tr>
+
       <tr>
-        <th>Or <a class="link" onclick="loginPage()">login</a> instead.</th>
+        <th>Or <a onclick="loginPage()">login</a> instead.</th>
       </tr>
-    </tbody>
-  </table>
+    </table>
+  </div>
 </div>
 
 <script>
@@ -83,32 +85,37 @@
     document.getElementById("login").style.display = "";
   }
 
-  // Replace with domain and api call of backend
-  url = "";
-
-  // checks passwords
   function checkFields() {
-    console.log(document.getElementById("pswd2").value);
-    console.log(document.getElementById("pswdagain").value);
-
     if (
-      document.getElementById("pswd2").value ==
+      document.getElementById("pswd").value ==
       document.getElementById("pswdagain").value
     ) {
       alert("they match");
-    } else {
-      alert("passwords do not match");
     }
   }
 
-  function signup_user() {
-    checkFields();
-    const fname = document.getElementById("fname").value;
-    const lname = document.getElementById("lname").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("pswd2").value;
+  function signUp() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const dob = document.getElementById("dob").value;
 
-    const url = "https://abopsc-backend.dontntntnt.de/authenticate";
+    const url = "https://abopsc-backend.dontntntnt.de/api/person/post/";
+
+    var details = {
+      email: email,
+      password: password,
+      name: name,
+      dob: dob,
+    };
+
+    var formBody = [];
+    for (var property in details) {
+      var encodedKey = encodeURIComponent(property);
+      var encodedValue = encodeURIComponent(details[property]);
+      formBody.push(encodedKey + "=" + encodedValue);
+    }
+    formBody = formBody.join("&");
 
     const options = {
       method: "POST",
@@ -116,31 +123,15 @@
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       credentials: "include", // include, *same-origin, omit
       headers: {
-        "Content-Type": "application/json",
+        // 'Content-Type': 'application/json'
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
       },
-      body: JSON.stringify({
-        fname: fname,
-        lname: lname,
-        username: username,
-        password: password,
-      }),
+      body: formBody,
     };
 
-    // Fetch JWT
-    fetch(url, options).then((response) => {
-      // trap error response from Web API
-      if (!response.ok) {
-        const errorMsg = "Login error: " + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      // Success!!!
-      // Redirect to Database location
-
-      var requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
-    });
+    fetch(url, options)
+      .then((response) => console.log(response.text()))
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
   }
 </script>
