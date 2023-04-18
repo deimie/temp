@@ -40,8 +40,8 @@
           <span>Password</span
           ><input
             type="password"
-            id="pswd"
-            name="pswd"
+            id="pswd2"
+            name="pswd2"
             placeholder="enter a password..."
           />
         </th>
@@ -88,8 +88,11 @@
 
   // checks passwords
   function checkFields() {
+    console.log(document.getElementById("pswd2").value);
+    console.log(document.getElementById("pswdagain").value);
+
     if (
-      document.getElementById("pswd").value ==
+      document.getElementById("pswd2").value ==
       document.getElementById("pswdagain").value
     ) {
       alert("they match");
@@ -103,7 +106,7 @@
     const fname = document.getElementById("fname").value;
     const lname = document.getElementById("lname").value;
     const username = document.getElementById("username").value;
-    const password = document.getElementById("pswd").value;
+    const password = document.getElementById("pswd2").value;
 
     const url = "https://abopsc-backend.dontntntnt.de/authenticate";
 
