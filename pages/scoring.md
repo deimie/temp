@@ -4,8 +4,6 @@ layout: singleWide
 permalink: /scores/
 ---
 
-{{< include ../_includes/_lab_nav.html >}}
-
 ### Score Rundown:
 * Lab - 2 points
 * Lesson - 1 point

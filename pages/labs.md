@@ -1,7 +1,7 @@
 ---
-title: Labs
+title: Lab Scores
 layout: singleWide
-permalink: /labs/
+permalink: /scores/
 ---
 
-{{< include ../_includes/_lab_nav.html >}}
+Still in progress!!!
