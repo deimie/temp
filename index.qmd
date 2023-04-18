@@ -8,7 +8,7 @@
   <span>Welcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. 
       We also have a cars-themed lab for you to practice the concepts in application!</span>
   
-  <a href="../pages/about.html"><button class="btn">Learn More</button></a>
+  <a href="../temp/pages/about.html"><button class="btn">Learn More</button></a>
 </div>
 
 <div class="tileContainer">

@@ -23,9 +23,9 @@
   {
     "objectID": "pages/scavenger.html",
     "href": "pages/scavenger.html",
-    "title": "Question 1",
+    "title": "Scavenger Hunt",
     "section": "",
-    "text": "---\ntitle: Scavenger Hunt\nauthor: Iris Yang\ndate: 'April 16, 2023'\nformat:\n  html:\n    code-fold: true\nkeep-ipynb: true\n---\nWelcome to our scavenger hunt!\nWe have computers set up across the room with each question. Start at question 1 and make sure to record your answers. The responses will create message and the key to a special prize!\nint x = 56/10*5*4;\n\nif (x&lt;10){\n    System.out.println(\"extra credit\");\n}\nelse if (x&lt;= 50){\n    System.out.println(\"apple\");\n}\nelse if (x &gt; 50 &&  x &lt;= 100){\n    System.out.println(\"candy\");\n}\nelse if (x &gt; 100 &&  x &lt;= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x &gt; 115 &&  x &lt;= 150){\n    System.out.println(\"dinero\");\n}"
+    "text": "Welcome to our scavenger hunt!\nWe have computers set up across the room with each question. Start at question 1 and make sure to record your answers. The responses will create message and the key to a special prize!"
   },
   {
     "objectID": "pages/grading.html",
@@ -109,33 +109,33 @@
     "href": "pages/scavenger.html#question-1",
     "title": "Scavenger Hunt",
     "section": "Question 1",
-    "text": "Question 1\n\n\nCode\nint x = 56/10*5*4;\n\nif (x<10){\n    System.out.println(\"extra credit\");\n}\nelse if (x<= 50){\n    System.out.println(\"apple\");\n}\nelse if (x > 50 &&  x <= 100){\n    System.out.println(\"candy\");\n}\nelse if (x > 100 &&  x <= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x > 115 &&  x <= 150){\n    System.out.println(\"dinero\");\n}"
+    "text": "Question 1\n\n\nCode\nint x = 56/10*5*4;\nif (x<10) {\n    System.out.println(\"extra credit\");\n}\nelse if (x<= 50){\n    System.out.println(\"apple\");\n}\nelse if (x > 50 &&  x <= 100){\n    System.out.println(\"candy\");\n}\nelse if (x > 100 &&  x <= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x > 115 &&  x <= 150){\n    System.out.println(\"dinero\");\n}"
   },
   {
     "objectID": "pages/scavenger.html#question-2",
     "href": "pages/scavenger.html#question-2",
-    "title": "Question 1",
+    "title": "Scavenger Hunt",
     "section": "Question 2",
-    "text": "Question 2\n\npublic static void main(String [] args) {\n    String[] words = {\"and\", \"more\", \"is\", \"also\", \"plus\"};\n    answer(words);\n    System.out.println(answer(words));\n}\n\npublic static String answer(String words[]) {\n    String first = words[0];\n    for (int i = 1 ; i &lt; words.length ; i++) {\n        if ((words[i].compareTo(first)) &lt; 0) {\n            first = words[i];\n        }\n    } \n    return first;\n}"
+    "text": "Question 2\n\n\nCode\npublic static void main(String [] args) {\n    String[] words = {\"and\", \"more\", \"is\", \"also\", \"plus\"};\n    answer(words);\n    System.out.println(answer(words));\n}\n\npublic static String answer(String words[]) {\n    String first = words[0];\n    for (int i = 1 ; i < words.length ; i++) {\n        if ((words[i].compareTo(first)) < 0) {\n            first = words[i];\n        }\n    } \n    return first;\n}"
   },
   {
     "objectID": "pages/scavenger.html#question-3",
     "href": "pages/scavenger.html#question-3",
-    "title": "Question 1",
+    "title": "Scavenger Hunt",
     "section": "Question 3",
-    "text": "Question 3\n\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\");\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\");\n}\nelse {\n    System.out.print(\"in\");\n}"
+    "text": "Question 3\n\n\nCode\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\");\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\");\n}\nelse {\n    System.out.print(\"in\");\n}"
   },
   {
     "objectID": "pages/scavenger.html#question-4",
     "href": "pages/scavenger.html#question-4",
-    "title": "Question 1",
+    "title": "Scavenger Hunt",
     "section": "Question 4",
-    "text": "Question 4\n\nint x = 10;\nif (x*3 &lt;= 30) {\n    x++;\n}\nif (x &gt; 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\nA. 11 (chair)\nB. 15 (backpack)\nC. 31 (table)\nD. error (floor)"
+    "text": "Question 4\n\n\nCode\nint x = 10;\nif (x*3 <= 30) {\n    x++;\n}\nif (x > 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\n\nA. 11 (chair)\nB. 15 (backpack)\nC. 31 (table)\nD. error (floor)"
   },
   {
     "objectID": "pages/scavenger.html#question-5",
     "href": "pages/scavenger.html#question-5",
-    "title": "Question 1",
+    "title": "Scavenger Hunt",
     "section": "Question 5",
     "text": "Question 5\nItems whose value does not change are called…\nA. variable (Mr.M’s desk)\nB. stay-same (bathroom)\nC. literal (outside)\nD. unvariable (hetvi’s backpack)"
   }
