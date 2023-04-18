@@ -1,8 +1,11 @@
 ---
 title: Quiz
 layout: single
-permalink: /quiz/
 ---
+
+<!--Honestly I have no idea what build_revision is, you might just have to delete it if it's causing problems-->
+<link href="{{ '/quiz/?v=' | append: site.github.build_revision | relative_url }}">
+
 <h2>Quiz</h2>
 <ul class="quiz" id="quiz">
 
@@ -15,10 +18,14 @@ permalink: /quiz/
     const question_answer_map = new Map();
     var question_count = 0;
 
-    // YOU HAVE TO GET THE ID SOMEHOW
+    var currentUrl = window.location.href;
+    let url = new URL(currentUrl);
+    let urlParams = new URLSearchParams(url.search);
+    var name = parseString(urlParams.get("name"));
+
     function create_questions(set) {
         
-        const ID = 0; // Change later
+
         url = "https://abopsc-backend.dontntntnt.de/api/problem/getProblemSetMC";
 
         const body = {
@@ -27,7 +34,7 @@ permalink: /quiz/
                 "Content-Type" : "application/json"
             },
             credentials : "include",
-            body: JSON.stringify({id : ID})
+            body: JSON.stringify({name : name})
         }
 
         fetch(url, body).then(data => data.json()).then(data => {
