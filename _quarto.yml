@@ -8,18 +8,18 @@ website:
     left:
       - href: index.html
         text: Home
-      - href: ../pages/about.html
+      - href: ../temp/pages/about.html
         text: About ABopsC
-      - href: ../pages/scavenger.html
+      - href: ../temp/pages/scavenger.html
         text: Scavenger Hunt
-      - href: ../pages/lesson.html
+      - href: ../temp/pages/lesson.html
         text: Lesson
-      - href: ../pages/labs.html
+      - href: ../temp/pages/labs.html
         text: Labs
-      - href: ../pages/scoring.html
+      - href: ../temp/pages/scoring.html
         text: Scores
     right:
-      - href: ../pages/userControl.html
+      - href: ../temp/pages/userControl.html
         text: Account
 
 format:
