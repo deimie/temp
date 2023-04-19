@@ -11,14 +11,14 @@
     "href": "pages/assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Assignment 1\n\n\nAssignment 2"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
   },
   {
     "objectID": "pages/assignments.html#assignments",
     "href": "pages/assignments.html#assignments",
     "title": "Assignments",
     "section": "",
-    "text": "Assignment 1\n\n\nAssignment 2"
+    "text": "Assignment 1\n\n\nAssignment 2\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment 1\nAssignment 2"
   },
   {
     "objectID": "pages/grading.html",
@@ -51,9 +51,9 @@
   {
     "objectID": "pages/userControl.html",
     "href": "pages/userControl.html",
-    "title": "\nLogin\n",
+    "title": "\nSign Up\n",
     "section": "",
-    "text": "Login\n\n\n\n\n\n\nUsername\n\n\n\n\nPassword\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail\n\n\n\n\n\n\n\nPassword\n\n\n\n\n\n\n\nConfirm Password\n\n\n\n\n\n\n\nDate of Birth\n\n\n\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
+    "text": "&lt;table id=\"credentialsInput\"&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Email&lt;/th&gt;\n        &lt;th&gt;&lt;input autocomplete=\"off\" type=\"email\" id=\"username\" name=\"username\" placeholder=\"enter your username...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Password&lt;/th&gt;\n        &lt;th&gt;&lt;input autocomplete=\"off\" type=\"password\" id=\"pswd\" name=\"pswd\" placeholder=\"enter your password...\"&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;th&gt;&lt;button class=\"btn\" type=\"submit\" value=\"Submit\" onclick=\"login_user()\"&gt;Submit&lt;/button&gt;&lt;/th&gt;\n    &lt;/tr&gt;\n\n    &lt;tr&gt;\n        &lt;th&gt; Or &lt;a onclick=\"signUpPage()\"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;\n\n&lt;button id=\"but_logout\" class=\"btn\" type=\"submit\" onclick=\"logout()\"&gt;Logout&lt;/button&gt;\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail\n\n\n\n\n\n\n\nPassword\n\n\n\n\n\n\n\nConfirm Password\n\n\n\n\n\n\n\nDate of Birth\n\n\n\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
   },
   {
     "objectID": "pages/lesson.html",
