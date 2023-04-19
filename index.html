@@ -130,20 +130,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="text-box" style="margin-bottom:90px;">
-<h1>
+<h1 id="user">
 Welcome to ABopsC
 </h1>
 <p><span>Welcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!</span></p>
-<p><a href="../temp/pages/about.html"><button class="btn">Learn More</button></a></p>
-</div>
-<h3 class="anchored">
-<div id="user">
-
-</div>
-<div id="loginMessage">
-
-</div>
+<a href="../temp/pages/about.html"><button class="btn">Learn More</button></a>
+<h3 id="loginMessage" class="warning anchored">
 </h3>
+</div>
 <script>
   if (sessionStorage.getItem("username") == null) {
       sessionStorage.setItem("username", "Guest");
@@ -151,7 +145,7 @@ Welcome to ABopsC
   if (sessionStorage.getItem("authorized") == null) {
       sessionStorage.setItem("authorized", false);
   }
-  document.getElementById("user").innerHTML = "Hello " + sessionStorage.getItem("username") + "!";
+  document.getElementById("user").innerHTML = "Welcome to ABopsC, " + sessionStorage.getItem("username") + "!";
   console.log(sessionStorage.getItem("authorized"));
 
   if (sessionStorage.getItem("authorized") === "false") {
