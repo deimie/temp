@@ -51,9 +51,9 @@
   {
     "objectID": "pages/userControl.html",
     "href": "pages/userControl.html",
-    "title": "\nLogin\n",
+    "title": "\nSign Up\n",
     "section": "",
-    "text": "Login\n\n\n\n\n\n\nUsername\n\n\n\n\nPassword\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
+    "text": "Email \n\n\n\n\npassword \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
   },
   {
     "objectID": "pages/lesson.html",

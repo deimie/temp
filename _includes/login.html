@@ -1,25 +1,31 @@
 <html>
 
 <div id="login" class="userAuth">
-    <table id="credentialsInput">
-        <tr>
-            <th>Email</th>
-            <th><input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username..."></th>
-        </tr>
-        <tr>
-            <th>Password</th>
-            <th><input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password..."></th>
-        </tr>
-        <tr>
-            <th><button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button></th>
-        </tr>
+<table id="credentialsInput">
+    <tr>
+        <th>
+            <span>Email</span>
+            <input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <span>password</span>
+            <input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button>
+        </th>
+    </tr>
 
-        <tr>
-            <th> Or <a onclick="signUpPage()">sign up</a> instead.</th>
-        </tr>
-    </table>
+    <tr>
+        <th> Or <a onclick="signUpPage()" class="link">sign up</a> instead.</th>
+    </tr>
+</table>
 
-    <button id="but_logout" class="btn" type="submit" onclick="logout()">Logout</button>
+<button id="but_logout" class="btn" type="submit" onclick="logout()">Logout</button>
 </div>
 </html>
 

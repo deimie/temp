@@ -130,20 +130,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div id="login" class="userAuth">
-<h1>
-Login
-</h1>
 
-<table>
-<tbody>
-<tr>
+<table id="credentialsInput">
+<tbody><tr>
 <th>
-<span>Username</span><input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
+<span>Email</span> <input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
 </th>
 </tr>
 <tr>
 <th>
-<span>Password</span><input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
+<span>password</span> <input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
 </th>
 </tr>
 <tr>
@@ -155,13 +151,12 @@ Submit
 </tr>
 <tr>
 <th>
-Or <a class="link" onclick="signUpPage()">sign up</a> instead.
+Or <a onclick="signUpPage()" class="link">sign up</a> instead.
 </th>
 </tr>
-</tbody>
 
-</table>
-<button class="btn" type="submit" onclick="logout()">
+</tbody></table>
+<button id="but_logout" class="btn" type="submit" onclick="logout()">
 Logout
 </button>
 </div>
@@ -169,15 +164,16 @@ Logout
 <script>
 
 
-    if (sessionStorage.getItem("authorized")) {
-        document.getElementById("loggedIn").style.display = "hidden";
-        document.getElementById("loggedOut").style.visibility = "visible";
-    }
+if (sessionStorage.getItem("authorized") === "true") {
+    document.getElementById("but_logout").style.display = "block";
+    document.getElementById("credentialsInput").style.display = "none";
+}
 
-    else {
-        document.getElementById("loggedIn").style.visibility = "visible";
-        document.getElementById("loggedOut").style.display = "hidden";
-    }
+else {
+    document.getElementById("but_logout").style.display = "none";
+    document.getElementById("credentialisInput").style.display = "block";
+}
+
     // show signup, hide login
     function signUpPage() {
         document.getElementById("signup").style.display = "";
@@ -273,7 +269,7 @@ Logout
         sessionStorage.setItem("username", "Guest");
         sessionStorage.setItem("email", null);
         sessionStorage.setItem("authorized", false);
-        window.location.reload();
+        window.location.href = "https://deimie.github.io/temp/";
 
     }
 
