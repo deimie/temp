@@ -11,6 +11,25 @@
   <a href="../temp/pages/about.html"><button class="btn">Learn More</button></a>
 </div>
 
+<h3>
+  <div id="user"></div>
+  <div id="loginMessage"></div>
+</h3>
+<script>
+  if (sessionStorage.getItem("username") == null) {
+      sessionStorage.setItem("username", "Guest");
+  }
+  if (sessionStorage.getItem("authorized") == null) {
+      sessionStorage.setItem("authorized", false);
+  }
+  document.getElementById("user").innerHTML = "Hello " + sessionStorage.getItem("username") + "!";
+  console.log(sessionStorage.getItem("authorized"));
+
+  if (sessionStorage.getItem("authorized") === "false") {
+      document.getElementById("loginMessage").innerHTML = "You are not logged in. Please log in to access the lesson.";
+  }
+</script>
+
 <div class="tileContainer">
 
 <a href="../temp/pages/scavenger.html">
