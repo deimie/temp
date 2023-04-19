@@ -4,8 +4,6 @@ layout: single
 permalink: /assignments/
 ---
 
-## Assignments
-
 <section id="assignments" class="level2">
 <h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
 <ol type="1">
@@ -32,7 +30,4 @@ permalink: /assignments/
   }
 </script>
 
-
-1. [Assignment 1]({{site.baseurl}}/grading/)
-2. [Assignment 2]()
 
