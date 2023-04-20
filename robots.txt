@@ -1,1 +1,1 @@
-Sitemap: https://deimie.github.io/temp/sitemap.xml
+Sitemap: https://github.com/deimie/temp/sitemap.xml
