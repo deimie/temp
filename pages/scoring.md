@@ -61,7 +61,7 @@ title: Lab Scores
 
 
     function makeTable() {
-        console.log("bogus");
+        console.log("smth");
     }
 
 </script>
