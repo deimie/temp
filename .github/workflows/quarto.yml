@@ -5,9 +5,8 @@ on:
     branches: [master]
 
 jobs:
-  Quarto Commands:
+  build-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Quarto Commands
         uses: quarto-dev/quarto-actions/setup@v2
