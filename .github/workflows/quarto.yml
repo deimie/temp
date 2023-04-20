@@ -10,6 +10,10 @@ jobs:
 
     steps:
       - name: Quarto Commands
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 0.3.71
       - run: quarto render
       - run: git push
       - run: quarto publish gh-pages
+      - run: git push
