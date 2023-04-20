@@ -1,24 +1,24 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nWelcome to ABopsC\n",
+    "section": "",
+    "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
+  },
+  {
     "objectID": "pages/assignments.html",
     "href": "pages/assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "{% include lab_nav.html %}"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
   },
   {
     "objectID": "pages/assignments.html#assignments",
     "href": "pages/assignments.html#assignments",
     "title": "Assignments",
-    "section": "Assignments",
-    "text": "Assignments\n\nAssignment 1\nAssignment 2"
-  },
-  {
-    "objectID": "pages/index.html",
-    "href": "pages/index.html",
-    "title": "\nWelcome to ABopsC\n",
     "section": "",
-    "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
+    "text": "Assignment 1\n\n\nAssignment 2\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment 1\nAssignment 2"
   },
   {
     "objectID": "pages/grading.html",
@@ -51,9 +51,9 @@
   {
     "objectID": "pages/userControl.html",
     "href": "pages/userControl.html",
-    "title": "\nLogin\n",
+    "title": "\nSign Up\n",
     "section": "",
-    "text": "Login\n\n\n\n\n\n\nUsername\n\n\n\n\nPassword\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName\n\n\n\n\n\n\n\nEmail\n\n\n\n\n\n\n\nPassword\n\n\n\n\n\n\n\nConfirm Password\n\n\n\n\n\n\n\nDate of Birth\n\n\n\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
+    "text": "Email \n\n\n\n\npassword \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
   },
   {
     "objectID": "pages/lesson.html",
