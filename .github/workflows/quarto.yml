@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      run: quarto render
-      run: git push
-      run: quarto publish gh-pages
+      - name: Quarto Commands
+      - run: quarto render
+      - run: git push
+      - run: quarto publish gh-pages
