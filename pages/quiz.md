@@ -1,6 +1,5 @@
 ---
 title: Quiz
-layout: single
 ---
 
 <!--Honestly I have no idea what build_revision is, you might just have to delete it if it's causing problems-->

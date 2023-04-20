@@ -4,12 +4,29 @@
 <body class="indexBackground">
 
 <div class="text-box" style="margin-bottom:90px;">
-  <h1>Welcome to ABopsC</h1>
+  <h1 id="user">Welcome to ABopsC</h1>
   <span>Welcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. 
       We also have a cars-themed lab for you to practice the concepts in application!</span>
   
   <a href="../temp/pages/about.html"><button class="btn">Learn More</button></a>
+  <h3 id=loginMessage class="warning"></h3>
+
 </div>
+
+<script>
+  if (sessionStorage.getItem("username") == null) {
+      sessionStorage.setItem("username", "Guest");
+  }
+  if (sessionStorage.getItem("authorized") == null) {
+      sessionStorage.setItem("authorized", false);
+  }
+  document.getElementById("user").innerHTML = "Welcome to ABopsC, " + sessionStorage.getItem("username") + "!";
+  console.log(sessionStorage.getItem("authorized"));
+
+  if (sessionStorage.getItem("authorized") === "false") {
+      document.getElementById("loginMessage").innerHTML = "You are not logged in. Please log in to access the lesson.";
+  }
+</script>
 
 <div class="tileContainer">
 

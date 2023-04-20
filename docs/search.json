@@ -1,24 +1,24 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nWelcome to ABopsC\n",
+    "section": "",
+    "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
+  },
+  {
     "objectID": "pages/assignments.html",
     "href": "pages/assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "{% include lab_nav.html %}"
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
   },
   {
     "objectID": "pages/assignments.html#assignments",
     "href": "pages/assignments.html#assignments",
     "title": "Assignments",
-    "section": "Assignments",
-    "text": "Assignments\n\nAssignment 1\nAssignment 2"
-  },
-  {
-    "objectID": "pages/index.html",
-    "href": "pages/index.html",
-    "title": "\nWelcome to ABopsC\n",
     "section": "",
-    "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
+    "text": "Assignment 1\n\n\nAssignment 2\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment 1\nAssignment 2"
   },
   {
     "objectID": "pages/grading.html",
@@ -51,9 +51,9 @@
   {
     "objectID": "pages/userControl.html",
     "href": "pages/userControl.html",
-    "title": "\nLogin\n",
+    "title": "\nSign Up\n",
     "section": "",
-    "text": "Login\n\n\n\n\n\n\nUsername\n\n\n\n\nPassword\n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\n\nLogout\n\n\n\n\n\n\n&lt;h1&gt;Sign Up&lt;/h1&gt;\n&lt;table&gt;\n  &lt;tr&gt;\n    &lt;th&gt;Name&lt;/th&gt;\n    &lt;th&gt;\n      &lt;input\n        type=\"text\"\n        id=\"name\"\n        name=\"name\"\n        placeholder=\"enter your name...\"\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;Email&lt;/th&gt;\n    &lt;th&gt;\n      &lt;input\n        type=\"text\"\n        id=\"email\"\n        name=\"email\"\n        placeholder=\"enter your email...\"\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;Password&lt;/th&gt;\n    &lt;th&gt;\n      &lt;input\n        type=\"password\"\n        id=\"password\"\n        name=\"password\"\n        placeholder=\"enter a password...\"\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;Confirm Password&lt;/th&gt;\n    &lt;th&gt;\n      &lt;input\n        type=\"password\"\n        id=\"pswdagain\"\n        name=\"pswdagain\"\n        placeholder=\"re-enter password...\"\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;Date of Birth&lt;/th&gt;\n    &lt;th&gt;\n      &lt;input\n        type=\"text\"\n        placeholder=\"00-00-0000\"\n        id=\"dob\"\n        name=\"enter date of birth...\"\n        required\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;\n      &lt;button class=\"btn\" type=\"submit\" value=\"Submit\" onclick=\"signUp()\"&gt;\n        Submit\n      &lt;/button&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;Or &lt;a onclick=\"loginPage()\"&gt;login&lt;/a&gt; instead.&lt;/th&gt;\n  &lt;/tr&gt;\n&lt;/table&gt;"
+    "text": "Email \n\n\n\n\npassword \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
   },
   {
     "objectID": "pages/lesson.html",
