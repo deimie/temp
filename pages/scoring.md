@@ -1,7 +1,5 @@
 ---
 title: Lab Scores
-layout: singleWide
-permalink: /scores/
 ---
 
 ### Score Rundown:

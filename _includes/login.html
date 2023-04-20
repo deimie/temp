@@ -3,19 +3,25 @@
 <div id="login" class="userAuth">
 <table id="credentialsInput">
     <tr>
-        <th>Email</th>
-        <th><input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username..."></th>
+        <th>
+            <span>Email</span>
+            <input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
+        </th>
     </tr>
     <tr>
-        <th>Password</th>
-        <th><input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password..."></th>
+        <th>
+            <span>password</span>
+            <input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
+        </th>
     </tr>
     <tr>
-        <th><button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button></th>
+        <th>
+            <button class="btn" type="submit" value="Submit" onclick="login_user()">Submit</button>
+        </th>
     </tr>
 
     <tr>
-        <th> Or <a onclick="signUpPage()">sign up</a> instead.</th>
+        <th> Or <a onclick="signUpPage()" class="link">sign up</a> instead.</th>
     </tr>
 </table>
 
