@@ -5,9 +5,10 @@ permalink: /scores/
 ---
 
 ### Score Rundown:
-* Lab - 2 points
-* Lesson - 1 point
-* Total - 3 points
+
+- Lab - 2 points
+- Lesson - 1 point
+- Total - 3 points
 
 <body>
     <div id="scores">
@@ -59,5 +60,10 @@ permalink: /scores/
         document.getElementById("scores").innerHTML = result;
     }
     makeTableHTML(people);
+
+
+    function makeTable() {
+        
+    }
 
 </script>
