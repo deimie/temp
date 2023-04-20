@@ -15,6 +15,10 @@ layout: single
 
 <script>
 
+
+    // If not logged in, redirect to login
+    if (!sessionStorage.getItem("authorized")) window.location.href = "https://deimie.github.io/temp/pages/userControl.html";
+
     const question_answer_map = new Map();
     var question_count = 0;
 
@@ -23,7 +27,9 @@ layout: single
     let urlParams = new URLSearchParams(url.search);
     var name = parseString(urlParams.get("name"));
 
-    function create_questions(set) {
+    create_questions(name);
+
+    function create_questions(name) {
         
 
         url = "https://abopsc-backend.dontntntnt.de/api/problem/getProblemSetMC";
@@ -105,12 +111,21 @@ layout: single
 
         // REMEMBER TO GET USER EMAIL AND PASSWORD
         function returnScore() {
-            var score = getScore();
-            document.getElementById("results").innerHTML = "Your score is " + score + "/" + question_count;
+            var number_score = getScore();
+            var json_body = {sessionStorage.getItem("email"), }
+            document.getElementById("results").innerHTML = "Your score is " + number_score + "/" + question_count;
 
-            /* This fetch should be used to send scores
-            fetch()
-            */
+            // TODO: Create backend POST CORS for receiving scores and change url
+            fetch("https://abopsc-backend.dontntntnt.de/api/problem/getProblemSetMC",
+                {
+                    method : "POST",
+                    headers : {
+                        "Content-Type" : "application/json"
+                    },
+                    credentials : "include",
+                    body : JSON.stringify({sessionStorage.getItem("email"), sessionStorage.getItem("password"), score : number_score});
+                }
+            );
         }
     }
 </script>
