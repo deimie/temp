@@ -130,25 +130,41 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div id="login" class="userAuth">
-<pre><code>&lt;table id="credentialsInput"&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Email&lt;/th&gt;
-        &lt;th&gt;&lt;input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Password&lt;/th&gt;
-        &lt;th&gt;&lt;input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password..."&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th&gt;&lt;button class="btn" type="submit" value="Submit" onclick="login_user()"&gt;Submit&lt;/button&gt;&lt;/th&gt;
-    &lt;/tr&gt;
 
-    &lt;tr&gt;
-        &lt;th&gt; Or &lt;a onclick="signUpPage()"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
+<table id="credentialsInput">
+<tbody><tr>
+<th>
+Email
+</th>
+<th>
+<input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
+</th>
+</tr>
+<tr>
+<th>
+Password
+</th>
+<th>
+<input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
+</th>
+</tr>
+<tr>
+<th>
+<button class="btn" type="submit" value="Submit" onclick="login_user()">
+Submit
+</button>
+</th>
+</tr>
+<tr>
+<th>
+Or <a onclick="signUpPage()">sign up</a> instead.
+</th>
+</tr>
 
-&lt;button id="but_logout" class="btn" type="submit" onclick="logout()"&gt;Logout&lt;/button&gt;</code></pre>
+</tbody></table>
+<button id="but_logout" class="btn" type="submit" onclick="logout()">
+Logout
+</button>
 </div>
 
 <script>
