@@ -375,7 +375,10 @@ Or <a onclick="loginPage()" class="link">login</a> instead.
 
     fetch(url, options)
       .then((response) => console.log(response.text()))
-      .then((result) => console.log(result))
+      .then((result) =>  {
+        console.log(result);
+        window.location.href = "https://deimie.github.io/temp/pages/userControl.html";
+      })
       .catch((error) => console.log("error", error));
   }
 </script>
