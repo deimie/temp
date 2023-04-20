@@ -13,8 +13,8 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 0.3.71
-        run: |
-          quarto render
-          git push
-          quarto publish gh-pages
-          git push
+          script: |
+            quarto render
+            git push
+            quarto publish gh-pages
+            git push
