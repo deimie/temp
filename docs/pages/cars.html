@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ABopsC - Assignments</title>
+<title>ABopsC - Cars Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,14 +119,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#car-registry" id="toc-car-registry" class="nav-link active" data-scroll-target="#car-registry">Car Registry</a></li>
+  <li><a href="#prices" id="toc-prices" class="nav-link" data-scroll-target="#prices">Prices</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignments</h1>
+<h1 class="title">Cars Lab</h1>
 </div>
 
 
@@ -141,51 +148,71 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>You are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.</p>
+<p>To make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.</p>
+<p>In this lab, you will be creating a car registry that will allow you to keep track of different cars and their prices. You will also be able to compare prices, calculate the acceleration of the car, and find the cheapest car in the registry.</p>
+<p>To get started, we’ve provided the following code in the Github repo here: https://github.com/dontran15/backend-abopsc/tree/master/src/main/java/com/nighthawk/spring_portfolio/database/lab as well as the frontend shown on this page. You will be working with the <code>CarLab</code> class and the <code>CarLabApiController</code> files</p>
+<p>TODO: - [ ] Clone code and run locally - [ ] Add car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types - [ ] Add a constructor to the CarLab class that takes in the car make, model, and mpg as parameters - [ ] Create another method based on operations on the CarLab class that uses a different data type - [ ] Given a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration</p>
+<section id="car-registry" class="level3">
+<h3 class="anchored" data-anchor-id="car-registry">Car Registry</h3>
 
-<div id="navAuthorized">
-<p><a href="../temp/pages/scavenger.html"><button class="btn" style="font-size: 17px;">Scavenger Hunt</button></a> <a href="../temp/pages/lesson.html"><button class="btn" style="font-size: 17px;">Lesson</button></a> <a href="../temp/pages/labs.html"><button class="btn" style="font-size: 17px;">Lab Work</button></a> <a href="../temp/pages/scoring.html"><button class="btn" style="font-size: 17px;">Scoring</button></a></p>
+<!-- Create table to display cars -->
+<table id="carsTable">
+<tbody><tr>
+<th>
+Name
+</th>
+<th>
+Price
+</th>
+</tr>
+
+</tbody></table>
+</section>
+<section id="prices" class="level3">
+<h3 class="anchored" data-anchor-id="prices">Prices</h3>
+Cheapest car is:
+<div id="result">
+
 </div>
 
-
-<section id="assignments" class="level2">
-<ol type="1">
-<li>
-<a href="{{site.baseurl}}/grading/">Assignment 1</a>
-</li>
-<li>
-<a href="">Assignment 2</a>
-</li>
-</ol>
-<h3 class="anchored" data-anchor-id="assignments">
-<div id="user">
-
-</div>
-<div id="loginMessage">
-
-</div>
-</h3>
 <script>
-  if (sessionStorage.getItem("username") == null) {
-      sessionStorage.setItem("username", "Guest");
-  }
-  if (sessionStorage.getItem("authorized") == null) {
-      sessionStorage.setItem("authorized", false);
-  }
-  document.getElementById("user").innerHTML = "Hello " + sessionStorage.getItem("username") + "!";
-  console.log(sessionStorage.getItem("authorized"));
+    // fetch from database
+    const resultTable = document.getElementById("carsTable");
+    const cars_url = "https://abopsc-backend.dontntntnt.de/api/carLab";
+    fetch(cars_url + "/")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            // create table rows
+            for (let i = 0; i < data.length; i++) {
+                let row = resultTable.insertRow(-1);
+                let name = row.insertCell(0);
+                let price = row.insertCell(1);
+                name.innerHTML = data[i].name;
+                price.innerHTML = data[i].price;
+            }
+        });
+    .catch(err => console.log(err));
+    
+    // find cheapest car
+    const cheapestCar = document.getElementById("result");
+    const cheapest_url = cars_url + "/compareprice";
 
-  if (sessionStorage.getItem("authorized") === "false") {
-      document.getElementById("loginMessage").innerHTML = "You are not logged in. Please log in to access the lesson.";
-  }
+    fetch(cheapest_url)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            cheapestCar.innerHTML = data;
+        });
+    .catch(err => console.log(err));
+
 </script>
-<ol type="1">
-<li><a href="{{site.baseurl}}/grading/">Assignment 1</a></li>
-<li><a href="">Assignment 2</a></li>
-</ol>
 
 
+</section>
 
-</section></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
