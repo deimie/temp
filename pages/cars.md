@@ -5,7 +5,6 @@ title: Cars Lab
 ### Car Registry
 
 <!-- Create table to display cars -->
-
 <table id="carsTable">
     <tr>
         <th>Name</th>
@@ -13,11 +12,15 @@ title: Cars Lab
     </tr>
 </table>
 
+### Cheapest Car
+
+Cheapest car is: <div id="result"></div>
+
 <script>
     // fetch from database
     const resultTable = document.getElementById("carsTable");
     const cars_url = "https://abopsc-backend.dontntntnt.de/api/carLab";
-    fetch(cars_url)
+    fetch(cars_url + "/")
         .then(response => response.json())
         .then(data => {
             console.log(data)
@@ -32,5 +35,9 @@ title: Cars Lab
         });
     .catch(err => console.log(err));
     
+    // find cheapest car
+    const cheapestCar = document.getElementById("result");
+    const cheapest_url = cars_url + "/compareprice";
 
+    // send POST 
 </script>
