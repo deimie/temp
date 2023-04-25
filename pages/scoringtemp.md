@@ -77,7 +77,7 @@ title: Lab Scores
           console.log(data);
 
           for (const person in data) {
-            console.log(`${person.name}: ${data[person]}`);
+            console.log(person.name);
             }
         })
         .then()
