@@ -1,6 +1,9 @@
 ---
 title: Cars Lab
 ---
+Part 1: Complete Lesson Hacks on a Jupyter Notebook.
+ 
+Part 2: PBL 
 
 You are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.
 

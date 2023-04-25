@@ -24,9 +24,9 @@ title: Quiz
     var currentUrl = window.location.href;
     let url = new URL(currentUrl);
     let urlParams = new URLSearchParams(url.search);
-    var name = parseString(urlParams.get("name"));
+    var problem_set_name = parseString(urlParams.get("name"));
 
-    create_questions(name);
+    create_questions(problem_set_name);
 
     function create_questions(name) {
         
@@ -112,17 +112,17 @@ title: Quiz
         function returnScore() {
             var number_score = getScore();
             var json_body = {sessionStorage.getItem("email"), }
-            document.getElementById("results").innerHTML = "Your score is " + number_score + "/" + question_count;
+            document.getElementById("results").innerHTML = "Your score is " + number_score + "/" + question_count
 
             // TODO: Create backend POST CORS for receiving scores and change url
-            fetch("https://abopsc-backend.dontntntnt.de/api/problem/getProblemSetMC",
+            fetch("https://abopsc-backend.dontntntnt.de/api/problem/score",
                 {
                     method : "POST",
                     headers : {
                         "Content-Type" : "application/json"
                     },
                     credentials : "include",
-                    body : JSON.stringify({sessionStorage.getItem("email"), sessionStorage.getItem("password"), score : number_score});
+                    body : JSON.stringify({email : sessionStorage.getItem("email"), name : problem_set_name, score : number_score});
                 }
             );
         }
