@@ -57,7 +57,6 @@ Cheapest car is: <div id="result"></div>
                 price.innerHTML = data[i].price;
             }
         });
-    .catch(err => console.log(err));
     
     // find cheapest car
     const cheapestCar = document.getElementById("result");
@@ -69,6 +68,5 @@ Cheapest car is: <div id="result"></div>
             console.log(data)
             cheapestCar.innerHTML = data;
         });
-    .catch(err => console.log(err));
 
 </script>
