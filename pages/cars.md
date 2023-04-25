@@ -11,11 +11,17 @@ In this lab, you will be creating a car registry that will allow you to keep tra
 To get started, we've provided the following code in the Github repo here: https://github.com/dontran15/backend-abopsc/tree/master/src/main/java/com/nighthawk/spring_portfolio/database/lab as well as the frontend shown on this page. You will be working with the `CarLab` class and the `CarLabApiController` files
 
 TODO:
+
 - [ ] Clone code and run locally
+
 - [ ] Add car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types
+
 - [ ] Add a constructor to the CarLab class that takes in the car make, model, and mpg as parameters
+
 - [ ] Create another method based on operations on the CarLab class that uses a different data type
-- [ ] Given a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration
+
+- [ ] Given a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration)
+
 
 ### Car Registry
 
