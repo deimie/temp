@@ -1,14 +1,42 @@
-name: Quarto
+name: Quarto Render and Publish
+
+# on:
+#   push:
+#     branches: [master]
+
+# jobs:
+#   build-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Quarto Commands
+#         uses: quarto-dev/quarto-actions/setup@v2
+#         with:
+#           version: 0.3.71
+#           script: |
+#             quarto render
+#             git push
+#             quarto publish gh-pages
+#             git push
 
 on:
   push:
-    branches: [master]
+    branches: master
 
 jobs:
-  Quarto Commands:
+  build-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      run: quarto render
-      run: git push
-      run: quarto publish gh-pages
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

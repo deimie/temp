@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "\nWelcome to ABopsC\n",
+    "title": "ABopsC",
     "section": "",
     "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
   },
@@ -151,6 +151,13 @@
     "href": "pages/scoring.html",
     "title": "Lab Scores",
     "section": "",
-    "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
+    "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n</div>"
+  },
+  {
+    "objectID": "pages/cars.html",
+    "href": "pages/cars.html",
+    "title": "Cars Lab",
+    "section": "",
+    "text": "You are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.\nTo make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.\nIn this lab, you will be creating a car registry that will allow you to keep track of different cars and their prices. You will also be able to compare prices, calculate the acceleration of the car, and find the cheapest car in the registry.\nTo get started, we’ve provided the following code in the Github repo here: https://github.com/dontran15/backend-abopsc/tree/master/src/main/java/com/nighthawk/spring_portfolio/database/lab as well as the frontend shown on this page. You will be working with the CarLab class and the CarLabApiController files\nTODO: - [ ] Clone code and run locally - [ ] Add car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types - [ ] Add a constructor to the CarLab class that takes in the car make, model, and mpg as parameters - [ ] Create another method based on operations on the CarLab class that uses a different data type - [ ] Given a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration\n\nCar Registry\n\n\n\n\n\nName\n\n\nPrice\n\n\n\n\n\n\nPrices\nCheapest car is:"
   }
 ]
