@@ -75,15 +75,15 @@ title: Lab Scores
           .then(response => response.text())
         .then(result => {
           console.log(result);
+
+          for (const person in response) {
+            console.log(`${person.name}: ${response[person]}`);
+            }
         })
         .catch(error => console.log('error', error));
 
         var result = "<table";
         result+="<thead><tr><th>Name</th><th>Homework Score</th></thead><tbody>";
-        
-        for (const person in response) {
-            console.log(`${person.name}: ${response[person]}`);
-        }
 
         result += "</tbody></table>";
         document.getElementById("scores").innerHTML = result;
