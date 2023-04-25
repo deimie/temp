@@ -16,7 +16,7 @@ title: Lab Scores
 <script>
     // put all scores and names in this array (order Z at top, A at bottom)
     let people = [
-        ["name","homework", "comment"],
+        ["name", "homework", "comment"],
         ["","/2", ""],
         ["","/2", ""],
         ["","/2", ""],
@@ -77,9 +77,13 @@ title: Lab Scores
           console.log(result);
         })
         .catch(error => console.log('error', error));
-        
+
         var result = "<table";
         result+="<thead><tr><th>Name</th><th>Homework Score</th></thead><tbody>";
+        
+        for (const person in response) {
+            console.log(`${person.name}: ${response[person]}`);
+        }
 
         result += "</tbody></table>";
         document.getElementById("scores").innerHTML = result;
