@@ -72,12 +72,12 @@ title: Lab Scores
         fetch(
           url + `/api/person/all`, requestOptions
         )
-        .then(response => response.text())
-        .then(result => {
-          console.log(result);
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
 
-          for (const person in result) {
-            console.log(`${person.name}: ${response[person]}`);
+          for (const person in data) {
+            console.log(`${person.name}: ${data[person]}`);
             }
         })
         .then()
