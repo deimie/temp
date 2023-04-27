@@ -37,8 +37,8 @@ title: Lab Scores
         ["Meena","3.0/3", "comprehensive code with expected output shown"],
         ["Madhumita","3.0/3", "comprehensive code with expected output shown"],
         ["Aadya","3.0/3", "comprehensive code with expected output shown"],
-        ["Rohan","3.0/3", ""],
-        ["Shreya","3.0/3", ""],
+        ["Rohan","3.0/3", "comprehensive code with expected output shown"],
+        ["Shreya","3.0/3", "comprehensive code with expected output shown"],
         ["Linda","./3", ""],
         ["Grey","./3", ""]
     ]
