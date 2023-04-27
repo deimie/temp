@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nWelcome to ABopsC\n",
-    "section": "",
-    "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
-  },
-  {
-    "objectID": "pages/assignments.html",
-    "href": "pages/assignments.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Scavenger Hunt Lesson Lab Work Scoring"
-  },
-  {
-    "objectID": "pages/assignments.html#assignments",
-    "href": "pages/assignments.html#assignments",
-    "title": "Assignments",
-    "section": "",
-    "text": "Assignment 1\n\n\nAssignment 2\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment 1\nAssignment 2"
-  },
-  {
-    "objectID": "pages/quiz.html",
-    "href": "pages/quiz.html",
-    "title": "Quiz",
-    "section": "",
-    "text": "Quiz\n\n\n\n\nCheck\n\nYour score is -/-"
-  },
-  {
-    "objectID": "pages/scoringtemp.html",
-    "href": "pages/scoringtemp.html",
+    "objectID": "pages/scoring.html",
+    "href": "pages/scoring.html",
     "title": "Lab Scores",
     "section": "",
     "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
-  },
-  {
-    "objectID": "pages/userControl.html",
-    "href": "pages/userControl.html",
-    "title": "\nSign Up\n",
-    "section": "",
-    "text": "Email \n\n\n\n\npassword \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
   },
   {
     "objectID": "pages/grading.html",
@@ -56,67 +21,11 @@
     "text": "Grading Checklist Period 2 APCSA\n\n\n\n\n\nName\n\n\nScore\n\n\n\n\nName\n\n\nScore\n\n\n\n\n\nName:  Grade:  Submit"
   },
   {
-    "objectID": "pages/labs.html",
-    "href": "pages/labs.html",
-    "title": "Lab Scores",
+    "objectID": "pages/quiz.html",
+    "href": "pages/quiz.html",
+    "title": "Quiz",
     "section": "",
-    "text": "Still in progress!!!"
-  },
-  {
-    "objectID": "pages/scoring.html",
-    "href": "pages/scoring.html",
-    "title": "Lab Scores",
-    "section": "",
-    "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
-  },
-  {
-    "objectID": "pages/cars.html",
-    "href": "pages/cars.html",
-    "title": "Cars Lab",
-    "section": "",
-    "text": "Part 1: Complete Lesson Hacks on a Jupyter Notebook.\nPart 2: PBL\nYou are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.\nTo make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.\nIn this lab, you will be creating a car registry that will allow you to keep track of different cars and their prices. You will also be able to compare prices, calculate the acceleration of the car, and find the cheapest car in the registry.\nTo get started, we’ve provided the following code in the Github repo here: https://github.com/dontran15/backend-abopsc/tree/master/src/main/java/com/nighthawk/spring_portfolio/database/lab as well as the frontend shown on this page. You will be working with the CarLab class and the CarLabApiController files\nTODO:\n\nClone code and run locally\nAdd car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types\nAdd a constructor to the CarLab class that takes in the car make, model, and mpg as parameters\nCreate another method based on operations on the CarLab class that uses a different data type\nGiven a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration)\n\n\nCar Registry\n\n\n\n\n\nName\n\n\nPrice\n\n\n\n\n\n\nPrices\nCheapest car is:"
-  },
-  {
-    "objectID": "pages/scavenger.html",
-    "href": "pages/scavenger.html",
-    "title": "Scavenger Hunt",
-    "section": "",
-    "text": "Directions: Welcome to our introduction to Unit 1-4. We have 5 questions posted around the room.Partner up and grab your phone to write down the output of the code. No laptops. The responses will create message and the key to a special prize! Ask Iris if you have any questions."
-  },
-  {
-    "objectID": "pages/scavenger.html#question-1",
-    "href": "pages/scavenger.html#question-1",
-    "title": "Scavenger Hunt",
-    "section": "Question 1",
-    "text": "Question 1\n\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\");\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\");\n}\nelse {\n    System.out.print(\"in\");\n}\n\n\nVariables x and y are initialized with boolean values: x is true and y is false.\nFirst conditional statement is evaluated. The expression !(x||y) evaluates to false, and the expression (x && y) evaluates to false as well. - Therefore, the first conditional statement does not execute.\nThe second conditional statement is evaluated. The expression !(x&&y) evaluates to true, and the expression (x || y) evaluates to true.\nCode prints “under”."
-  },
-  {
-    "objectID": "pages/scavenger.html#question-2",
-    "href": "pages/scavenger.html#question-2",
-    "title": "Scavenger Hunt",
-    "section": "Question 2",
-    "text": "Question 2\n\nint x = 10;\nif (x*3 &lt;= 30) {\n    x++;\n}\nif (x &gt; 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\nA. 11 (chair)\nB. 15 (backpack)\nC. 31 (table)\nD. error (floor)\n\nx is initialized to 10.\nThe first if statement checks if x3 is less than or equal to 30. Since x3 is equal to 30, the condition is true and the code inside the if statement is executed.\nInside the if statement, x is incremented by 1, so it becomes 11.\nThe second if statement checks if x is greater than 31. Since x is equal to 11, the condition is false and the code inside the if statement is not executed.\nThe final value of x is printed, which is 11."
-  },
-  {
-    "objectID": "pages/scavenger.html#question-3",
-    "href": "pages/scavenger.html#question-3",
-    "title": "Scavenger Hunt",
-    "section": "Question 3",
-    "text": "Question 3\n\npublic class Q3 {\n    public static void main(String[] args) {\n        String[] words = {\"hello\", \"world\", \"Java\", \"try\", \"catch\"};\n        String result = \"outside\";\n        for (String word : words) {\n            try {\n                // Attempt some code that might throw an exception\n                if (word.length() &gt; 5) {\n                    break;\n                }\n            } catch (Exception e) {\n                // Catch any exception and change the result\n                result = \"inside\";\n            }\n        }\n        System.out.println(result);\n    }\n}\n\n\nAn array of strings named words is declared and initialized with 5 string values.\nA string variable named result is declared and initialized to the value “outside”.\nA for-each loop is used to iterate over each string in the words array.\nInside the loop, an if statement checks if the length of the current string is greater than 5. If it is, the break statement is executed and the loop is terminated.\nSince none of the strings in the array have a length greater than 5, the if statement is never triggered and the break statement is never executed.\nThe loop completes normally and the final value of result is printed to the console, which is “outside”."
-  },
-  {
-    "objectID": "pages/scavenger.html#question-4",
-    "href": "pages/scavenger.html#question-4",
-    "title": "Scavenger Hunt",
-    "section": "Question 4",
-    "text": "Question 4\n\npublic class Q4 {\n    public static void main(String[] args) {\n        String[] words = {\"also\", \"plus\", \"is\", \"for\", \"and\"};\n\n        String first = words[0]; // initialize with the first word\n\n        for (int i = 1; i &lt; words.length; i++) {\n            if (words[i].length() &lt; first.length()) {\n                first = words[i]; // update shortestWord if a shorter word is found\n            }\n        }\n\n        System.out.println(first);\n    }\n}\n\n\nAn array of strings named words is declared and initialized with 5 string values.\nA string variable named first is declared and initialized to the value of the first string in the words array, which is “also”.\nA for loop is used to iterate over each string in the words array starting from the second element (index 1).\nInside the loop, an if statement checks if the length of the current string is less than the length of the first string. If it is, the first variable is updated with the value of the current string.\nThe loop completes normally and the final value of first is printed to the console, which is “is” because it is the shortest word in the array."
-  },
-  {
-    "objectID": "pages/scavenger.html#question-5",
-    "href": "pages/scavenger.html#question-5",
-    "title": "Scavenger Hunt",
-    "section": "Question 5",
-    "text": "Question 5\n\nint x = 56/10*5*4;\nif (x&lt;10) {\n    System.out.println(\"extra credit\");\n}\nelse if (x&lt;= 50){\n    System.out.println(\"apple\");\n}\nelse if (x &gt; 50 &&  x &lt;= 100){\n    System.out.println(\"candy\");\n}\nelse if (x &gt; 100 &&  x &lt;= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x &gt; 115 &&  x &lt;= 150){\n    System.out.println(\"dinero\");\n}\n\nIt follows the simple arithmetic expression. x = 112 which is between 50 and 100 so it prints candy."
+    "text": "Quiz\n\n\n\n\nCheck\n\nYour score is -/-"
   },
   {
     "objectID": "pages/lesson.html",
@@ -161,10 +70,101 @@
     "text": "You are tasked with creating a program that allows a user to enter the number of cars they own, and then input the make and model of each car. The program will then print out the list of cars.\nHere are the specific requirements:\n\nUse a try-catch statement to catch any input/output exceptions that may occur.\nUse a while loop to ensure that the user enters a positive integer for the number of cars they own.\nUse a for loop to iterate over each car and prompt the user to enter the make and model of the car."
   },
   {
+    "objectID": "pages/assignments.html",
+    "href": "pages/assignments.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Scavenger Hunt Lesson Lab Work Scoring"
+  },
+  {
+    "objectID": "pages/assignments.html#assignments",
+    "href": "pages/assignments.html#assignments",
+    "title": "Assignments",
+    "section": "",
+    "text": "Assignment 1\n\n\nAssignment 2\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment 1\nAssignment 2"
+  },
+  {
+    "objectID": "pages/scavenger.html",
+    "href": "pages/scavenger.html",
+    "title": "Scavenger Hunt",
+    "section": "",
+    "text": "Directions: Welcome to our introduction to Unit 1-4. We have 5 questions posted around the room.Partner up and grab your phone to write down the output of the code. No laptops. The responses will create message and the key to a special prize! Ask Iris if you have any questions."
+  },
+  {
+    "objectID": "pages/scavenger.html#question-1",
+    "href": "pages/scavenger.html#question-1",
+    "title": "Scavenger Hunt",
+    "section": "Question 1",
+    "text": "Question 1\n\n// x is true, y is false\nif (!(x||y) || (x && y)) {\n    System.out.print(\"on\");\n}\nif (!(x&&y) && (x || y)) {\n    System.out.print(\"under\");\n}\nelse {\n    System.out.print(\"in\");\n}\n\n\nVariables x and y are initialized with boolean values: x is true and y is false.\nFirst conditional statement is evaluated. The expression !(x||y) evaluates to false, and the expression (x && y) evaluates to false as well. - Therefore, the first conditional statement does not execute.\nThe second conditional statement is evaluated. The expression !(x&&y) evaluates to true, and the expression (x || y) evaluates to true.\nCode prints “under”."
+  },
+  {
+    "objectID": "pages/scavenger.html#question-2",
+    "href": "pages/scavenger.html#question-2",
+    "title": "Scavenger Hunt",
+    "section": "Question 2",
+    "text": "Question 2\n\nint x = 10;\nif (x*3 &lt;= 30) {\n    x++;\n}\nif (x &gt; 31) {\n    x += 4;\n}\nSystem.out.print(x);\n\nA. 11 (chair)\nB. 15 (backpack)\nC. 31 (table)\nD. error (floor)\n\nx is initialized to 10.\nThe first if statement checks if x3 is less than or equal to 30. Since x3 is equal to 30, the condition is true and the code inside the if statement is executed.\nInside the if statement, x is incremented by 1, so it becomes 11.\nThe second if statement checks if x is greater than 31. Since x is equal to 11, the condition is false and the code inside the if statement is not executed.\nThe final value of x is printed, which is 11."
+  },
+  {
+    "objectID": "pages/scavenger.html#question-3",
+    "href": "pages/scavenger.html#question-3",
+    "title": "Scavenger Hunt",
+    "section": "Question 3",
+    "text": "Question 3\n\npublic class Q3 {\n    public static void main(String[] args) {\n        String[] words = {\"hello\", \"world\", \"Java\", \"try\", \"catch\"};\n        String result = \"outside\";\n        for (String word : words) {\n            try {\n                // Attempt some code that might throw an exception\n                if (word.length() &gt; 5) {\n                    break;\n                }\n            } catch (Exception e) {\n                // Catch any exception and change the result\n                result = \"inside\";\n            }\n        }\n        System.out.println(result);\n    }\n}\n\n\nAn array of strings named words is declared and initialized with 5 string values.\nA string variable named result is declared and initialized to the value “outside”.\nA for-each loop is used to iterate over each string in the words array.\nInside the loop, an if statement checks if the length of the current string is greater than 5. If it is, the break statement is executed and the loop is terminated.\nSince none of the strings in the array have a length greater than 5, the if statement is never triggered and the break statement is never executed.\nThe loop completes normally and the final value of result is printed to the console, which is “outside”."
+  },
+  {
+    "objectID": "pages/scavenger.html#question-4",
+    "href": "pages/scavenger.html#question-4",
+    "title": "Scavenger Hunt",
+    "section": "Question 4",
+    "text": "Question 4\n\npublic class Q4 {\n    public static void main(String[] args) {\n        String[] words = {\"also\", \"plus\", \"is\", \"for\", \"and\"};\n\n        String first = words[0]; // initialize with the first word\n\n        for (int i = 1; i &lt; words.length; i++) {\n            if (words[i].length() &lt; first.length()) {\n                first = words[i]; // update shortestWord if a shorter word is found\n            }\n        }\n\n        System.out.println(first);\n    }\n}\n\n\nAn array of strings named words is declared and initialized with 5 string values.\nA string variable named first is declared and initialized to the value of the first string in the words array, which is “also”.\nA for loop is used to iterate over each string in the words array starting from the second element (index 1).\nInside the loop, an if statement checks if the length of the current string is less than the length of the first string. If it is, the first variable is updated with the value of the current string.\nThe loop completes normally and the final value of first is printed to the console, which is “is” because it is the shortest word in the array."
+  },
+  {
+    "objectID": "pages/scavenger.html#question-5",
+    "href": "pages/scavenger.html#question-5",
+    "title": "Scavenger Hunt",
+    "section": "Question 5",
+    "text": "Question 5\n\nint x = 56/10*5*4;\nif (x&lt;10) {\n    System.out.println(\"extra credit\");\n}\nelse if (x&lt;= 50){\n    System.out.println(\"apple\");\n}\nelse if (x &gt; 50 &&  x &lt;= 100){\n    System.out.println(\"candy\");\n}\nelse if (x &gt; 100 &&  x &lt;= 115){\n    System.out.println(\"chocolate\");\n}\nelse if (x &gt; 115 &&  x &lt;= 150){\n    System.out.println(\"dinero\");\n}\n\nIt follows the simple arithmetic expression. x = 112 which is between 50 and 100 so it prints candy."
+  },
+  {
     "objectID": "pages/about.html",
     "href": "pages/about.html",
     "title": "About ABopsC",
     "section": "",
     "text": "Welcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!"
+  },
+  {
+    "objectID": "pages/scoringtemp.html",
+    "href": "pages/scoringtemp.html",
+    "title": "Lab Scores",
+    "section": "",
+    "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
+  },
+  {
+    "objectID": "pages/userControl.html",
+    "href": "pages/userControl.html",
+    "title": "\nSign Up\n",
+    "section": "",
+    "text": "Email \n\n\n\n\npassword \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
+  },
+  {
+    "objectID": "pages/labs.html",
+    "href": "pages/labs.html",
+    "title": "Lab Scores",
+    "section": "",
+    "text": "Still in progress!!!"
+  },
+  {
+    "objectID": "pages/cars.html",
+    "href": "pages/cars.html",
+    "title": "Cars Lab",
+    "section": "",
+    "text": "Part 1: Complete Lesson Hacks on a Jupyter Notebook.\nPart 2: PBL\nYou are a teenager who has their license and wants to find a car to buy. When you go to the car dealership, you realize that there are many different things you have to keep track of. You have to keep track of the car brands you look at, the prices of the cars, phone numbers of different sales representatives, etc.\nTo make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.\nIn this lab, you will be creating a car registry that will allow you to keep track of different cars and their prices. You will also be able to compare prices, calculate the acceleration of the car, and find the cheapest car in the registry.\nTo get started, we’ve provided the following code in the Github repo here: https://github.com/dontran15/backend-abopsc/tree/master/src/main/java/com/nighthawk/spring_portfolio/database/lab as well as the frontend shown on this page. You will be working with the CarLab class and the CarLabApiController files\nTODO:\n\nClone code and run locally\nAdd car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types\nAdd a constructor to the CarLab class that takes in the car make, model, and mpg as parameters\nCreate another method based on operations on the CarLab class that uses a different data type\nGiven a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration)\n\n\nCar Registry\n\n\n\n\n\nName\n\n\nPrice\n\n\n\n\n\n\nPrices\nCheapest car is:"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nWelcome to ABopsC\n",
+    "section": "",
+    "text": "Welcome to ABopsC\n\nWelcome to our site on which we teach you about AP Computer Science A Units 1-4 to prepare our classmates for the AP Exam. We also have a cars-themed lab for you to practice the concepts in application!\nLearn More\n\n\n\n\n\n   Scavenger Hunt      Lesson      Labs      Scores"
   }
 ]
