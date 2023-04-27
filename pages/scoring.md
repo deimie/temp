@@ -55,7 +55,7 @@ title: Lab Scores
                 result += "<td>"+people[i][j]+"</td>";   
             }   
             result += "</tr>";
-        }   
+        }
         result += "</tbody></table>";
         document.getElementById("scores").innerHTML = result;
     }
