@@ -154,7 +154,14 @@ ul.task-list li input[type="checkbox"] {
 <p>To make it easy on yourself, you want to develop a computerized code that is able to sort through different prices, car brands, etc.</p>
 <p>In this lab, you will be creating a car registry that will allow you to keep track of different cars and their prices. You will also be able to compare prices, calculate the acceleration of the car, and find the cheapest car in the registry.</p>
 <p>To get started, we’ve provided the following code in the Github repo here: https://github.com/dontran15/backend-abopsc/tree/master/src/main/java/com/nighthawk/spring_portfolio/database/lab as well as the frontend shown on this page. You will be working with the <code>CarLab</code> class and the <code>CarLabApiController</code> files</p>
-<p>TODO: - [ ] Clone code and run locally - [ ] Add car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types - [ ] Add a constructor to the CarLab class that takes in the car make, model, and mpg as parameters - [ ] Create another method based on operations on the CarLab class that uses a different data type - [ ] Given a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration</p>
+<p>TODO:</p>
+<ul class="task-list">
+<li><p><input type="checkbox" disabled="">Clone code and run locally</p></li>
+<li><p><input type="checkbox" disabled="">Add car make, model, mpg as attributes to CarLab class, using knowledge of different primitive types</p></li>
+<li><p><input type="checkbox" disabled="">Add a constructor to the CarLab class that takes in the car make, model, and mpg as parameters</p></li>
+<li><p><input type="checkbox" disabled="">Create another method based on operations on the CarLab class that uses a different data type</p></li>
+<li><p><input type="checkbox" disabled="">Given a list of requirements for budget, mpg, and acceleration, find the cheapest car that meets all of the requirements (use boolean operators and iteration)</p></li>
+</ul>
 <section id="car-registry" class="level3">
 <h3 class="anchored" data-anchor-id="car-registry">Car Registry</h3>
 
@@ -195,7 +202,6 @@ Cheapest car is:
                 price.innerHTML = data[i].price;
             }
         });
-    .catch(err => console.log(err));
     
     // find cheapest car
     const cheapestCar = document.getElementById("result");
@@ -207,7 +213,6 @@ Cheapest car is:
             console.log(data)
             cheapestCar.innerHTML = data;
         });
-    .catch(err => console.log(err));
 
 </script>
 
