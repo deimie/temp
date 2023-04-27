@@ -46,7 +46,7 @@ title: Lab Scores
     // iterates through array and creates tr's and td's for each index
     function makeTableHTML(people) {
         var result = "<table>";
-        result += "<thead><tr><th>Name</th><th>Homework Score</th><th>Comments</th></thead><tbody>";
+        result += "<thead><tr><th>    Name    </th><th>    Homework Score    </th><th>    Comments</th></thead><tbody>";
         // Create header row. Better way to do this?
         //for (var i = 0; i < array.length; i++) {
         for (var i = people.length-1; i > 0; i--) {
