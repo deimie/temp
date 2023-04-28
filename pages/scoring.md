@@ -22,7 +22,7 @@ title: Lab Scores
         ["Jay","2.8/3", "comprehensive code but hack 4 doesn't have an output shown"],
         ["Rithvik","2./8/3", "comprehensive code but hack 4 doesn't have an output shown"],
         ["Aryan","2.8/3", "comprehensive code but hack 4 doesn't have an output shown"],
-        ["Tiaben","3.0/3", "it's good, but try fixing hack 4 output for scanner input"],
+        ["Tiaben","3.2/3", "it's good and there's extra credit"],
         ["Saumya","3.0/3", "comprehensive code with expected output shown"],
         ["Sophie","3.0/3", "comprehensive code with expected output shown"],
         ["Saathvika","3.3./3", "comprehensive code with expected output shown + completed ec"],
@@ -39,7 +39,7 @@ title: Lab Scores
         ["Aadya","3.0/3", "comprehensive code with expected output shown"],
         ["Rohan","3.0/3", "comprehensive code with expected output shown"],
         ["Shreya","3.0/3", "comprehensive code with expected output shown"],
-        ["Linda","./3", ""],
+        ["Linda","3/3", "comprehensive code with code output"],
         ["Grey","./3", ""]
     ]
 
