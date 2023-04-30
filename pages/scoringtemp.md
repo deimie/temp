@@ -63,7 +63,7 @@ title: Lab Scores
       myHeaders.append("Content-Type", "application/json");
       let emailBody = "yup@yup.com";
       var requestOptions = {
-        method: 'GET',
+        method: 'POST',
         headers: myHeaders,
         mode: 'cors',
         cache: 'default', 
@@ -115,7 +115,7 @@ title: Lab Scores
               // let emailBody = { email: person.email };
 
               var requestOptions2 = {
-                  method: 'GET',
+                  method: 'POST',
                   headers: myHeaders,
                   mode: 'cors',
                   cache: 'default', 
