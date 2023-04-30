@@ -16,25 +16,27 @@ title: Lab Scores
 <script>
     // put all scores and names in this array (order Z at top, A at bottom)
     let people = [
-        ["name", "homework", "comment"],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""],
-        ["","/3", ""]
+        ["id","name", "homework", "comment"],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""],
+        ["","","/3", ""]
     ]
+
+    var objects = [];
 
     // // iterates through array and creates tr's and td's for each index
     function makeTableHTML(people) {
@@ -44,7 +46,7 @@ title: Lab Scores
         //for (var i = 0; i < array.length; i++) {
         for (var i = people.length-1; i > 0; i--) {
             result += "<tr>";
-            for (var j = 0; j < people[i].length; j++) {
+            for (var j = 1; j < people[i].length; j++) {
                 result += "<td>"+people[i][j]+"</td>";   
             }   
             result += "</tr>";
@@ -80,6 +82,29 @@ title: Lab Scores
             var person = data[i];
             if(person.roles[0].name == 'ROLE_USER'){
               console.log(person.name);
+
+              let email = {email: person.email};
+
+              var requestOptions2 = {
+                  method: 'GET',
+                  headers: myHeaders,
+                  mode: 'cors',
+                  cache: 'default', 
+                  credentials: 'include',
+                  redirect: 'manual',
+                  body: JSON.stringify(email);
+                };  
+
+              fetch(
+                url + '/api/grading/grades', requestOptions
+              )
+              .then((response) => response.json())
+              .then((data2) => {
+                for (var j in data2){
+                  var grade = grade[j];
+                  console.log(grade.id);
+                }
+              })                
             }
           }
         })
