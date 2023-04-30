@@ -118,7 +118,7 @@ title: Lab Scores
     }
 
     initializeTable().then(result => {
-      makeHTMLTable(result);
+      makeTableHTML(result);
     })
 
 </script>
