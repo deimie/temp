@@ -117,8 +117,44 @@ title: Lab Scores
         return objects;
     }
 
+    async function userTable(){
+      var requestOptions2 = {
+        method: 'POST',
+        headers: myHeaders,
+        mode: 'cors',
+        cache: 'default', 
+        credentials: 'include',
+        redirect: 'manual',
+        body: JSON.stringify({ email: sessionStorage.getItem("email") })
+      };  
+
+      var objects = [["id","name", "homeworkScore", "comment"]];
+  
+      const response2 = await fetch(url + '/api/grading/grades', requestOptions2);
+      const data2 = await response2.json();
+
+      for (var j in data2){
+        var grade = data2[j];
+        var personGradeArray = [];
+        personGradeArray.push(grade.id);
+        personGradeArray.push(grade.person.name);
+        personGradeArray.push(grade.points.toString());
+        personGradeArray.push(grade.comment)
+        console.log(personGradeArray);
+        objects.push(personGradeArray);
+      }   
+
+      return objects;
+    }
+
     if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
       initializeTable().then(result => {
+        makeTableHTML(result);
+      })
+    }
+
+    if(sessionStorage.getItem("role") == "ROLE_USER"){
+      userTable().then(result => {
         makeTableHTML(result);
       })
     }
