@@ -101,7 +101,7 @@ title: Lab Scores
               .then((response2) => response2.json())
               .then((data2) => {
                 for (var j in data2){
-                  var grade = grade[j];
+                  var grade = data2[j];
                   console.log(grade.id);
                 }
               })                
