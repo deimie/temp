@@ -92,7 +92,7 @@ title: Lab Scores
                   cache: 'default', 
                   credentials: 'include',
                   redirect: 'manual',
-                  body: JSON.stringify(email);
+                  body: JSON.stringify(email)
                 };  
 
               fetch(
