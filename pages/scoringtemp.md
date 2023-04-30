@@ -8,34 +8,62 @@ title: Lab Scores
 - Lesson - 1 point
 - Total - 3 points
 
-<body>
-    <div id="scores">
-</body>
+
+<html>
+  <div id="scores">
+  <table id="gradesInput">
+  <tr>
+  <th>
+  <span>email:</span>
+  <input
+  autocomplete="off"
+  type="email"
+  id="email"
+  name="email"
+  placeholder="enter email..."
+  />
+  </th>
+  </tr>
+  <tr>
+  <th>
+  <span>score</span>
+  <input
+  autocomplete="off"
+  type="text"
+  id="score"
+  name="score"
+  placeholder="enter score..."
+  />
+  </th>
+  </tr>
+  <tr>
+  <th>
+  <button
+  class="btn"
+  type="submit"
+  value="Submit"
+  onclick="submitScore();"
+  >
+  Submit
+  </button>
+  </th>
+  </tr>
+  </table>
+  </div>
+</html>
 
 <script>
-    // put all scores and names in this array (order Z at top, A at bottom)
-    let people = [
-        ["id","name", "homework", "comment"],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""],
-        ["","","/3", ""]
-    ]
+    if(sessionStorage.getItem("role") == "USER_ADMIN"){
+      document.getElementById("gradesInput").style.display = "none";
+    } else {
+      document.getElementById("gradesInput").style.display = "block";
+    }
+    // submit scores of user (TODO: can put inputs into table)
+    function submitScore(){
+      
+    }
 
-    // // iterates through array and creates tr's and td's for each index
+    // iterates through array and creates tr's and td's for each index
     function makeTableHTML(people) {
         var result = "<table>";
         result += "<thead><tr><th>Name</th><th>Score</th><th>Comment</th></thead><tbody>";
@@ -68,7 +96,7 @@ title: Lab Scores
           redirect: 'manual',
         };
 
-        var objects = [["id","name", "homeworkScore", "comment"]];
+        var objects = [["id","name", "email", "homeworkScore", "comment"]];
 
         try{
           const response = await fetch(
@@ -101,6 +129,7 @@ title: Lab Scores
                     var personGradeArray = [];
                     personGradeArray.push(grade.id);
                     personGradeArray.push(grade.person.name);
+                    personGradeArray.push(grade.person.email);
                     personGradeArray.push(grade.points.toString());
                     personGradeArray.push(grade.comment)
                     console.log(personGradeArray);
