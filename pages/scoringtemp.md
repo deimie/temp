@@ -100,7 +100,7 @@ title: Lab Scores
               console.log(person.name);
               console.log(person.email);
 
-              // let email = { email: person.email };
+              // let emailBody = { email: person.email };
 
               var requestOptions2 = {
                   method: 'GET',
@@ -109,7 +109,7 @@ title: Lab Scores
                   cache: 'default', 
                   credentials: 'include',
                   redirect: 'manual',
-                  body: { email: person.email }
+                  body: JSON.stringify({ email: person.email })
                 };  
 
               fetch(
