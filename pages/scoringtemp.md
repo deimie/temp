@@ -58,6 +58,22 @@ title: Lab Scores
 
     const url = "https://abopsc-backend.dontntntnt.de";
 
+    function userTable() {
+      var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+          method: 'GET',
+          headers: myHeaders,
+          mode: 'cors',
+          cache: 'default', 
+          credentials: 'include',
+          redirect: 'manual'
+        };
+
+
+    }
+
     function initializeTable() {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -84,7 +100,7 @@ title: Lab Scores
               console.log(person.name);
               console.log(person.email);
 
-              let email = {email: person.email};
+              // let email = { email: person.email };
 
               var requestOptions2 = {
                   method: 'GET',
@@ -93,7 +109,7 @@ title: Lab Scores
                   cache: 'default', 
                   credentials: 'include',
                   redirect: 'manual',
-                  body: JSON.stringify(email)
+                  body: { email: person.email }
                 };  
 
               fetch(
