@@ -68,7 +68,7 @@ title: Lab Scores
           credentials: 'include',
           redirect: 'manual',
         };
-        
+
         var objects = [["id","name", "homeworkScore", "comment"]];
 
         fetch(
@@ -116,6 +116,7 @@ title: Lab Scores
         })
         .catch(error => console.log('error', error));
 
+        console.log(objects);
         return objects;
     }
     makeTableHTML(initializeTable());
