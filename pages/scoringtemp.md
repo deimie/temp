@@ -38,6 +38,18 @@ title: Lab Scores
   </tr>
   <tr>
   <th>
+  <span>comment</span>
+  <input
+  autocomplete="off"
+  type="text"
+  id="comment"
+  name="comment"
+  placeholder="enter comment..."
+  />
+  </th>
+  </tr>
+  <tr>
+  <th>
   <button
   class="btn"
   type="submit"
@@ -53,14 +65,19 @@ title: Lab Scores
 </html>
 
 <script>
-    if(sessionStorage.getItem("role") == "USER_ADMIN"){
+    if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
       document.getElementById("gradesInput").style.display = "none";
-    } else {
+    } else if (sessionStorage.getItem("role") == null || sessionStorage.getItem("role") == "ROLE_USER"){
       document.getElementById("gradesInput").style.display = "block";
     }
     // submit scores of user (TODO: can put inputs into table)
     function submitScore(){
-      
+      var email = document.getElementById("email").value;
+      var score = document.getElementById("email").value;
+      var comment = document.getElementById("comment").value;
+
+      console.log(email);
+      console.log(score);
     }
 
     // iterates through array and creates tr's and td's for each index
