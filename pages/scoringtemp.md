@@ -82,6 +82,7 @@ title: Lab Scores
             var person = data[i];
             if(person.roles[0].name == 'ROLE_USER'){
               console.log(person.name);
+              console.log(person.email);
 
               let email = {email: person.email};
 
