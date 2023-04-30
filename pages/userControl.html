@@ -263,19 +263,36 @@ ul.task-list li input[type="checkbox"] {
             }
           }
           sessionStorage.setItem("authorized", authorized);
+          fetch(
+            "https://abopsc-backend.dontntntnt.de/api/person/getPersonRoles?email=" +
+              username,
+            requestOptions
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              for (const item of data) {
+                console.log(item["name"]);
+                if (
+                  item["name"] == "ROLE_ADMIN" ||
+                  item["name"] == "ROLE_USER"
+                ) {
+                  authorized = true;
+                }
+              }
+              sessionStorage.setItem("authorized", authorized);
 
-          console.log(authorized);
+              console.log(authorized);
 
-          if (authorized) {
-            document.getElementById("admin").style.display = "block";
-          } else {
-            document.getElementById("admin").style.display = "none";
-          }
-        })
-        .catch((error) => console.error(error));
+              if (authorized) {
+                document.getElementById("admin").style.display = "block";
+              } else {
+                document.getElementById("admin").style.display = "none";
+              }
+            })
+            .catch((error) => console.error(error));
+        });
     });
   }
-
   function logout() {
     document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     sessionStorage.setItem("username", "Guest");
