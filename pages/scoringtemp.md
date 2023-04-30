@@ -118,6 +118,9 @@ title: Lab Scores
     }
 
     async function userTable(){
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      
       var requestOptions2 = {
         method: 'POST',
         headers: myHeaders,
