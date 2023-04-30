@@ -59,6 +59,8 @@ title: Lab Scores
     const url = "https://abopsc-backend.dontntntnt.de";
 
     function userTable() {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
       let emailBody = "yup@yup.com";
       var requestOptions = {
         method: 'GET',
@@ -81,7 +83,7 @@ title: Lab Scores
         }
       })
     }
-    
+
     userTable();
 
     function initializeTable() {
