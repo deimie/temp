@@ -117,8 +117,9 @@ title: Lab Scores
         return objects;
     }
 
-    initializeTable().then(result => {
-      makeTableHTML(result);
-    })
-
+    if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
+      initializeTable().then(result => {
+        makeTableHTML(result);
+      })
+    }
 </script>
