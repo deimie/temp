@@ -78,7 +78,9 @@ title: Lab Scores
 
           for (var i in data) {
             var person = data[i];
-            console.log(person.name);
+            if(person.roles[0].name == 'ROLE_USER'){
+              console.log(person.name);
+            }
           }
         })
         .catch(error => console.log('error', error));
