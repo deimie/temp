@@ -11,6 +11,14 @@ title: Lab Scores
 <body>
     <div id="scores">
     </div>
+    <br>
+    <form>
+           Name:<br>
+            <input type="text" id="name" name="name">
+            Grade:<br>
+            <input type="text" id="grade" name="grade">
+            <button type="button" onclick="addRow();">Submit</button>
+    </form>
 </body>
 
 <script>
@@ -120,7 +128,7 @@ title: Lab Scores
     async function userTable(){
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      
+
       var requestOptions2 = {
         method: 'POST',
         headers: myHeaders,
