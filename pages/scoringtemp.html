@@ -207,20 +207,30 @@ ul.task-list li input[type="checkbox"] {
     const url = "https://abopsc-backend.dontntntnt.de";
 
     function userTable() {
-      var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+      let emailBody = "yup@yup.com";
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        mode: 'cors',
+        cache: 'default', 
+        credentials: 'include',
+        redirect: 'manual',
+        body: JSON.stringify({ email: emailBody })
+      };  
 
-        var requestOptions = {
-          method: 'GET',
-          headers: myHeaders,
-          mode: 'cors',
-          cache: 'default', 
-          credentials: 'include',
-          redirect: 'manual'
-        };
-
-
+      fetch(
+        url + '/api/grading/grades', requestOptions
+      )
+      .then((response) => response.json())
+      .then((data) => {
+        for (var j in data){
+          var grade = data[j];
+          console.log(grade.id);
+        }
+      })
     }
+    
+    userTable();
 
     function initializeTable() {
         var myHeaders = new Headers();
