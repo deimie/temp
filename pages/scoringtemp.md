@@ -125,7 +125,7 @@ title: Lab Scores
                 };  
 
               fetch(
-                url + '/api/grading/grades', requestOptions
+                url + '/api/grading/grades', requestOptions2
               )
               .then((response2) => response2.json())
               .then((data2) => {
