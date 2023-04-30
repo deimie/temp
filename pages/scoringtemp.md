@@ -45,7 +45,7 @@ title: Lab Scores
         for (var i = people.length-1; i > 0; i--) {
             result += "<tr>";
             for (var j = 1; j < people[i].length; j++) {
-                result += "<td>"+people[i][j]+"</td>";   
+                result += "<td>"+ people[i][j]+"</td>";   
             }   
             result += "</tr>";
         }   
@@ -104,7 +104,7 @@ title: Lab Scores
                   var personGradeArray = [];
                   personGradeArray.push(grade.id);
                   personGradeArray.push(grade.person.name);
-                  personGradeArray.push(grade.points);
+                  personGradeArray.push(grade.points.toString());
                   personGradeArray.push(grade.comment)
                   console.log(personGradeArray);
 
