@@ -137,7 +137,7 @@
     "href": "pages/scoringtemp.html",
     "title": "Lab Scores",
     "section": "",
-    "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;\n&lt;br&gt;\n&lt;form&gt;\n       Name:&lt;br&gt;\n        &lt;input type=\"text\" id=\"name\" name=\"name\"&gt;\n        Grade:&lt;br&gt;\n        &lt;input type=\"text\" id=\"grade\" name=\"grade\"&gt;\n        &lt;button type=\"button\" onclick=\"addRow();\"&gt;Submit&lt;/button&gt;\n&lt;/form&gt;"
+    "text": "Score Rundown:\n\nLab - 2 points\nLesson - 1 point\nTotal - 3 points\n\n\n\n&lt;/div&gt;"
   },
   {
     "objectID": "pages/userControl.html",
