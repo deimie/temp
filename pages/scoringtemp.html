@@ -216,6 +216,8 @@ ul.task-list li input[type="checkbox"] {
           credentials: 'include',
           redirect: 'manual',
         };
+        
+        var objects = [["id","name", "homeworkScore", "comment"]];
 
         fetch(
           url + `/api/person/all`, requestOptions
@@ -239,8 +241,6 @@ ul.task-list li input[type="checkbox"] {
                   redirect: 'manual',
                   body: JSON.stringify({ email: person.email })
                 };  
-              
-              var objects = [["id","name", "homeworkScore", "comment"]];
 
               fetch(
                 url + '/api/grading/grades', requestOptions2
