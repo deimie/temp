@@ -56,7 +56,7 @@ title: Lab Scores
 
     const url = "https://abopsc-backend.dontntntnt.de";
 
-    function initializeTable() {
+    async function initializeTable() {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -70,6 +70,12 @@ title: Lab Scores
         };
 
         var objects = [["id","name", "homeworkScore", "comment"]];
+
+        const response = await fetch(
+          url + `/api/person/all`, requestOptions
+        );
+        const data = await response.json();
+
 
         fetch(
           url + `/api/person/all`, requestOptions
