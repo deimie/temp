@@ -36,8 +36,6 @@ title: Lab Scores
         ["","","/3", ""]
     ]
 
-    var objects = [];
-
     // // iterates through array and creates tr's and td's for each index
     function makeTableHTML(people) {
         var result = "<table>";
@@ -57,34 +55,6 @@ title: Lab Scores
     // makeTableHTML(people);
 
     const url = "https://abopsc-backend.dontntntnt.de";
-
-    function userTable() {
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      let emailBody = "yup@yup.com";
-      var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        mode: 'cors',
-        cache: 'default', 
-        credentials: 'include',
-        redirect: 'manual',
-        body: JSON.stringify({ email: emailBody })
-      };  
-
-      fetch(
-        url + '/api/grading/grades', requestOptions
-      )
-      .then((response) => response.json())
-      .then((data) => {
-        for (var j in data){
-          var grade = data[j];
-          console.log(grade.id);
-        }
-      })
-    }
-
-    userTable();
 
     function initializeTable() {
         var myHeaders = new Headers();
@@ -112,8 +82,6 @@ title: Lab Scores
               console.log(person.name);
               console.log(person.email);
 
-              // let emailBody = { email: person.email };
-
               var requestOptions2 = {
                   method: 'POST',
                   headers: myHeaders,
@@ -123,6 +91,8 @@ title: Lab Scores
                   redirect: 'manual',
                   body: JSON.stringify({ email: person.email })
                 };  
+              
+              var objects = [["id","name", "homeworkScore", "comment"]];
 
               fetch(
                 url + '/api/grading/grades', requestOptions2
@@ -131,7 +101,14 @@ title: Lab Scores
               .then((data2) => {
                 for (var j in data2){
                   var grade = data2[j];
-                  console.log(grade.id);
+                  var personGradeArray = [];
+                  personGradeArray.push(grade.id);
+                  personGradeArray.push(grade.person.name);
+                  personGradeArray.push(grade.points);
+                  personGradeArray.push(grade.comment)
+                  console.log(personGradeArray);
+
+                  objects.push(personGradeArray);
                 }
               })                
             }
@@ -139,11 +116,7 @@ title: Lab Scores
         })
         .catch(error => console.log('error', error));
 
-        var result = "<table";
-        result+="<thead><tr><th>Name</th><th>Homework Score</th></thead><tbody>";
-
-        result += "</tbody></table>";
-        document.getElementById("scores").innerHTML = result;
+        return objects;
     }
-    initializeTable();
+    makeTableHTML(initializeTable());
 </script>
