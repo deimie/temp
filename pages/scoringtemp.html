@@ -158,7 +158,15 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 <div id="scores">
-<pre><code>&lt;/div&gt;</code></pre>
+<pre><code>&lt;/div&gt;
+&lt;br&gt;
+&lt;form&gt;
+       Name:&lt;br&gt;
+        &lt;input type="text" id="name" name="name"&gt;
+        Grade:&lt;br&gt;
+        &lt;input type="text" id="grade" name="grade"&gt;
+        &lt;button type="button" onclick="addRow();"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 
 
 <script>
@@ -268,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
     async function userTable(){
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      
+
       var requestOptions2 = {
         method: 'POST',
         headers: myHeaders,
