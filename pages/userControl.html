@@ -261,7 +261,6 @@ ul.task-list li input[type="checkbox"] {
             if (item["name"] == "ROLE_ADMIN" || item["name"] == "ROLE_USER") {
               authorized = true;
             }
-            sessionStorage.setItem("role", item["name"]);
           }
           sessionStorage.setItem("authorized", authorized);
 
