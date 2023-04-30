@@ -144,7 +144,7 @@
     "href": "pages/userControl.html",
     "title": "\nSign Up\n",
     "section": "",
-    "text": "Email \n\n\n\n\npassword \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr sign up instead.\n\n\n\n\n\nLogout\n\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
+    "text": "&lt;table id=\"credentialsInput\"&gt;\n  &lt;tr&gt;\n    &lt;th&gt;\n      &lt;span&gt;Email&lt;/span&gt;\n      &lt;input\n        autocomplete=\"off\"\n        type=\"email\"\n        id=\"username\"\n        name=\"username\"\n        placeholder=\"enter your username...\"\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n  &lt;tr&gt;\n    &lt;th&gt;\n      &lt;span&gt;password&lt;/span&gt;\n      &lt;input\n        autocomplete=\"off\"\n        type=\"password\"\n        id=\"pswd\"\n        name=\"pswd\"\n        placeholder=\"enter your password...\"\n      /&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n  &lt;tr&gt;\n    &lt;th&gt;\n      &lt;button\n        class=\"btn\"\n        type=\"submit\"\n        value=\"Submit\"\n        onclick=\"login_user()\"\n      &gt;\n        Submit\n      &lt;/button&gt;\n    &lt;/th&gt;\n  &lt;/tr&gt;\n\n  &lt;tr&gt;\n    &lt;th&gt;Or &lt;a onclick=\"signUpPage()\" class=\"link\"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;\n  &lt;/tr&gt;\n&lt;/table&gt;\n\n&lt;button id=\"but_logout\" class=\"btn\" type=\"submit\" onclick=\"logout()\"&gt;\n  Logout\n&lt;/button&gt;\n\n\n\n\n\n\nSign Up\n\n\n\n\n\nName \n\n\n\n\nEmail \n\n\n\n\nPassword \n\n\n\n\nConfirm Password \n\n\n\n\nDate of Birth \n\n\n\n\n\nSubmit\n\n\n\n\n\nOr login instead."
   },
   {
     "objectID": "pages/labs.html",

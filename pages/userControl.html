@@ -130,149 +130,160 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div id="login" class="userAuth">
+<pre><code>&lt;table id="credentialsInput"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      &lt;span&gt;Email&lt;/span&gt;
+      &lt;input
+        autocomplete="off"
+        type="email"
+        id="username"
+        name="username"
+        placeholder="enter your username..."
+      /&gt;
+    &lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      &lt;span&gt;password&lt;/span&gt;
+      &lt;input
+        autocomplete="off"
+        type="password"
+        id="pswd"
+        name="pswd"
+        placeholder="enter your password..."
+      /&gt;
+    &lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      &lt;button
+        class="btn"
+        type="submit"
+        value="Submit"
+        onclick="login_user()"
+      &gt;
+        Submit
+      &lt;/button&gt;
+    &lt;/th&gt;
+  &lt;/tr&gt;
 
-<table id="credentialsInput">
-<tbody><tr>
-<th>
-<span>Email</span> <input autocomplete="off" type="email" id="username" name="username" placeholder="enter your username...">
-</th>
-</tr>
-<tr>
-<th>
-<span>password</span> <input autocomplete="off" type="password" id="pswd" name="pswd" placeholder="enter your password...">
-</th>
-</tr>
-<tr>
-<th>
-<button class="btn" type="submit" value="Submit" onclick="login_user()">
-Submit
-</button>
-</th>
-</tr>
-<tr>
-<th>
-Or <a onclick="signUpPage()" class="link">sign up</a> instead.
-</th>
-</tr>
+  &lt;tr&gt;
+    &lt;th&gt;Or &lt;a onclick="signUpPage()" class="link"&gt;sign up&lt;/a&gt; instead.&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
-</tbody></table>
-<button id="but_logout" class="btn" type="submit" onclick="logout()">
-Logout
-</button>
+&lt;button id="but_logout" class="btn" type="submit" onclick="logout()"&gt;
+  Logout
+&lt;/button&gt;</code></pre>
 </div>
 
 <script>
-
-
-if (sessionStorage.getItem("authorized") === "true") {
+  if (sessionStorage.getItem("authorized") === "true") {
     document.getElementById("but_logout").style.display = "block";
     document.getElementById("credentialsInput").style.display = "none";
-}
-
-else {
+  } else {
     document.getElementById("but_logout").style.display = "none";
     document.getElementById("credentialisInput").style.display = "block";
-}
+  }
 
-    // show signup, hide login
-    function signUpPage() {
-        document.getElementById("signup").style.display = "";
-        document.getElementById("login").style.display = "none";
-    }
+  // show signup, hide login
+  function signUpPage() {
+    document.getElementById("signup").style.display = "";
+    document.getElementById("login").style.display = "none";
+  }
 
-    function login_user() {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("pswd").value;
+  function login_user() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("pswd").value;
 
-        console.log(username);
-        console.log(password);
+    console.log(username);
+    console.log(password);
 
-        const url = "https://abopsc-backend.dontntntnt.de/authenticate/";
+    const url = "https://abopsc-backend.dontntntnt.de/authenticate/";
 
-        const options = {
-            method: 'POST',
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'include', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: document.getElementById("username").value,
-                password: document.getElementById("pswd").value,
-            })
-        };
+    const options = {
+      method: "POST",
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "include", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: document.getElementById("username").value,
+        password: document.getElementById("pswd").value,
+      }),
+    };
 
+    // Fetch JWT
+    fetch(url, options).then((response) => {
+      // trap error response from Web API
+      if (!response.ok) {
+        const errorMsg = "Login error: " + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      // Success!!!
+      // Redirect to Database location
 
-        // Fetch JWT
-        fetch(url, options)
-            .then(response => {
-                // trap error response from Web API
-                if (!response.ok) {
-                    const errorMsg = 'Login error: ' + response.status;
-                    console.log(errorMsg);
-                    return;
-                }
-                // Success!!!
-                // Redirect to Database location
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
 
-                var requestOptions = {
-                    method: 'GET',
-                    redirect: 'follow'
-                };
+      fetch(
+        "https://abopsc-backend.dontntntnt.de/api/person/getPersonName?email=" +
+          username,
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((text) => {
+          console.log(text);
+          sessionStorage.setItem("email", username);
+          sessionStorage.setItem("username", text);
 
-                fetch("https://abopsc-backend.dontntntnt.de/api/person/getPersonName?email=" + username, requestOptions)
-                    .then(response => response.text())
-                    .then(text => {
-                        console.log(text);
-                        sessionStorage.setItem("email", username);
-                        sessionStorage.setItem("username", text);
+          window.location.href = "https://deimie.github.io/temp/";
+        })
+        .catch((error) => console.log("error", error));
 
-                        window.location.href = "https://deimie.github.io/temp/";
-                    })
-                    .catch(error => console.log('error', error));
+      let authorized = false;
 
-                let authorized = false;
+      fetch(
+        "https://abopsc-backend.dontntntnt.de/api/person/getPersonRoles?email=" +
+          username,
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          for (const item of data) {
+            console.log(item["name"]);
+            if (item["name"] == "ROLE_ADMIN" || item["name"] == "ROLE_USER") {
+              authorized = true;
+            }
+          }
+          sessionStorage.setItem("authorized", authorized);
+          sessionStorage.setItem("role", item["name"]);
 
-                fetch('https://abopsc-backend.dontntntnt.de/api/person/getPersonRoles?email=' + username, requestOptions)
-                    .then(response => response.json())
-                    .then(data => {
-                        for (const item of data) {
-                            console.log(item["name"]);
-                            if (item["name"] == "ROLE_ADMIN" || item["name"] == "ROLE_USER") {
-                                authorized = true;
-                            }
-                        }
-                        sessionStorage.setItem("authorized", authorized);
+          console.log(authorized);
 
-                        console.log(authorized);
+          if (authorized) {
+            document.getElementById("admin").style.display = "block";
+          } else {
+            document.getElementById("admin").style.display = "none";
+          }
+        })
+        .catch((error) => console.error(error));
+    });
+  }
 
-
-                        if (authorized) {
-                            document.getElementById("admin").style.display = "block";
-                        }
-
-                        else {
-                            document.getElementById("admin").style.display = "none";
-                        }
-
-
-                    })
-                    .catch(error => console.error(error));
-
-            })
-
-    }
-
-    function logout() {
-        document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        sessionStorage.setItem("username", "Guest");
-        sessionStorage.setItem("email", null);
-        sessionStorage.setItem("authorized", false);
-        window.location.href = "https://deimie.github.io/temp/";
-
-    }
-
+  function logout() {
+    document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    sessionStorage.setItem("username", "Guest");
+    sessionStorage.setItem("email", null);
+    sessionStorage.setItem("authorized", false);
+    window.location.href = "https://deimie.github.io/temp/";
+  }
 </script>
 <div id="signup" class="userAuth" style="display: none">
 <div>
