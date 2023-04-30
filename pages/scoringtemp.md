@@ -76,9 +76,10 @@ title: Lab Scores
         .then((data) => {
           console.log(data);
 
-          for (var person in data) {
+          for (var i in data) {
+            var person = data[i];
             console.log(person.name);
-            }
+          }
         })
         .catch(error => console.log('error', error));
 
