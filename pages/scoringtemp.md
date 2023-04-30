@@ -116,6 +116,9 @@ title: Lab Scores
         console.log(objects);
         return objects;
     }
-    
-    makeTableHTML(initializeTable());
+
+    initializeTable().then(result => {
+      makeHTMLTable(result);
+    })
+
 </script>
