@@ -68,6 +68,8 @@ title: Lab Scores
           credentials: 'include',
           redirect: 'manual',
         };
+        
+        var objects = [["id","name", "homeworkScore", "comment"]];
 
         fetch(
           url + `/api/person/all`, requestOptions
@@ -91,8 +93,6 @@ title: Lab Scores
                   redirect: 'manual',
                   body: JSON.stringify({ email: person.email })
                 };  
-              
-              var objects = [["id","name", "homeworkScore", "comment"]];
 
               fetch(
                 url + '/api/grading/grades', requestOptions2
