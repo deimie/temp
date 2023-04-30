@@ -216,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
           credentials: 'include',
           redirect: 'manual',
         };
-        
+
         var objects = [["id","name", "homeworkScore", "comment"]];
 
         fetch(
@@ -264,6 +264,7 @@ ul.task-list li input[type="checkbox"] {
         })
         .catch(error => console.log('error', error));
 
+        console.log(objects);
         return objects;
     }
     makeTableHTML(initializeTable());
