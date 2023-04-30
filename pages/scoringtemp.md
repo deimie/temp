@@ -11,14 +11,6 @@ title: Lab Scores
 <body>
     <div id="scores">
     </div>
-    <br>
-    <form>
-           Name:<br>
-            <input type="text" id="name" name="name">
-            Grade:<br>
-            <input type="text" id="grade" name="grade">
-            <button type="button" onclick="addRow();">Submit</button>
-    </form>
 </body>
 
 <script>
