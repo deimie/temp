@@ -39,8 +39,7 @@ title: Lab Scores
         ["Aadya","2.7/3", "comprehensive code with expected output shown"],
         ["Rohan","2.7/3", "comprehensive code with expected output shown"],
         ["Shreya","2.7/3", "comprehensive code with expected output shown"],
-        ["Linda","2.7/3", "comprehensive code with code output"],
-        ["Grey","./3", ""]
+        ["Linda","2.7/3", "comprehensive code with code output"]
     ]
 
     // iterates through array and creates tr's and td's for each index
