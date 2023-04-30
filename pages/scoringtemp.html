@@ -219,17 +219,12 @@ ul.task-list li input[type="checkbox"] {
 
         var objects = [["id","name", "homeworkScore", "comment"]];
 
-        const response = await fetch(
-          url + `/api/person/all`, requestOptions
-        );
-        const data = await response.json();
-
-
-        fetch(
-          url + `/api/person/all`, requestOptions
-        )
-        .then((response) => response.json())
-        .then((data) => {
+        try{
+          const response = await fetch(
+            url + `/api/person/all`, requestOptions
+          );
+          
+          const data = await response.json();
           console.log(data);
 
           for (var i in data) {
@@ -247,32 +242,29 @@ ul.task-list li input[type="checkbox"] {
                   redirect: 'manual',
                   body: JSON.stringify({ email: person.email })
                 };  
-
-              fetch(
-                url + '/api/grading/grades', requestOptions2
-              )
-              .then((response2) => response2.json())
-              .then((data2) => {
-                for (var j in data2){
-                  var grade = data2[j];
-                  var personGradeArray = [];
-                  personGradeArray.push(grade.id);
-                  personGradeArray.push(grade.person.name);
-                  personGradeArray.push(grade.points.toString());
-                  personGradeArray.push(grade.comment)
-                  console.log(personGradeArray);
-
-                  objects.push(personGradeArray);
-                }
-              })                
-            }
-          }
-        })
-        .catch(error => console.log('error', error));
+            
+                const response2 = await fetch(url + '/api/grading/grades', requestOptions2);
+                const data2 = await response2.json();
+                  for (var j in data2){
+                    var grade = data2[j];
+                    var personGradeArray = [];
+                    personGradeArray.push(grade.id);
+                    personGradeArray.push(grade.person.name);
+                    personGradeArray.push(grade.points.toString());
+                    personGradeArray.push(grade.comment)
+                    console.log(personGradeArray);
+                    objects.push(personGradeArray);
+                  }              
+              }
+            }    
+      } catch {
+        console.log("failed"); // probably can pass through response
+      }
 
         console.log(objects);
         return objects;
     }
+    
     makeTableHTML(initializeTable());
 </script>
 
