@@ -98,7 +98,7 @@ title: Lab Scores
               fetch(
                 url + '/api/grading/grades', requestOptions
               )
-              .then((response) => response.json())
+              .then((response2) => response2.json())
               .then((data2) => {
                 for (var j in data2){
                   var grade = grade[j];
