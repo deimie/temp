@@ -10,7 +10,6 @@ title: Lab Scores
 
 <body>
     <div id="scores">
-    </div>
 </body>
 
 <script>
