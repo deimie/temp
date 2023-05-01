@@ -258,7 +258,8 @@ title: Lab Scores
                     personGradeArray.push(grade.person.name);
                     personGradeArray.push(grade.person.email);
                     personGradeArray.push(grade.points.toString());
-                    personGradeArray.push(grade.comment)
+                    personGradeArray.push(grade.comment);
+                    personGradeArray.push(grade.link);
                     console.log(personGradeArray);
                     objects.push(personGradeArray);
                   }              
