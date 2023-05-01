@@ -114,7 +114,7 @@ title: Lab Scores
 
     // submit homework of user
     function submitHW(){
-      var emailValue = sessionStorage.get("email");
+      var emailValue = sessionStorage.getItem("email");
       var assignmentName = "homework";
       var linkValue = document.getElementById("link").value;
       
@@ -194,7 +194,7 @@ title: Lab Scores
             result += "<tr>";
             for (var j = 2; j < people[i].length; j++) {
                 if(people[i][j] == null){
-                  result += "<td></td>";
+                  result += "<td> </td>";
                 }else{
                   result += "<td>"+ people[i][j]+"</td>";   
                 }  
