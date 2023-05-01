@@ -202,7 +202,7 @@ title: Lab Scores
                 }
                 if((j == people[i].length-1) && ((people[i][people[i].length-1]) != null)){
                   result += "<td>Submitted</td>";
-                } else {
+                } else if ((j == people[i].length-1)){
                   result += "<td>Not Turned In</td>";
                 }
             }   
