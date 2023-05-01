@@ -64,6 +64,33 @@ title: Lab Scores
   </tr>
   </table>
   </div> 
+  <div id="homework">
+  <table id="hwInput">
+  <tr>
+  <th>
+  <span>email:</span>
+  <input
+  autocomplete="off"
+  type="email"
+  id="email"
+  name="email"
+  placeholder="enter email..."
+  />
+  </th>
+  </tr>
+  <th>
+  <button
+  class="btn"
+  type="submit"
+  value="Submit"
+  onclick="submitHW();"
+  >
+  Submit
+  </button>
+  </th>
+  </tr>
+  </table>
+  </div> 
 </html>
 
 <script>
@@ -74,6 +101,20 @@ title: Lab Scores
       document.getElementById("gradesInput").style.display = "none";
     } else {
       document.getElementById("gradesInput").style.display = "none";
+    }
+
+    document.getElementById("hwInput").style.display = "none";
+    if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
+      document.getElementById("gradesInput").style.display = "none";
+    } else if (sessionStorage.getItem("role") == "ROLE_USER"){
+      document.getElementById("gradesInput").style.display = "block";
+    } else {
+      document.getElementById("gradesInput").style.display = "none";
+    }
+
+    // submit homework of user
+    function submitHW(){
+
     }
 
     // submit scores of user (TODO: can put inputs into table)
