@@ -124,7 +124,11 @@ title: Lab Scores
         for (var i = people.length-1; i > 0; i--) {
             result += "<tr>";
             for (var j = 1; j < people[i].length; j++) {
-                result += "<td>"+ people[i][j]+"</td>";   
+                if(people[i][j] == null){
+                  result += "<td></td>";
+                }else{
+                  result += "<td>"+ people[i][j]+"</td>";   
+                }  
             }   
             result += "</tr>";
         }   
