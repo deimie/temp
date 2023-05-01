@@ -109,7 +109,7 @@ title: Lab Scores
         .then((response) => response.text())
         .then((text) => {
           console.log(text);
-          window.location.href = "https://deimie.github.io/temp/pages/scoringtemp.html";
+          // window.location.href = "https://deimie.github.io/temp/pages/scoringtemp.html";
         })
         .catch((error) => console.log("error", error));
 
