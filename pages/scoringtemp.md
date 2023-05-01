@@ -67,13 +67,13 @@ title: Lab Scores
 </html>
 
 <script>
-    document.getElementById("gradesInput").style.display = "hide";
+    document.getElementById("gradesInput").style.display = "none";
     if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
-      document.getElementById("gradesInput").style.display = "show";
+      document.getElementById("gradesInput").style.display = "block";
     } else if (sessionStorage.getItem("role") == null || sessionStorage.getItem("role") == "ROLE_USER"){
-      document.getElementById("gradesInput").style.display = "hide";
+      document.getElementById("gradesInput").style.display = "none";
     } else {
-      document.getElementById("gradesInput").style.display = "hide";
+      document.getElementById("gradesInput").style.display = "none";
     }
 
     // submit scores of user (TODO: can put inputs into table)
