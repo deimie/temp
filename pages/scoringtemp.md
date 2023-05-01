@@ -79,7 +79,7 @@ title: Lab Scores
     // submit scores of user (TODO: can put inputs into table)
     function submitScore(){
       var emailValue = document.getElementById("email").value;
-      var scoreValue = document.getElementById("email").value;
+      var scoreValue = document.getElementById("score").value;
       var commentValue = document.getElementById("comment").value;
       var assignmentName = "homework";
 
