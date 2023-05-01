@@ -69,15 +69,46 @@ title: Lab Scores
       document.getElementById("gradesInput").style.display = "none";
     } else if (sessionStorage.getItem("role") == null || sessionStorage.getItem("role") == "ROLE_USER"){
       document.getElementById("gradesInput").style.display = "block";
+    } else {
+      document.getElementById("gradesInput").style.display = "block";
     }
+
     // submit scores of user (TODO: can put inputs into table)
     function submitScore(){
-      var email = document.getElementById("email").value;
-      var score = document.getElementById("email").value;
-      var comment = document.getElementById("comment").value;
+      var emailValue = document.getElementById("email").value;
+      var scoreValue = document.getElementById("email").value;
+      var commentValue = document.getElementById("comment").value;
+      var assignmentName = "homework";
 
       console.log(email);
       console.log(score);
+
+      var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+      var data = { email: emailValue, assignment: assignmentName, score: scoreValue, comment: commentValue };
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        mode: 'cors',
+        cache: 'default', 
+        credentials: 'include',
+        redirect: 'manual',
+        body: JSON.stringify(data)
+      };
+
+      fetch(
+        "https://abopsc-backend.dontntntnt.de/api/grading/updateGrade",
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((text) => {
+          console.log(text);
+          window.location.href = "https://deimie.github.io/temp/pages/scoringtemp.html";
+        })
+        .catch((error) => console.log("error", error));
+
     }
 
     // iterates through array and creates tr's and td's for each index
