@@ -233,7 +233,7 @@ Submit
         .then((response) => response.text())
         .then((text) => {
           console.log(text);
-          // window.location.href = "https://deimie.github.io/temp/pages/scoringtemp.html";
+          window.location.href = "https://deimie.github.io/temp/pages/scoringtemp.html";
         })
         .catch((error) => console.log("error", error));
 
@@ -242,7 +242,7 @@ Submit
     // iterates through array and creates tr's and td's for each index
     function makeTableHTML(people) {
         var result = "<table>";
-        result += "<thead><tr><th>Name</th><th>Score</th><th>Comment</th></thead><tbody>";
+        result += "<thead><tr><th>Name</th><th>Email</th><th>Score</th><th>Comment</th></thead><tbody>";
         // Create header row. Better way to do this?
         //for (var i = 0; i < array.length; i++) {
         for (var i = people.length-1; i > 0; i--) {
