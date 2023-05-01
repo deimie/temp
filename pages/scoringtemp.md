@@ -199,7 +199,12 @@ title: Lab Scores
                   result += "<td> </td>";
                 }else{
                   result += "<td>"+ people[i][j]+"</td>";   
-                }  
+                }
+                if((j == people[i].length-1) && ((people[i][people[i].length-1]) != null)){
+                  result += "<td>Submitted</td>";
+                } else {
+                  result += "<td>Not Turned In</td>";
+                }
             }   
             result += "</tr>";
         }   
@@ -259,7 +264,6 @@ title: Lab Scores
                     personGradeArray.push(grade.person.email);
                     personGradeArray.push(grade.points.toString());
                     personGradeArray.push(grade.comment);
-                    personGradeArray.push(grade.link);
                     console.log(personGradeArray);
                     objects.push(personGradeArray);
                   }              
@@ -296,9 +300,11 @@ title: Lab Scores
         var grade = data2[j];
         var personGradeArray = [];
         personGradeArray.push(grade.id);
+        personGradeArray.push(grade.link);
         personGradeArray.push(grade.person.name);
+        personGradeArray.push(grade.person.email);
         personGradeArray.push(grade.points.toString());
-        personGradeArray.push(grade.comment)
+        personGradeArray.push(grade.comment);
         console.log(personGradeArray);
         objects.push(personGradeArray);
       }   
