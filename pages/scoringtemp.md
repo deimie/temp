@@ -11,6 +11,8 @@ title: Lab Scores
 
 <html>
   <div id="scores">
+  </div>
+  <div id="scoringInput">
   <table id="gradesInput">
   <tr>
   <th>
