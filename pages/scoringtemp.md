@@ -80,8 +80,9 @@ title: Lab Scores
       var commentValue = document.getElementById("comment").value;
       var assignmentName = "homework";
 
-      console.log(email);
-      console.log(score);
+      console.log(emailValue);
+      console.log(scoreValue);
+      console.log(commentValue);
 
       var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
