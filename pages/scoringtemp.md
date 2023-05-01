@@ -68,13 +68,13 @@ title: Lab Scores
   <table id="hwInput">
   <tr>
   <th>
-  <span>email:</span>
+  <span>homework link:</span>
   <input
-  autocomplete="off"
-  type="email"
-  id="email"
-  name="email"
-  placeholder="enter email..."
+  autocomplete="on"
+  type="text"
+  id="hwLink"
+  name="hwLink"
+  placeholder="enter link..."
   />
   </th>
   </tr>
@@ -114,14 +114,42 @@ title: Lab Scores
 
     // submit homework of user
     function submitHW(){
+      var emailValue = sessionStorage.get("email");
+      var assignmentName = "homework";
+      var linkValue = document.getElementById("link").value;
+      
+      var myHeaders = new Headers();
+
+      myHeaders.append("Content-Type", "application/json");
+
+      var data = { email: emailValue, assignment: assignmentName, link: linkValue};
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        mode: 'cors',
+        cache: 'default', 
+        credentials: 'include',
+        redirect: 'manual',
+        body: JSON.stringify(data)
+      };
+
+      fetch(
+        "https://abopsc-backend.dontntntnt.de/api/grading/submitHW",
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((text) => {
+          console.log(text);
+          // window.location.href = "https://deimie.github.io/temp/pages/scoringtemp.html";
+        })
+        .catch((error) => console.log("error", error));
 
     }
 
     // submit scores of user (TODO: can put inputs into table)
     function submitScore(){
       var emailValue = document.getElementById("email").value;
-      var scoreValue = document.getElementById("score").value;
-      var commentValue = document.getElementById("comment").value;
       var assignmentName = "homework";
 
       console.log(emailValue);
@@ -129,7 +157,7 @@ title: Lab Scores
       console.log(commentValue);
 
       var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Content-Type", "application/json");
 
       var data = { email: emailValue, assignment: assignmentName, score: scoreValue, comment: commentValue };
 
@@ -159,7 +187,7 @@ title: Lab Scores
     // iterates through array and creates tr's and td's for each index
     function makeTableHTML(people) {
         var result = "<table>";
-        result += "<thead><tr><th>Name</th><th>Email</th><th>Score</th><th>Comment</th></thead><tbody>";
+        result += "<thead><tr><th>Name</th><th>Email</th><th>Score</th><th>Comment</th><th>Status</th></thead><tbody>";
         // Create header row. Better way to do this?
         //for (var i = 0; i < array.length; i++) {
         for (var i = people.length-1; i > 0; i--) {
@@ -224,6 +252,7 @@ title: Lab Scores
                     var grade = data2[j];
                     var personGradeArray = [];
                     personGradeArray.push(grade.id);
+                    personGradeArray.push(grade.link);
                     personGradeArray.push(grade.person.name);
                     personGradeArray.push(grade.person.email);
                     personGradeArray.push(grade.points.toString());
