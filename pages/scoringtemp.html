@@ -191,13 +191,13 @@ Submit
 
 
 <script>
-    document.getElementById("gradesInput").style.display = "block";
+    document.getElementById("gradesInput").style.display = "hide";
     if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
-      document.getElementById("gradesInput").style.display = "none";
+      document.getElementById("gradesInput").style.display = "show";
     } else if (sessionStorage.getItem("role") == null || sessionStorage.getItem("role") == "ROLE_USER"){
-      document.getElementById("gradesInput").style.display = "block";
+      document.getElementById("gradesInput").style.display = "hide";
     } else {
-      document.getElementById("gradesInput").style.display = "block";
+      document.getElementById("gradesInput").style.display = "hide";
     }
 
     // submit scores of user (TODO: can put inputs into table)
@@ -259,7 +259,6 @@ Submit
         result += "</tbody></table>";
         document.getElementById("scores").innerHTML = result;
     }
-    // makeTableHTML(people);
 
     const url = "https://abopsc-backend.dontntntnt.de";
 
