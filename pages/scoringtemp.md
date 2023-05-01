@@ -116,7 +116,7 @@ title: Lab Scores
     function submitHW(){
       var emailValue = sessionStorage.getItem("email");
       var assignmentName = "homework";
-      var linkValue = document.getElementById("link").value;
+      var linkValue = document.getElementById("hwLink").value;
       
       var myHeaders = new Headers();
 
