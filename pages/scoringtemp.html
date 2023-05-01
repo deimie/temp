@@ -311,8 +311,10 @@ Submit
             for (var j = 2; j < people[i].length; j++) {
                 if(people[i][j] == null){
                   result += "<td> </td>";
-                }else{
-                  result += "<td>"+ people[i][j]+"</td>";   
+                }else if (j == 2){
+                  result += "<td><a href=\"" + people[i][1] + "\">" + people[i][j] + "</a></td>";   
+                } else{
+                  result += "<td>"+ people[i][j] + "</td>"; 
                 }
                 if((j == people[i].length-1) && ((people[i][1]) != null)){
                   result += "<td>Submitted</td>";
