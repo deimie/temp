@@ -67,6 +67,7 @@ title: Lab Scores
 </html>
 
 <script>
+    document.getElementById("gradesInput").style.display = "block";
     if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
       document.getElementById("gradesInput").style.display = "none";
     } else if (sessionStorage.getItem("role") == null || sessionStorage.getItem("role") == "ROLE_USER"){
