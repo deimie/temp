@@ -63,7 +63,7 @@ title: Lab Scores
   </th>
   </tr>
   </table>
-  </div>
+  </div> 
 </html>
 
 <script>
