@@ -105,11 +105,11 @@ title: Lab Scores
 
     document.getElementById("hwInput").style.display = "none";
     if(sessionStorage.getItem("role") == "ROLE_ADMIN"){
-      document.getElementById("gradesInput").style.display = "none";
+      document.getElementById("hwInput").style.display = "none";
     } else if (sessionStorage.getItem("role") == "ROLE_USER"){
-      document.getElementById("gradesInput").style.display = "block";
+      document.getElementById("hwInput").style.display = "block";
     } else {
-      document.getElementById("gradesInput").style.display = "none";
+      document.getElementById("hwInput").style.display = "none";
     }
 
     // submit homework of user
