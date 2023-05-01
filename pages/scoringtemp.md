@@ -151,6 +151,8 @@ title: Lab Scores
     function submitScore(){
       var emailValue = document.getElementById("email").value;
       var assignmentName = "homework";
+      var scoreValue = document.getElementById("score").value;
+      var commentValue = document.getElementById("comment").value;
 
       console.log(emailValue);
       console.log(scoreValue);
